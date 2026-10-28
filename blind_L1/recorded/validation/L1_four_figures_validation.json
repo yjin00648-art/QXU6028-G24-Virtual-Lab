@@ -1,0 +1,18 @@
+{
+  "group": "G24",
+  "model": "hard_gap",
+  "Eg_kT": 3.5306,
+  "temperature_K": 300.0,
+  "EF_op_eV": 0.12357794498565,
+  "measurement_count": 50,
+  "fit_energy_grid_points": 4000,
+  "fit_EF_grid_points": 400,
+  "plot_energy_grid_points": 40001,
+  "plot_EF_grid_points": 600,
+  "files": [
+    "L1_electron_population.png",
+    "L1_hole_population.png",
+    "L1_hall_coefficient.png",
+    "L1_sheet_resistance.png"
+  ]
+}

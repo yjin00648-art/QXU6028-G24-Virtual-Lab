@@ -1,0 +1,12 @@
+G24 L2 refined-gap result
+Selected model: hard_gap
+Optimised Eg/kBT: 3.5306
+Optimised Eg at 300 K: 0.091273 eV
+Bootstrap Eg/kBT: median 3.52, 16th-84th percentile [3.43, 3.65]
+Cone residual: 0.10326635
+Optimised hard-gap residual: 0.01379014
+Residual improvement versus cone: 86.65%
+Hard-gap bootstrap selection fraction: 1.000
+Random seed: 20260923
+
+Method note: the carrier equations, independent normalisation, 400-point EF grid, nearest-point residual and 15% model rule were retained. Only Eg was refined first in 0.001-kBT steps and then in 0.0001-kBT steps for the central fit, following the updated instruction to vary the gap for the smallest residual.

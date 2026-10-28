@@ -1,0 +1,13 @@
+{
+  "eta0": 0.0013309924629099194,
+  "selected_eta_factor": 1.0,
+  "selected_eta": 0.0013309924629099194,
+  "central_fwhm_probe_pitch": 1.4442950156533698,
+  "offcentre_fwhm_probe_pitch": 1.303488853548259,
+  "resolution_probe_pitch": 1.4442950156533698,
+  "detection_limit_fraction": 6.420532374154724e-06,
+  "max_abs_map": 0.020762160674544602,
+  "specification_fraction": 0.03,
+  "decision": "clear pass",
+  "random_seed": 20260924
+}

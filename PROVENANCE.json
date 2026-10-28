@@ -1,0 +1,525 @@
+{
+  "assembled_on": "2026-10-28",
+  "group": "G24",
+  "kind": "archival_reorganisation",
+  "copied_files": [
+    {
+      "path": "L3/data/L3_meta.json",
+      "source": "regular_G24/regular_G24/L3_meta.json",
+      "sha256": "eb6d9f039b68b650f85e33bc477e3029ee2aeec15f481ac112ce5ab6edcf5df7"
+    },
+    {
+      "path": "L3/data/L3_A.npy",
+      "source": "regular_G24/regular_G24/L3_A.npy",
+      "sha256": "4783c2c21d21c9c24d82be9b05a264331a9123b113785be3849398d8ee4d0cd5"
+    },
+    {
+      "path": "L3/data/L3_d.csv",
+      "source": "regular_G24/regular_G24/L3_d.csv",
+      "sha256": "7646ed7a9f4a78d65d92239949784a49b9cd75b06c0f103387508755d8a50e2f"
+    },
+    {
+      "path": "L1/data/L1_data.csv",
+      "source": "regular_G24/regular_G24/L1_data.csv",
+      "sha256": "913c63758b02012630d51f5a349c7f9a0da6d010fb783361b247412388e8ce1c"
+    },
+    {
+      "path": "L2/data/L2_meta.json",
+      "source": "regular_G24/regular_G24/L2_meta.json",
+      "sha256": "204028e72fba0fe67a7e2e3a7bc0b06c3a246411405d8280f5e9e4992ce309c7"
+    },
+    {
+      "path": "L2/data/L2_data.csv",
+      "source": "regular_G24/regular_G24/L2_data.csv",
+      "sha256": "50c195f6348b98767772c186fbc939a78d0a3ef2d9a944432231058e7a118c60"
+    },
+    {
+      "path": "L1/data/manifest.json",
+      "source": "regular_G24/regular_G24/manifest.json",
+      "sha256": "6facc7b3c99a0f964fc7a45e36c95b9996d68a9a46bce50eba078f6b5395f240"
+    },
+    {
+      "path": "L1/data/results_template.json",
+      "source": "regular_G24/regular_G24/results_template.json",
+      "sha256": "38b1fd66dd732afa016321b6e79db609fac68ebe2781f91ed01ff5ff40c7c8c5"
+    },
+    {
+      "path": "L1/data/L1_params.json",
+      "source": "regular_G24/regular_G24/L1_params.json",
+      "sha256": "3c22b9086ea753f26841f1b0f3eb319630160f2d945bc2fabd2407e28db6b6b7"
+    },
+    {
+      "path": "L1/data/README_FIRST.txt",
+      "source": "regular_G24/regular_G24/README_FIRST.txt",
+      "sha256": "3a4f344fc523a3b9028cc39db0d8990c55b4dd71cb718fc0c06ceef3fd964f70"
+    },
+    {
+      "path": "blind_L3/data/L3_meta.json",
+      "source": "blind_G24/blind_G24/L3_meta.json",
+      "sha256": "6b9130e80e4942e653a16ea1063072d225e97ccc60ece7745a2e624293e191b7"
+    },
+    {
+      "path": "blind_L3/data/L3_A.npy",
+      "source": "blind_G24/blind_G24/L3_A.npy",
+      "sha256": "4783c2c21d21c9c24d82be9b05a264331a9123b113785be3849398d8ee4d0cd5"
+    },
+    {
+      "path": "blind_L1/data/blind_results.json",
+      "source": "blind_G24/blind_G24/blind_results.json",
+      "sha256": "ee05da594f0d66ca0a6b8de6be4f5656574ad4eb4396f8a1c5c817fe3cff7a1c"
+    },
+    {
+      "path": "blind_L3/data/L3_d.csv",
+      "source": "blind_G24/blind_G24/L3_d.csv",
+      "sha256": "cd6c2a5814d4777a97ccb5640b2917ce001db8a20593daa7f73be90eea3972e1"
+    },
+    {
+      "path": "blind_L1/data/L1_data.csv",
+      "source": "blind_G24/blind_G24/L1_data.csv",
+      "sha256": "7c273d05d991fa5b8fc29e397664e1d50df57d7b4772d7afc5255824d7fa3eed"
+    },
+    {
+      "path": "blind_L2/data/L2_meta.json",
+      "source": "blind_G24/blind_G24/L2_meta.json",
+      "sha256": "2d8a69bd0fb998445d0ba9063c948451a0def21f5c4fcd45e0cc0b6b41ae510b"
+    },
+    {
+      "path": "blind_L2/data/L2_data.csv",
+      "source": "blind_G24/blind_G24/L2_data.csv",
+      "sha256": "78564df41ef3e3e53b4555367750889d715f782887e520257abe4ef7ce1c136a"
+    },
+    {
+      "path": "blind_L1/data/manifest.json",
+      "source": "blind_G24/blind_G24/manifest.json",
+      "sha256": "0b81fcf96a6c5704b282c9649a308824561814f67018c728a60ff1a5a3765aef"
+    },
+    {
+      "path": "blind_L1/data/L1_params.json",
+      "source": "blind_G24/blind_G24/L1_params.json",
+      "sha256": "179444eafd7a040331abf9cb1326f3821b373ab89845621d0b5093c2d4eb01ba"
+    },
+    {
+      "path": "blind_L1/data/README_FIRST.txt",
+      "source": "blind_G24/blind_G24/README_FIRST.txt",
+      "sha256": "434948671518df288be0f1a02de6dce4c6b131329bb5b96fcd25fc3fa42616ab"
+    },
+    {
+      "path": "L1/code/analysis.py",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/scripts/analysis.py",
+      "sha256": "b5d8c39b0e5bc685f29f5311f554a9d4993e0119c39c0781e94e7dc9a87fc2eb"
+    },
+    {
+      "path": "blind_L1/code/analysis.py",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/scripts/analysis.py",
+      "sha256": "b5d8c39b0e5bc685f29f5311f554a9d4993e0119c39c0781e94e7dc9a87fc2eb"
+    },
+    {
+      "path": "L1/code/analysis_L1_four_figures.py",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/scripts/analysis_L1_four_figures.py",
+      "sha256": "97e5687ed11a06787287e598219110db6fc53b13fefaefffb0e0aa8ffbd63d3b"
+    },
+    {
+      "path": "blind_L1/code/analysis_L1_four_figures.py",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/scripts/analysis_L1_four_figures.py",
+      "sha256": "97e5687ed11a06787287e598219110db6fc53b13fefaefffb0e0aa8ffbd63d3b"
+    },
+    {
+      "path": "L2/code/analysis_L2.py",
+      "source": "G24_L2_Teacher_Optimized_Pack/G24_L2_Teacher_Optimized_Pack/analysis_L2.py",
+      "sha256": "8d55cf02e339b9f9336f8a1a1eaf103f87b44d70c0595b64b6821b270bf15bfe"
+    },
+    {
+      "path": "blind_L2/code/analysis_L2.py",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/scripts/analysis_L2.py",
+      "sha256": "8d55cf02e339b9f9336f8a1a1eaf103f87b44d70c0595b64b6821b270bf15bfe"
+    },
+    {
+      "path": "L2/code/analysis_L2_optimized.py",
+      "source": "G24_L2_Teacher_Optimized_Pack/G24_L2_Teacher_Optimized_Pack/analysis_L2_optimized.py",
+      "sha256": "8a48577e22e94f26db6da31bb8e9193866dfa03120599374c9de7fcd3377c52d"
+    },
+    {
+      "path": "blind_L2/code/analysis_L2_optimized.py",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/scripts/analysis_L2_optimized.py",
+      "sha256": "88fb1db5e45c46eecc84e4f9a6fc652fa4de417296d46d24e5e6edaf8360d9ec"
+    },
+    {
+      "path": "blind_L2/code/make_blind_l2_plots.py",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/scripts/make_blind_l2_plots.py",
+      "sha256": "ad2ec586cf934e1c05848af45204c8fb6b75e763e8ced23b750f7c6f8c0b0283"
+    },
+    {
+      "path": "L3/code/analysis_L3.py",
+      "source": "G24_L3_Working_Pack/G24_L3_Working_Pack/analysis_L3.py",
+      "sha256": "5c0b0a55272305736844b34fb4a748190bfa9d67899919dc5a1ba769bbed4123"
+    },
+    {
+      "path": "blind_L3/code/analysis_L3.py",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/scripts/analysis_L3.py",
+      "sha256": "5ab18f610d4d77cbb8406a83dfbe45d13a21a9534dc3e8066bfb3cf605786e82"
+    },
+    {
+      "path": "L1/recorded/L1_sheet_resistance.png",
+      "source": "G24_L1_Checkpoint_with_4_figures/L1_sheet_resistance.png",
+      "sha256": "4027c0e319743ebc46f5cdec91a5b4577a7b78880a31b3220fe5e6122cd42169"
+    },
+    {
+      "path": "L1/recorded/L1_hall_coefficient.png",
+      "source": "G24_L1_Checkpoint_with_4_figures/L1_hall_coefficient.png",
+      "sha256": "3441b327d419717efe09650ac8a125dbe657e725ac672886d10768d4209d01fb"
+    },
+    {
+      "path": "L1/recorded/L1_four_figures_note.txt",
+      "source": "G24_L1_Checkpoint_with_4_figures/L1_four_figures_note.txt",
+      "sha256": "ea71deb6ce33de60e96e6c6b8389b26ee0863f2e425835cffe27834258ba513d"
+    },
+    {
+      "path": "L1/recorded/L1_brief_note.txt",
+      "source": "G24_L1_Checkpoint_with_4_figures/L1_brief_note.txt",
+      "sha256": "99dee26cb85343b6b85e9c7762f28403ea2fbf0c0edc58b10f6d8bf769c16959"
+    },
+    {
+      "path": "L1/recorded/L1_factor_sweep.png",
+      "source": "G24_L1_Checkpoint_with_4_figures/L1_factor_sweep.png",
+      "sha256": "cae0497d55a2bb9ef467892e9aefe2b9a9becfe16cc9fadea56bf468d6e3ebd0"
+    },
+    {
+      "path": "L1/recorded/L1_hole_population.png",
+      "source": "G24_L1_Checkpoint_with_4_figures/L1_hole_population.png",
+      "sha256": "d29e9210dd32c05c274f0731716a59ce2a41b096b68db15802c511dd55da03bc"
+    },
+    {
+      "path": "L1/recorded/L1_electron_population.png",
+      "source": "G24_L1_Checkpoint_with_4_figures/L1_electron_population.png",
+      "sha256": "bd224b5975f7cdc2fc04ae9a5d4a88f892f6b4573b6e5ae9cd99f3a2c856c597"
+    },
+    {
+      "path": "L1/recorded/L1_four_figures_validation.json",
+      "source": "G24_L1_Checkpoint_with_4_figures/L1_four_figures_validation.json",
+      "sha256": "31f8125708f259f330f13d8e79902f54ea4dbace09d6b7dd120bfaaa27742b72"
+    },
+    {
+      "path": "L1/recorded/commit_hash.txt",
+      "source": "G24_L1_Checkpoint_with_4_figures/commit_hash.txt",
+      "sha256": "63308e6d89a89687e7a0ee4d7551798340573e70f0e5634ef6ee61da2b0bafb0"
+    },
+    {
+      "path": "L1/recorded/results.json",
+      "source": "G24_L1_Checkpoint_with_4_figures/results.json",
+      "sha256": "7a789fd9f5c109de4f10e21d3b87d08fcc66a110b4cbf821a2647fd1c67fcd29"
+    },
+    {
+      "path": "L2/recorded/L2_model_fit.png",
+      "source": "G24_L2_Checkpoint_complete/G24_L2_Checkpoint/L2_model_fit.png",
+      "sha256": "b9174e8935956f3f4e7e6f685ce6d2f954e1d004cd5cc1d1cfa9f6c07467b07b"
+    },
+    {
+      "path": "L2/recorded/L2_EF_trajectory.png",
+      "source": "G24_L2_Checkpoint_complete/G24_L2_Checkpoint/L2_EF_trajectory.png",
+      "sha256": "e9f9cf23ce73806a78f7212307e71335ebfbbf18dcbc1f372b97bdd9f60e79d5"
+    },
+    {
+      "path": "L2/recorded/L2_gap_residual_sweep.csv",
+      "source": "G24_L2_Checkpoint_complete/G24_L2_Checkpoint/L2_gap_residual_sweep.csv",
+      "sha256": "969541855fe5a885ac006d9041824baee62307d23627e6f4df2280a61f049153"
+    },
+    {
+      "path": "L2/recorded/L2_gap_residual_sweep.png",
+      "source": "G24_L2_Checkpoint_complete/G24_L2_Checkpoint/L2_gap_residual_sweep.png",
+      "sha256": "24f15bae7bc16a6e64449e7192dd9ccf357e4f2c585f06cf20a6a681c5caca00"
+    },
+    {
+      "path": "L2/recorded/commit_hash.txt",
+      "source": "G24_L2_Checkpoint_complete/G24_L2_Checkpoint/commit_hash.txt",
+      "sha256": "e70aaff9b3d2cc5fd85513f75b2a60ed43ebddc024ead869bf0195f37060ea52"
+    },
+    {
+      "path": "L2/recorded/results.json",
+      "source": "G24_L2_Checkpoint_complete/G24_L2_Checkpoint/results.json",
+      "sha256": "47901e727eebc3551dceb6f4c0f37cce4566628c1d128f87713b29ed91279ee6"
+    },
+    {
+      "path": "L2/recorded/L2_brief_note.txt",
+      "source": "G24_L2_Checkpoint_complete/G24_L2_Checkpoint/L2_brief_note.txt",
+      "sha256": "682baee3434d5c622afb18a8befaad17c126195ef1388b4333f9206ec7e3c355"
+    },
+    {
+      "path": "L3/recorded/L3_brief_note.txt",
+      "source": "G24_L3_Checkpoint/L3_brief_note.txt",
+      "sha256": "d0b0f24681e340cf0f98b30960a8ab22a356b63583b8a66bd61dc8bc28e28297"
+    },
+    {
+      "path": "L3/recorded/L3_map.png",
+      "source": "G24_L3_Checkpoint/L3_map.png",
+      "sha256": "5d8b2b800f1d76bbe1dd152813ccce6d579af8d362833100051fab6f2d7d9579"
+    },
+    {
+      "path": "L3/recorded/L3_method.png",
+      "source": "G24_L3_Checkpoint/L3_method.png",
+      "sha256": "105217a3bcee7bcdcbd12b4e9e7eacdbb99226c554a5d879bad4892052ba0cf4"
+    },
+    {
+      "path": "L3/recorded/commit_hash.txt",
+      "source": "G24_L3_Checkpoint/commit_hash.txt",
+      "sha256": "96d6987c969ff7015c8cdbdc22c37943c6cf18b572ac437570ca2661afb12e88"
+    },
+    {
+      "path": "L3/recorded/results.json",
+      "source": "G24_L3_Checkpoint/results.json",
+      "sha256": "b2214ba1ac483895782a9816640cd7ee197048edf15c6cd492a5391c5fd9e8cb"
+    },
+    {
+      "path": "blind_L1/recorded/figures/L1_sheet_resistance.png",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/figures/L1_sheet_resistance.png",
+      "sha256": "81651b66a6677c5a1ee6e1264b38c4af10e39a0820b5cbf82a729d652938681d"
+    },
+    {
+      "path": "blind_L1/recorded/figures/L1_hall_coefficient.png",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/figures/L1_hall_coefficient.png",
+      "sha256": "aa2787c54c1e23c5bd18c013150048c7f182f68593870c270a25a4e620c40f85"
+    },
+    {
+      "path": "blind_L1/recorded/figures/L1_factor_sweep.png",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/figures/L1_factor_sweep.png",
+      "sha256": "d4c472c740d0d962c280596b66a23cac46ec4b77a66eb6d33b5397cc148a26c9"
+    },
+    {
+      "path": "blind_L1/recorded/figures/L1_hole_population.png",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/figures/L1_hole_population.png",
+      "sha256": "fa97ee9fe848a462dcba8494467484cc70077661804d156cc9e72478145dfb17"
+    },
+    {
+      "path": "blind_L1/recorded/figures/L1_electron_population.png",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/figures/L1_electron_population.png",
+      "sha256": "ceccb09b0908fca17aa1e587fb88631b8028792d2fc559e90d40ebc7d00c0c2c"
+    },
+    {
+      "path": "blind_L1/recorded/tables/L1_calculations.csv",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/tables/L1_calculations.csv",
+      "sha256": "6981ffec7ceea2401bac96cae2b7624964e1989055e09d8542042bc25cef494e"
+    },
+    {
+      "path": "blind_L1/recorded/notes/L1_four_figures_note.txt",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/notes/L1_four_figures_note.txt",
+      "sha256": "eede3e866368d8f5a9450694b17e052c4b543f063c6492830456885a846d9464"
+    },
+    {
+      "path": "blind_L1/recorded/notes/L1_brief_note.txt",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/notes/L1_brief_note.txt",
+      "sha256": "5f6740dac728a91a217383d9fcd24ba6c69336ac4af7537b155f9f4ed1ecf3c2"
+    },
+    {
+      "path": "blind_L1/recorded/validation/L1_validation.json",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/validation/L1_validation.json",
+      "sha256": "198daaa3b176f95ead0c30b409bbae0b8add8fe1f8fdaeef2537526e1a81e7fb"
+    },
+    {
+      "path": "blind_L1/recorded/validation/L1_four_figures_validation.json",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/validation/L1_four_figures_validation.json",
+      "sha256": "78f541c6f9e66cd5b1d8f9c3d24290ae3560ee2076c857a4770243adff2c73c6"
+    },
+    {
+      "path": "blind_L1/recorded/blind_results.json",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/submission/blind_results.json",
+      "sha256": "c968b19d8eb48053f1d7395645892a485d495a5b7ad9a6ffdff8a4c653b2016f"
+    },
+    {
+      "path": "blind_L1/recorded/run_log.txt",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/submission/run_log.txt",
+      "sha256": "e822b1c33aa4fb801385b1979d115826f3272c954a42fe5a9787bd7b8fb8c289"
+    },
+    {
+      "path": "blind_L1/recorded/pipeline_commit.txt",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/submission/pipeline_commit.txt",
+      "sha256": "86a19db322e8677a248176f2f195d3c7dc29557ffb9c4ca172da34fafd84b169"
+    },
+    {
+      "path": "blind_L2/recorded/figures/L2_model_fit.png",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/figures/L2_model_fit.png",
+      "sha256": "1a6fa1903e088e9b5799859c47816f43ac25319a4861855787af21a49040bb81"
+    },
+    {
+      "path": "blind_L2/recorded/figures/L2_EF_trajectory.png",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/figures/L2_EF_trajectory.png",
+      "sha256": "a5e0db8883bfb476920bfc70d96db535f2af6b620888270f2f1c75be57468cc4"
+    },
+    {
+      "path": "blind_L2/recorded/figures/L2_raw_repeats.png",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/figures/L2_raw_repeats.png",
+      "sha256": "2412b6056578291e3022641c562fab8a346769058c6268718f46f9231ce8101a"
+    },
+    {
+      "path": "blind_L2/recorded/figures/L2_gap_residual_sweep.png",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/figures/L2_gap_residual_sweep.png",
+      "sha256": "8df13915d03a21d0906d9f2bc9f69e0cfa97ef4a110c9f1f0b64e44f8a7d44d8"
+    },
+    {
+      "path": "blind_L2/recorded/tables/L2_calculations.csv",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/tables/L2_calculations.csv",
+      "sha256": "2755341967131de0e92d0d43f05e362b06f233aa29dab0bf8a83e38081d6d4ec"
+    },
+    {
+      "path": "blind_L2/recorded/tables/L2_gap_residual_sweep.csv",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/tables/L2_gap_residual_sweep.csv",
+      "sha256": "5447f5c7f1587991566731e56cc6da1508650763a615772cfcbe98592f40196b"
+    },
+    {
+      "path": "blind_L2/recorded/tables/L2_refined_gap_sweep.csv",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/tables/L2_refined_gap_sweep.csv",
+      "sha256": "53cc80afa96437225ad668a0d6fe11fe4f35f4d403227151f446a7e78856c095"
+    },
+    {
+      "path": "blind_L2/recorded/notes/L2_brief_note.txt",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/notes/L2_brief_note.txt",
+      "sha256": "c154b9a4232920e296f78770333a6384f171549d625f23116d7a53d4ad2a81e4"
+    },
+    {
+      "path": "blind_L2/recorded/validation/L2_validation.json",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/validation/L2_validation.json",
+      "sha256": "260db7c626b5044e3f807374858e652599d6cf554d274387803b31b62ca1772a"
+    },
+    {
+      "path": "blind_L2/recorded/blind_results.json",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/submission/blind_results.json",
+      "sha256": "c968b19d8eb48053f1d7395645892a485d495a5b7ad9a6ffdff8a4c653b2016f"
+    },
+    {
+      "path": "blind_L2/recorded/run_log.txt",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/submission/run_log.txt",
+      "sha256": "e822b1c33aa4fb801385b1979d115826f3272c954a42fe5a9787bd7b8fb8c289"
+    },
+    {
+      "path": "blind_L2/recorded/pipeline_commit.txt",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/submission/pipeline_commit.txt",
+      "sha256": "86a19db322e8677a248176f2f195d3c7dc29557ffb9c4ca172da34fafd84b169"
+    },
+    {
+      "path": "blind_L3/recorded/figures/L3_map.png",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/figures/L3_map.png",
+      "sha256": "b574d6384d8b13bc4fa72054610e37b81ee93670915480edd5e56bbd59960471"
+    },
+    {
+      "path": "blind_L3/recorded/figures/L3_method.png",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/figures/L3_method.png",
+      "sha256": "98d5884c1c31f1cc93777d0ac17624dfcd518fd7063d1c02aa27c904ea0bbf72"
+    },
+    {
+      "path": "blind_L3/recorded/tables/L3_noise_maxima.csv",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/tables/L3_noise_maxima.csv",
+      "sha256": "1467d64035dd600cba52c0a9b90149aa6c194d9bfed855320cd43605daa76182"
+    },
+    {
+      "path": "blind_L3/recorded/tables/L3_map.csv",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/tables/L3_map.csv",
+      "sha256": "6526a1584a1cae973ee326d73f7bc1f0f6a6245af306c2cc40dcfc787bd3c8cd"
+    },
+    {
+      "path": "blind_L3/recorded/tables/L3_eta_sensitivity.csv",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/tables/L3_eta_sensitivity.csv",
+      "sha256": "29284a918264961465bddbf09eef927cdc1b42d34b688928a972888cd27ca857"
+    },
+    {
+      "path": "blind_L3/recorded/notes/L3_brief_note.txt",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/notes/L3_brief_note.txt",
+      "sha256": "579d3d713e806ddb3cf96d2865484508a2547a39a743ec0b79ffde828b8b6906"
+    },
+    {
+      "path": "blind_L3/recorded/validation/L3_diagnostics.json",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/validation/L3_diagnostics.json",
+      "sha256": "4df540bd4966d3dfa1828986dbd63d9c92cb6a024c629ed76ad1f8a69ac87e67"
+    },
+    {
+      "path": "blind_L3/recorded/blind_results.json",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/submission/blind_results.json",
+      "sha256": "c968b19d8eb48053f1d7395645892a485d495a5b7ad9a6ffdff8a4c653b2016f"
+    },
+    {
+      "path": "blind_L3/recorded/run_log.txt",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/submission/run_log.txt",
+      "sha256": "e822b1c33aa4fb801385b1979d115826f3272c954a42fe5a9787bd7b8fb8c289"
+    },
+    {
+      "path": "blind_L3/recorded/pipeline_commit.txt",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/submission/pipeline_commit.txt",
+      "sha256": "86a19db322e8677a248176f2f195d3c7dc29557ffb9c4ca172da34fafd84b169"
+    },
+    {
+      "path": "BLIND_ARCHIVE_README.txt",
+      "source": "G24_Blind_L1_L2_L3_Complete(1)/G24_Blind_Final_20260924/README_BLIND_CN.txt",
+      "sha256": "3c1755c5641c63c329d4f4b510d468ddd8485f5502f8f154d5438f32bf096fcd"
+    },
+    {
+      "path": "AI_usage_log_L1_original.txt",
+      "source": "G24_L2_checkpoint/G24_L1/records/AI_usage_log_entry.txt",
+      "sha256": "2662f684d6e043bac585f7b44d43316c63770b22cf1822b4331b019a261ec9f4"
+    },
+    {
+      "path": "AI_usage_log_L2_original.txt",
+      "source": "G24_L2_Teacher_Optimized_Pack/G24_L2_Teacher_Optimized_Pack/AI_usage_log_entry.txt",
+      "sha256": "c6a60eed7e1f42fca3c55b7a9e46250799a88bb4ba4ebddc1b0ddb48c0d1b524"
+    }
+  ],
+  "source_archives": [
+    {
+      "filename": "G24_Blind_L1_L2_L3_Complete(1).zip",
+      "bytes": 2039485,
+      "sha256": "f06496a996356e12a1e7987f8cdcbfa6cce1827d50b0e2f4c88a653232197e28"
+    },
+    {
+      "filename": "G24_Blind_Submission(1).zip",
+      "bytes": 3690,
+      "sha256": "f2d3ff40656a08e1988269fd91777127883d452657efd82d1e7dbce3d928b01c"
+    },
+    {
+      "filename": "G24_L1_Checkpoint_with_4_figures.zip",
+      "bytes": 616103,
+      "sha256": "4b4332bb997544fcda4573c7b0ea57888fb479069cb68cfc47c8c208119e9a45"
+    },
+    {
+      "filename": "G24_L2_Checkpoint(4).zip",
+      "bytes": 706520,
+      "sha256": "930c2d89c3f4090e206b52ffdff7bc2bb9fd64a4156199ad9bd9007a229d13a4"
+    },
+    {
+      "filename": "G24_L2_Checkpoint_complete.zip",
+      "bytes": 714042,
+      "sha256": "1ad58259f02d71a9488e5f2d24faf59f0e388f68606ebb4bc57898e39b1f71e6"
+    },
+    {
+      "filename": "G24_L2_Teacher_Optimized_Pack.zip",
+      "bytes": 732768,
+      "sha256": "e29f02c013bce8097fa85e7d014cd6a178a73282a632bfc0b7e8a60a881812d5"
+    },
+    {
+      "filename": "G24_L2_checkpoint.zip",
+      "bytes": 1036894,
+      "sha256": "ab4196d681b8fb19e22bc086d502bbc31181f5c4c02b4ecf8018bdb25f25af50"
+    },
+    {
+      "filename": "G24_L3_Checkpoint.zip",
+      "bytes": 521734,
+      "sha256": "0282ca6630af3112764e63ad671824234885622dfe315140a10ad5a6b7962fe3"
+    },
+    {
+      "filename": "G24_L3_Working_Pack.zip",
+      "bytes": 1152894,
+      "sha256": "0b3ae95b39e71729ddeb712db62b89b7deaadf1416f3a87d0fc547e7b4f4d455"
+    },
+    {
+      "filename": "blind_G24.zip",
+      "bytes": 63177,
+      "sha256": "8bc5560e2587d38cbd55916c88c4dad4fbc5356954d6fb09dda8eac4f6de983c"
+    },
+    {
+      "filename": "regular_G24.zip",
+      "bytes": 63770,
+      "sha256": "3e575bfc7d0ad590ac3ad8b9df84554fc21533ab3f2878b23d2b25ba06ee84ad"
+    }
+  ],
+  "notes": [
+    "All copied source, raw data and recorded outputs are byte-for-byte copies. No original .git history or credentials are included.",
+    "Blind stages share identical full blind_results.json, run_log.txt and pipeline_commit.txt; these were not three separate submitted checkpoints.",
+    "reproduce.py and repository documentation are new organisational work, not the historic frozen pipeline.",
+    "The archived regular and blind refined L2 scripts have different hard-coded search windows. This archive does not establish frozen-pipeline compliance."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "validated_on": "2026-10-28",
+  "group": "G24",
+  "original_copied_file_sha256_checks": {"total": 91, "passed": 91},
+  "python_syntax_checks": {"total": 12, "passed": 12},
+  "archived_png_integrity_checks": {"total": 21, "passed": 21},
+  "raw_dataset_manifest_checks": {"regular": "9/9 passed", "blind": "9/9 passed"},
+  "pipeline_replay": {
+    "regular": {"completed": true, "matches_archived_results_except_commit": true, "relative_tolerance": 1e-10, "absolute_tolerance": 1e-12},
+    "blind": {"completed": true, "matches_archived_results_except_commit": true, "relative_tolerance": 1e-10, "absolute_tolerance": 1e-12},
+    "recorded_commit_for_local_test": "PENDING_ARCHIVAL_REPLAY",
+    "note": "This local verification is an archival replay without a new Git commit. It is not a replacement for historical frozen-pipeline evidence."
+  },
+  "credential_pattern_scan": "No common access-token or private-key patterns found in packaged text files.",
+  "remote_repository_created": true,
+  "repository_url": "https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab"
+}

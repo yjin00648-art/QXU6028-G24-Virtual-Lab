@@ -1,0 +1,15 @@
+{
+  "c": 0.04324510529248154,
+  "T": 300.0,
+  "EF_op_eV": 0.14090052931260313,
+  "rho_ohm_sq": 593.5050146375786,
+  "columns": [
+    "EF_eV",
+    "n_band_cm2",
+    "rho_ohm_sq"
+  ],
+  "note": "n_band is the finite-temperature band-edge integral from E=0. Recover the Fermi-referenced count by integrating from E=EF, then calculate the mobility correction.",
+  "group": "G24",
+  "dataset_set": "regular",
+  "schema_version": "QXU6028-data-v1"
+}

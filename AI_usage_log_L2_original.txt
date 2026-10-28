@@ -1,0 +1,6 @@
+Date / phase: 23 September 2026 / L2 refined-gap fit
+Tool/model: OpenAI Codex
+Purpose: Refine the G24 hard-gap parameter after clarification that the teacher required Eg to be varied to minimise the residual.
+Prompt or instruction summary: Keep the published carrier equations, independent R_H/R_xx normalisation, 400-point EF grid, nearest-point residual and bootstrap repeat resampling. Refine only Eg, identify the minimum residual, update the trajectory and uncertainty, and retain the 15% model-selection check.
+Output used / changed / rejected: Used the refined hard-gap search and updated plots/results. The coarse Eg/kBT=2.00 result was replaced by the refined central estimate Eg/kBT=2.0730 because the updated instruction allowed a continuously refined gap search. No raw data were modified.
+Checked by: Two-stage gap search (0.001 then 0.0001 kBT); independent rerun produced identical results.json, validation JSON and calculation CSV; cone residual 0.06414722; refined hard-gap residual 0.01080589; 200/200 bootstrap fits selected hard gap; bootstrap 16th-84th percentile [2.00, 2.13] kBT; trajectory length 58; all outputs finite; figures visually inspected.

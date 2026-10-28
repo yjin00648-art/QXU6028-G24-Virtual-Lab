@@ -1,0 +1,26 @@
+{
+  "group": "G24",
+  "temperature_K": 300.0,
+  "measurement_count": 50,
+  "EF_grid_points": 400,
+  "central_gap_search_kT": [
+    3.2,
+    3.8,
+    0.001
+  ],
+  "final_gap_search_half_width_kT": 0.003,
+  "final_gap_step_kT": 0.0001,
+  "bootstrap_gap_step_kT": 0.01,
+  "cone_residual": 0.103266348116208,
+  "optimised_gap_Eg_kT": 3.5306,
+  "optimised_gap_Eg_eV": 0.09127306766940001,
+  "optimised_gap_residual": 0.013790143351586698,
+  "bootstrap_replicates": 200,
+  "bootstrap_seed": 20260923,
+  "bootstrap_gap_median_kT": 3.52,
+  "bootstrap_gap_p16_kT": 3.43,
+  "bootstrap_gap_p84_kT": 3.6515999999999997,
+  "bootstrap_hard_gap_fraction": 1.0,
+  "trajectory_length": 50,
+  "all_outputs_finite": true
+}

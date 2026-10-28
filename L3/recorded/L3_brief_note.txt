@@ -1,0 +1,21 @@
+G24 L3 zero-mean regularised reconstruction
+A shape: (128, 100); d shape: (3, 128)
+Maximum absolute row sum: 1.665e-16
+Numerical rank of A: 92 / 100
+Gradient matrix shape: (180, 100)
+eta0: 0.001330992463; selected eta factor: 1
+Map mean: -4.163e-19
+Positive feature: x=-2.7, y=2.7, amplitude=+0.04069367
+Negative feature: x=2.7, y=-2.7, amplitude=-0.03286978
+Central PSF FWHM: 1.444295 probe pitches
+Off-centre PSF FWHM: 1.303489 probe pitches
+Conservative resolution: 1.444295 probe pitches
+Repeat-noise sigma: median=2.024e-07, maximum=5.721e-07
+Noise simulations: 500; random seed: 20260924
+95% detection limit delta95: 4.051695296e-06
+Maximum absolute reconstructed non-uniformity: 0.04069367
+Announced specification: max|m| <= 0.030
+Decision: CLEAR FAIL
+Confidence statement: clear fail: max|m| - delta95 = 0.04068962 is above the 0.030 limit.
+
+Method note: the reference result uses the prescribed eta0 because the extrema and the fail decision remain stable across the five requested eta factors. The probe is blind to the constant mode, so the map is explicitly projected and returned with zero mean. Adjacent pixels of the same sign are treated as one broad feature; the reported coordinates are the positive and negative extrema. The repeat-linked detection limit is orders of magnitude smaller than the observed 4.07% extremum, so repeat noise does not alter the fail decision.

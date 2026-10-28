@@ -1,0 +1,53 @@
+{
+  "module": "QXU6028 Polymer Devices",
+  "academic_year": "2026-27",
+  "group": "G24",
+  "dataset_set": "regular",
+  "files": [
+    {
+      "name": "L1_data.csv",
+      "bytes": 452,
+      "sha256": "913c63758b02012630d51f5a349c7f9a0da6d010fb783361b247412388e8ce1c"
+    },
+    {
+      "name": "L1_params.json",
+      "bytes": 444,
+      "sha256": "3c22b9086ea753f26841f1b0f3eb319630160f2d945bc2fabd2407e28db6b6b7"
+    },
+    {
+      "name": "L2_data.csv",
+      "bytes": 7202,
+      "sha256": "50c195f6348b98767772c186fbc939a78d0a3ef2d9a944432231058e7a118c60"
+    },
+    {
+      "name": "L2_meta.json",
+      "bytes": 344,
+      "sha256": "204028e72fba0fe67a7e2e3a7bc0b06c3a246411405d8280f5e9e4992ce309c7"
+    },
+    {
+      "name": "L3_A.npy",
+      "bytes": 102528,
+      "sha256": "4783c2c21d21c9c24d82be9b05a264331a9123b113785be3849398d8ee4d0cd5"
+    },
+    {
+      "name": "L3_d.csv",
+      "bytes": 6584,
+      "sha256": "7646ed7a9f4a78d65d92239949784a49b9cd75b06c0f103387508755d8a50e2f"
+    },
+    {
+      "name": "L3_meta.json",
+      "bytes": 526,
+      "sha256": "eb6d9f039b68b650f85e33bc477e3029ee2aeec15f481ac112ce5ab6edcf5df7"
+    },
+    {
+      "name": "README_FIRST.txt",
+      "bytes": 982,
+      "sha256": "3a4f344fc523a3b9028cc39db0d8990c55b4dd71cb718fc0c06ceef3fd964f70"
+    },
+    {
+      "name": "results_template.json",
+      "bytes": 532,
+      "sha256": "38b1fd66dd732afa016321b6e79db609fac68ebe2781f91ed01ff5ff40c7c8c5"
+    }
+  ]
+}

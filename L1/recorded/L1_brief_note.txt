@@ -1,0 +1,9 @@
+G24 L1 result
+Exact operating point: E_F = 0.1409005293 eV
+Band-edge carrier count: n_band = 1.819046e+12 cm^-2
+Fermi-referenced carrier count: n_F = 5.073654e+11 cm^-2
+Correction factor: C = n_band/n_F = 3.585278
+Band-edge mobility estimate: 5.781247e+03 cm^2 V^-1 s^-1
+Corrected mobility: 2.072738e+04 cm^2 V^-1 s^-1
+
+Interpretation: the band-edge method reports 3.585 times the Fermi-referenced carrier count, an overestimate of 258.5% relative to n_F. At fixed sheet resistivity, mobility is therefore underestimated by the same factor. Any carrier-count-normalised sensor sensitivity that scales as 1/n should be recalibrated upward by 3.585 times.

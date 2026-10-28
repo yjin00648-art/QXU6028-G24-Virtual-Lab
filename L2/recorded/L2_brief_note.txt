@@ -1,0 +1,15 @@
+G24 L2 refined-gap result
+Selected model: hard_gap
+Optimised Eg/kBT: 2.0730
+Optimised Eg at 300 K: 0.053591 eV
+Bootstrap Eg/kBT: median 2.06, 16th-84th percentile [2.00, 2.13]
+Cone residual: 0.06414722
+Optimised hard-gap residual: 0.01080589
+Residual improvement versus cone: 83.15%
+Hard-gap bootstrap selection fraction: 1.000
+Random seed: 20260923
+
+Method note: the carrier equations, independent normalisation, 400-point EF grid, nearest-point residual and 15% model rule were retained. Only Eg was refined first in 0.001-kBT steps and then in 0.0001-kBT steps for the central fit, following the updated instruction to vary the gap for the smallest residual.
+
+Residual-sweep evidence:
+The overview uses hard-gap candidates from 0.50 to 8.00 in 0.25-kBT steps, and the local scan uses 1.900 to 2.200 in 0.001-kBT steps. The minimum remains Eg/kBT = 2.0730. For 58 averaged measurement pairs, the nearest-curve RMS residual is 0.01080589 and the residual sum of squares is 0.00677250. Here RSS = sum(d_i^2) = N x RMS^2 in the independently normalised (R_H, R_s) plane. See L2_gap_residual_sweep.png and L2_gap_residual_sweep.csv.

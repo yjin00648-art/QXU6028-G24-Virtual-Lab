@@ -1,0 +1,60 @@
+QXU6028 G24 BLIND PIPELINE RUN LOG
+Run date: 2026-09-24 (UTC)
+Dataset: blind_G24
+Pipeline commit: 51814957ddcb8d34d4153c386cf2194f7be0b541
+
+INPUT VALIDATION
+- ZIP integrity: PASS
+- Manifest SHA-256 checks: PASS (9/9 files)
+- Group: G24
+- dataset_set: blind
+
+L1 COMMAND
+python analysis.py --data-dir blind_G24 --output-dir outputs --pipeline-commit 51814957ddcb8d34d4153c386cf2194f7be0b541
+
+L1 OUTPUT
+Exact operating point: E_F = 0.1235779450 eV
+Band-edge carrier count: n_band = 1.408818e+12 cm^-2
+Fermi-referenced carrier count: n_F = 4.460863e+11 cm^-2
+Correction factor: C = 3.1581735677
+Corrected mobility: 3.3659067774e+04 cm^2 V^-1 s^-1
+C=2 crossing: 0.0727618899 eV
+C=4 crossing: 0.1573469071 eV
+
+L2 COMMAND
+python analysis_L2_optimized.py --data-dir blind_G24 --output-dir outputs --base-results outputs/results.json --pipeline-commit 51814957ddcb8d34d4153c386cf2194f7be0b541
+
+L2 OUTPUT
+Selected model: hard_gap
+Optimised Eg/kBT: 3.5306
+Optimised Eg at 300 K: 0.091273 eV
+Bootstrap Eg/kBT 16th-84th percentile: [3.43, 3.6516]
+Cone residual: 0.1032663481
+Optimised hard-gap residual: 0.0137901434
+Optimised hard-gap RSS: 0.0095084027
+Residual improvement versus cone: 86.65%
+Bootstrap hard-gap fraction: 1.000
+EF trajectory length: 50
+
+L3 COMMAND
+python analysis_L3.py --data-dir blind_G24 --output-dir outputs --base-results outputs/results.json --pipeline-commit 51814957ddcb8d34d4153c386cf2194f7be0b541
+
+L3 OUTPUT
+eta0: 0.001330992463
+max|m|: 0.0207621607
+Positive feature: (x=2.7, y=-2.7), amplitude=+0.0154684613
+Negative feature: (x=1.5, y=0.9), amplitude=-0.0207621607
+Resolution: 1.444295 probe pitches
+95% detection limit delta95: 6.420532374e-06
+Specification: max|m| <= 0.030
+Decision: CLEAR PASS
+Confidence: max|m| + delta95 = 0.02076858, below 0.030
+
+FINAL VALIDATION
+- blind_results.json schema: QXU6028-results-v1
+- L1 values finite: PASS
+- L2 model selected and 50 EF values finite: PASS
+- L3 map contains exactly 100 finite row-major values: PASS
+- L3 map mean is effectively zero: PASS
+- pipeline commit recorded consistently: PASS
+- Pipeline completed without errors.

@@ -1,0 +1,36 @@
+{
+  "group": "G24",
+  "EF_op_eV": 0.12357794498565,
+  "gate_checks": [
+    {
+      "EF_eV": 0.0,
+      "expected_ratio": 1.0,
+      "calculated_ratio": 1.0,
+      "pass": true
+    },
+    {
+      "EF_eV": 0.073,
+      "expected_ratio": 2.0,
+      "calculated_ratio": 2.004939691363629,
+      "pass": true
+    },
+    {
+      "EF_eV": 0.1,
+      "expected_ratio": 2.6,
+      "calculated_ratio": 2.598845161149427,
+      "pass": true
+    },
+    {
+      "EF_eV": 0.2,
+      "expected_ratio": 5.1,
+      "calculated_ratio": 5.104373571868877,
+      "pass": true
+    }
+  ],
+  "max_source_n_band_relative_error": 3.2225617807540224e-12,
+  "closed_form_relative_error_at_operating_point": 2.9584882175290626e-07,
+  "monotonic_over_supplied_sweep": true,
+  "C2_crossing_EF_eV": 0.07276188988765439,
+  "C4_crossing_EF_eV": 0.1573469071357107,
+  "pipeline_commit": "51814957ddcb8d34d4153c386cf2194f7be0b541"
+}
