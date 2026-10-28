@@ -1,16 +1,19 @@
-# 本次仓库整理记录
+# G24 AI usage records
 
-日期：2026-10-28。
+**Checked by: Jin Zhengyang.** The reviewer identity was supplied by the user on 28 October 2026.
 
-用户请求：从先前聊天找回常规和 blind 的六项实验内容，建立 GitHub 小组代码仓库并上传。
+The current consolidated record is [docs/AI_USAGE.md](docs/AI_USAGE.md). It covers the tool, purpose, instruction summary, adopted or changed output, checking method and supporting evidence for each phase:
 
-本次新增内容：六目录整理、来源与 SHA-256 清单、README、依赖版本、忽略规则、重跑包装脚本。
-复制的原始数据、分析脚本和历史结果不作修改。原 AI usage 记录另行保留。
+| Phase | Completed record |
+| --- | --- |
+| L1 carrier counting and supplementary figures | [L1](docs/ai_usage/L1.md) |
+| L2 model fitting and uncertainty | [L2](docs/ai_usage/L2.md) |
+| L3 reconstruction, resolution and noise | [L3](docs/ai_usage/L3.md) |
+| Blind analysis and submitted records | [Blind test](docs/ai_usage/BLIND.md) |
+| Repository creation, checking and later corrections | [Repository work](docs/ai_usage/REPOSITORY.md) |
 
-核查时发现：blind 三阶段原来共用一次完整提交；常规和 blind 的细化带隙脚本搜索窗口不同。
-这两个事实已在 README 中明确说明，没有将本次整理描述为历史冻结管线。
+These completed records were written on 28 October 2026 using the supplied files and available conversation context. Historical instruction summaries are labelled as retrospective where a verbatim prompt is unavailable. They do not claim an unrecorded original review time or a full numerical rerun today.
 
-仓库导入只代表本次整理，不代表任何组员的历史实验贡献。
+The original L1 and L2 snapshots, `AI_usage_log_L1_original.txt` and `AI_usage_log_L2_original.txt`, remain unchanged as source evidence. The old L1 reviewer placeholder is superseded by the user-confirmed name in the current L1 record; it is retained only in the historical snapshot.
 
-
-2026-10-28续传：按用户明确要求不重跑六项计算，不上传报告、贡献声明或自评。补充三个实际QMplus提交ZIP和盲测时间截图；根结果来自既有完整记录，保留原哈希。新版共享入口及仅核验模式说明见 docs/AI_USAGE.md。
+用户已确认：这是其第一个 GitHub 仓库，2026-10-28 之前没有创建过 GitHub 仓库。旧 ZIP 中的本地 Git 对象与此前的 GitHub 远程仓库是两回事，不能据此推定用户过去创建过 GitHub 仓库。

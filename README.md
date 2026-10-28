@@ -85,6 +85,14 @@ python -m tests.negative_controls
 
 此前已通过10项数值测试；反例结果保存在 `validation/negative_controls.json`，人工记录范围见 `docs/AI_USAGE.md` 和 `docs/AI_ERROR_LEDGER.md`。
 
+## AI 使用记录与检查人
+
+**Checked by: Jin Zhengyang.** 检查人姓名由用户于2026-10-28明确提供；不据此倒填原始检查时间。
+
+当前完整日志见 [docs/AI_USAGE.md](docs/AI_USAGE.md)，分别覆盖 [L1](docs/ai_usage/L1.md)、[L2](docs/ai_usage/L2.md)、[L3](docs/ai_usage/L3.md)、[盲测](docs/ai_usage/BLIND.md) 和 [仓库整理](docs/ai_usage/REPOSITORY.md) 的工具、用途、指令摘要、采用/修改内容及检查证据。
+
+L3和盲测日志依据已保留文件事后整理，未冒充找回的逐字历史提示词。原始L1/L2日志保持原字节；旧L1快照中的检查人占位文字已由当前补充日志中的Jin Zhengyang取代，不再作为待填写的当前信息。
+
 ## 已有结果摘要
 
 | 项目 | 常规 | Blind |
@@ -97,6 +105,8 @@ python -m tests.negative_controls
 | L3 decision | clear fail | clear pass |
 
 ## 原始版本记录
+
+用户已确认：**这是其第一个GitHub仓库，2026-10-28之前没有创建过GitHub仓库。** 当前GitHub仓库的真实历史从2026-10-28的初始化与导入开始。此前ZIP内携带的是本地Git对象，不能据此推定用户以前建立过GitHub仓库，也不据此认定谁亲自完成了这些本地提交。
 
 `history/original_L1_L2.bundle` 保存4条可恢复的真实 L1/L2 提交；`python restore_history.py` 可在本地恢复 `archive/original-L1-L2` 分支。原 L1 提交包记录的 `432170af...` 和完整常规/盲测记录的 `51814957...` 目前只有原始哈希文本，没有在已提供材料中找到相应 Git 提交对象。这是版本证据的边界，**不表示 L1 的四张图缺失**。本次不改写旧哈希或提交日期。
 
