@@ -1,0 +1,14 @@
+{
+  "activity": "Blind test L3",
+  "attempt": 1,
+  "submission_status": "Submitted for grading",
+  "grading_status": "Not graded",
+  "opened_as_displayed": "Tuesday, 22 September 2026, 12:00 AM",
+  "due_as_displayed": "Thursday, 24 September 2026, 9:00 AM",
+  "last_modified_as_displayed": "Thursday, 24 September 2026, 10:42 AM",
+  "time_remaining_as_displayed": "Assignment was submitted 1 hour 42 mins late",
+  "submitted_filename": "G24_Blind_Submission.zip",
+  "timezone": "not shown in screenshot; no timezone inferred",
+  "screenshot_path": "evidence/submission_screenshots/blind_submission_status.png",
+  "meaning": "Records the platform display; no inference about marking penalties or any approved extension."
+}

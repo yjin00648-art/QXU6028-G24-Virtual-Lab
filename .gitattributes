@@ -1,0 +1,14 @@
+*.py text eol=lf
+*.md text eol=lf
+**/code/** -text
+**/data/** -text
+**/recorded/** -text
+evidence/** -text
+AI_usage_log_*_original.txt -text
+BLIND_ARCHIVE_README.txt -text
+results/** -text
+results.json -text
+history/*.bundle binary
+*.png binary
+*.npy binary
+*.zip binary

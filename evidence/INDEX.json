@@ -1,0 +1,76 @@
+{
+  "archived_on": "2026-10-28",
+  "items": [
+    {
+      "uploaded_name": "G24_L1_4figures.zip",
+      "repository_path": "evidence/submitted_archives/G24_L1_4figures.zip",
+      "bytes": 616103,
+      "sha256": "4b4332bb997544fcda4573c7b0ea57888fb479069cb68cfc47c8c208119e9a45",
+      "copied_without_modification": true,
+      "classification": "user-confirmed QMplus submission archive"
+    },
+    {
+      "uploaded_name": "G24_L2_Checkpoint.zip",
+      "repository_path": "evidence/submitted_archives/G24_L2_Checkpoint.zip",
+      "bytes": 714042,
+      "sha256": "1ad58259f02d71a9488e5f2d24faf59f0e388f68606ebb4bc57898e39b1f71e6",
+      "copied_without_modification": true,
+      "classification": "user-confirmed QMplus submission archive"
+    },
+    {
+      "uploaded_name": "G24_Blind_Submission.zip",
+      "repository_path": "evidence/submitted_archives/G24_Blind_Submission.zip",
+      "bytes": 1152525,
+      "sha256": "7d2f412e15b352e6e20f4958353e302f9cf55cc99f4df62750535aa58542d6ba",
+      "copied_without_modification": true,
+      "classification": "user-confirmed QMplus submission archive"
+    },
+    {
+      "uploaded_name": "L1_submission_status.png",
+      "repository_path": "evidence/submission_screenshots/L1_submission_status.png",
+      "bytes": 65429,
+      "sha256": "f96272c57b3fd49911dd4a80da08b0eb027c8f1c973ed52804e2d87fb29955f8",
+      "copied_without_modification": true,
+      "classification": "submission-status screenshot"
+    },
+    {
+      "uploaded_name": "L2_submission_status_1.png",
+      "repository_path": "evidence/submission_screenshots/L2_submission_status_1.png",
+      "bytes": 65235,
+      "sha256": "c2b27ae43d98d8c2cff16d5188a21851573295c5ff76d9a7916a100bc1d92490",
+      "copied_without_modification": true,
+      "classification": "submission-status screenshot"
+    },
+    {
+      "uploaded_name": "L2_submission_status_2.png",
+      "repository_path": "evidence/submission_screenshots/L2_submission_status_2.png",
+      "bytes": 65164,
+      "sha256": "2fa6c3e0bf62889b22a94382d3096ca996a683bee8dfeeed36a081a682ec8ad6",
+      "copied_without_modification": true,
+      "classification": "submission-status screenshot"
+    },
+    {
+      "uploaded_name": "image.png",
+      "repository_path": "evidence/submission_screenshots/blind_submission_status.png",
+      "bytes": 84330,
+      "sha256": "6ea4f90c63caf7d11e2837dfcd59a816af45102f20ba0cb32f1f32be4f7fdf2a",
+      "copied_without_modification": true,
+      "classification": "submission-status screenshot"
+    }
+  ],
+  "blind_receipt": {
+    "activity": "Blind test L3",
+    "attempt": 1,
+    "submission_status": "Submitted for grading",
+    "grading_status": "Not graded",
+    "opened_as_displayed": "Tuesday, 22 September 2026, 12:00 AM",
+    "due_as_displayed": "Thursday, 24 September 2026, 9:00 AM",
+    "last_modified_as_displayed": "Thursday, 24 September 2026, 10:42 AM",
+    "time_remaining_as_displayed": "Assignment was submitted 1 hour 42 mins late",
+    "submitted_filename": "G24_Blind_Submission.zip",
+    "timezone": "not shown in screenshot; no timezone inferred",
+    "screenshot_path": "evidence/submission_screenshots/blind_submission_status.png",
+    "meaning": "Records the platform display; no inference about marking penalties or any approved extension."
+  },
+  "scope": "No full numerical rerun. Preserve the three user-confirmed QMplus ZIPs byte-for-byte. Final report, contribution statement and self-assessment are outside this requested repository update."
+}

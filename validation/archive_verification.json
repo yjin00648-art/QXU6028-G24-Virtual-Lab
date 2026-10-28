@@ -1,0 +1,31 @@
+{
+  "kind": "archive-consistency-check-without-numerical-rerun",
+  "group": "G24",
+  "datasets": {
+    "regular": {
+      "raw_manifest_files_verified": 9,
+      "EF_trajectory_length": 58,
+      "map_length": 100,
+      "recorded_pipeline_commit": "51814957ddcb8d34d4153c386cf2194f7be0b541"
+    },
+    "blind": {
+      "raw_manifest_files_verified": 9,
+      "EF_trajectory_length": 50,
+      "map_length": 100,
+      "recorded_pipeline_commit": "51814957ddcb8d34d4153c386cf2194f7be0b541"
+    }
+  },
+  "evidence_files_verified": 7,
+  "submitted_ZIPs_verified": 3,
+  "L1_submitted_PNGs": 5,
+  "regular_final_source": "L3/recorded/results.json (byte-identical)",
+  "blind_final_source": "G24_Blind_Submission.zip (byte-identical)",
+  "L1_and_L2_fields_match_submitted_checkpoints": true,
+  "historical_blind_files_match_all_three_recorded_directories": true,
+  "blind_submission_status": "Submitted for grading",
+  "blind_last_modified_as_displayed": "Thursday, 24 September 2026, 10:42 AM",
+  "blind_timing_as_displayed": "Assignment was submitted 1 hour 42 mins late",
+  "numerical_analysis_rerun": false,
+  "historical_commit_objects_verified": false,
+  "historical_hashes_preserved_without_replacement": true
+}

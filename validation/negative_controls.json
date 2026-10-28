@@ -1,0 +1,35 @@
+{
+  "run_utc": "2026-10-28T11:41:51.486647+00:00",
+  "kind": "post-audit regression evidence, not a historical September error ledger",
+  "legacy_source_sha256": "8a48577e22e94f26db6da31bb8e9193866dfa03120599374c9de7fcd3377c52d",
+  "entries": [
+    {
+      "id": "E01_fixed_gap_window_on_actual_blind_data",
+      "discovered_on": "2026-10-28",
+      "data_kind": "provided blind data",
+      "legacy": {
+        "exception": "AssertionError",
+        "message": "Preliminary gap optimum lies on the search boundary.",
+        "completed": false
+      },
+      "repaired_model": "hard_gap",
+      "repaired_gap_kT": 3.5306,
+      "repaired_RMS": 0.013790143351586698,
+      "passed": true
+    },
+    {
+      "id": "E02_missing_cone_fallback_on_synthetic_cone",
+      "discovered_on": "2026-10-28",
+      "data_kind": "explicitly synthetic noise-free cone validation control",
+      "legacy": {
+        "exception": "AssertionError",
+        "message": "Preliminary gap optimum lies on the search boundary.",
+        "completed": false
+      },
+      "repaired_model": "cone",
+      "repaired_gap_kT": 0.0,
+      "repaired_RMS": 5.445005652175319e-16,
+      "passed": true
+    }
+  ]
+}
