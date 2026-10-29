@@ -32,11 +32,20 @@ The archived regular and blind refined L2 scripts use different fixed search win
 
 Jin Zhengyang stated that all regular L1/L2/L3 code and run figures were complete at **11:15**, and that blind work took place from **11:15 to 12:10**. This is 55 minutes if the same day and clock apply. The statement is retained verbatim in [user_reported_timeline.json](../../evidence/user_reported_timeline.json).
 
-The user did not explicitly specify an event date or timezone in this statement. Those fields remain unfilled rather than inferred. The stated code-readiness time is a user-provided account; it does not independently verify the code snapshot, the historical Git object, or whether the algorithm remained unchanged during the blind interval. It is not directly compared with the platform clock below.
+The user subsequently clarified that the operating times should be treated as **Singapore time (UTC+8)** and the screenshot as **UK local time**. The conversion uses the associated 24 September 2026 session date from the screenshot and preserved run log; the clarification did not separately restate the date. On that date the UK was on BST (UTC+1), so Singapore was seven hours ahead. The government clock-change dates were checked at [GOV.UK](https://www.gov.uk/when-do-the-clocks-change), with conversions calculated using Python zoneinfo.
+
+| Event | Singapore (UTC+8) | UK (BST, UTC+1) |
+| --- | --- | --- |
+| Regular code and figures ready, as reported | 11:15 | 04:15 |
+| Blind work, as reported | 11:15-12:10 | 04:15-05:10 |
+| Platform due time | 16:00 | 09:00 |
+| Platform last modified/submission time | 17:42 | 10:42 |
+
+The reported computational work lasted 55 minutes; the platform submission was recorded five hours and 32 minutes after the reported blind-work end. These are distinct events, and no reason for the interval is inferred. This account does not independently verify the code snapshot, the historical Git object, or an unchanged algorithm.
 
 ### Preserved platform receipt and recorded hash
 
-The user-supplied QMplus screenshot shows Attempt 1, Submitted for grading, Not graded, and last modified 24 September 2026 at 10:42 AM. It shows a 9:00 AM due time and states submission was 1 hour 42 minutes late. The timezone is not displayed; no penalty or extension decision is inferred.
+The user-supplied QMplus screenshot shows Attempt 1, Submitted for grading, Not graded, and last modified 24 September 2026 at 10:42 AM. It shows a 9:00 AM due time and states submission was 1 hour 42 minutes late. Although the timezone is not printed in the image, the user has identified it as UK local time. The original display is retained alongside the timezone interpretation and normalized values in the receipt JSON; no penalty or extension decision is inferred.
 
 The recorded pipeline hash is 51814957ddcb8d34d4153c386cf2194f7be0b541. Its underlying Git object has not been recovered from the supplied materials. The timing screenshot and preserved hash text do not independently establish that source object or prove compliance with the original frozen-code condition. The user has confirmed this October repository is their first GitHub repository.
 

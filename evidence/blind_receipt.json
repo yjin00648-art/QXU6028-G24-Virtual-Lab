@@ -8,7 +8,23 @@
   "last_modified_as_displayed": "Thursday, 24 September 2026, 10:42 AM",
   "time_remaining_as_displayed": "Assignment was submitted 1 hour 42 mins late",
   "submitted_filename": "G24_Blind_Submission.zip",
-  "timezone": "not shown in screenshot; no timezone inferred",
+  "timezone": "not printed in screenshot; subsequently identified by the user as UK local time",
   "screenshot_path": "evidence/submission_screenshots/blind_submission_status.png",
-  "meaning": "Records the platform display; no inference about marking penalties or any approved extension."
+  "meaning": "Preserves the platform display and adds user-specified timezone interpretation. No marking penalty or extension is inferred.",
+  "timezone_source": "Jin Zhengyang clarification on 2026-10-29",
+  "iana_timezone": "Europe/London",
+  "timezone_abbreviation_on_displayed_date": "BST",
+  "utc_offset_on_displayed_date": "+01:00",
+  "due_normalized": {
+    "UK": "2026-09-24T09:00:00+01:00",
+    "Singapore": "2026-09-24T16:00:00+08:00",
+    "UTC": "2026-09-24T08:00:00+00:00"
+  },
+  "last_modified_normalized": {
+    "UK": "2026-09-24T10:42:00+01:00",
+    "Singapore": "2026-09-24T17:42:00+08:00",
+    "UTC": "2026-09-24T09:42:00+00:00"
+  },
+  "clock_change_reference": "https://www.gov.uk/when-do-the-clocks-change",
+  "conversion_method": "Python zoneinfo: Europe/London and Asia/Singapore; 24 September 2026 is within British Summer Time."
 }

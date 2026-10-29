@@ -2,7 +2,7 @@
 
 Record completed: **28 October 2026**. **Checked by: Jin Zhengyang.**
 
-Timeline addendum, **29 October 2026**: Jin Zhengyang reported completion of all regular L1/L2/L3 code and run figures at 11:15, followed by blind work from 11:15 to 12:10. The event date and timezone were not explicitly supplied. The original statement is preserved in [user_reported_timeline.json](../evidence/user_reported_timeline.json) and discussed in the [blind record](ai_usage/BLIND.md). It is recorded as a user account, separately from the platform receipt and historical source-version verification.
+Timeline addendum, **29 October 2026**: Jin Zhengyang reported completion of all regular L1/L2/L3 code and run figures at 11:15, followed by blind work from 11:15 to 12:10. The user then designated the operating times as Singapore (UTC+8) and screenshot times as UK local time. Using the associated 24 September 2026 session date, UK time was BST (UTC+1): these operating times correspond to 04:15 and 04:15-05:10 UK; the platform's 10:42 UK submission corresponds to 17:42 Singapore. The date association is taken from the original screenshot/run log rather than a separately repeated date in the clarification. The statements and conversions are preserved in [user_reported_timeline.json](../evidence/user_reported_timeline.json) and the [blind record](ai_usage/BLIND.md), separately from historical source-version verification.
 
 Tool: ChatGPT Work / OpenAI Codex, as identified in the existing L1/L2 records and current work session. An exact historical model version was not recorded and is not inferred.
 

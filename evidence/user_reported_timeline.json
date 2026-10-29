@@ -8,8 +8,35 @@
   "blind_work_end_as_reported": "12:10",
   "duration_minutes_if_same_day_and_clock": 55,
   "event_date_as_explicitly_reported": null,
-  "timezone_as_explicitly_reported": null,
+  "timezone_as_explicitly_reported": "Asia/Singapore (UTC+8), designated by the user",
   "interpretation": "User-supplied code/figure readiness time and blind-work interval. The statement does not independently identify a code snapshot, verify a historical Git object, or establish that the algorithm remained unchanged.",
-  "relationship_to_QMplus_receipt": "Separate source from evidence/blind_receipt.json. The screenshot shows 24 September 2026, 10:42 AM without a timezone. Do not infer chronological agreement or contradiction until the reported event date and timezones are known.",
-  "historical_results_and_hashes_modified": false
+  "relationship_to_QMplus_receipt": "Operations use Singapore UTC+8 and the screenshot uses UK local time, identified by the user. On the associated 24 September 2026 session date the UK is BST UTC+1, so 10:42 UK equals 17:42 Singapore. User-reported computational work ending at 12:10 Singapore and platform submission at 17:42 Singapore are distinct events. This conversion does not independently verify the source code version.",
+  "historical_results_and_hashes_modified": false,
+  "timezone_clarification_recorded_on": "2026-10-29",
+  "verbatim_timezone_clarification": "截图时间为UK时间，真实时间你可以认为是新加坡（UTC+8）时间",
+  "event_date_used_for_conversion": "2026-09-24",
+  "event_date_basis": "Associated blind-session date from the supplied screenshot and preserved run log. The latest clarification specifies timezones rather than separately restating the event date.",
+  "regular_code_and_figures_ready_normalized": {
+    "UK": "2026-09-24T04:15:00+01:00",
+    "Singapore": "2026-09-24T11:15:00+08:00",
+    "UTC": "2026-09-24T03:15:00+00:00"
+  },
+  "blind_work_start_normalized": {
+    "UK": "2026-09-24T04:15:00+01:00",
+    "Singapore": "2026-09-24T11:15:00+08:00",
+    "UTC": "2026-09-24T03:15:00+00:00"
+  },
+  "blind_work_end_normalized": {
+    "UK": "2026-09-24T05:10:00+01:00",
+    "Singapore": "2026-09-24T12:10:00+08:00",
+    "UTC": "2026-09-24T04:10:00+00:00"
+  },
+  "duration_minutes": 55,
+  "submission_receipt_normalized": {
+    "UK": "2026-09-24T10:42:00+01:00",
+    "Singapore": "2026-09-24T17:42:00+08:00",
+    "UTC": "2026-09-24T09:42:00+00:00"
+  },
+  "clock_change_reference": "https://www.gov.uk/when-do-the-clocks-change",
+  "calculated_minutes_from_reported_blind_end_to_receipt": 332
 }
