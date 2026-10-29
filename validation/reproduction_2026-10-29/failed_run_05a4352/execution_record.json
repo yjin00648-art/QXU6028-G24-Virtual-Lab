@@ -1,0 +1,33 @@
+{
+  "kind": "fresh-clone-final-reproduction",
+  "started_utc": "2026-10-29T04:07:40.839673+00:00",
+  "source_commit": "05a4352861bffb27fa2ce7d8bf40c37c25028bc0",
+  "source_tree": "b6a8798a2afa82643b808074c8a860f24d6e2b87",
+  "clone_from": "https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab.git",
+  "clean_worktree_before": true,
+  "command": "python reproduce.py --dataset all",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.8"
+  },
+  "historical_sha256_before": {
+    "results.json": "b2214ba1ac483895782a9816640cd7ee197048edf15c6cd492a5391c5fd9e8cb",
+    "blind_results.json": "c968b19d8eb48053f1d7395645892a485d495a5b7ad9a6ffdff8a4c653b2016f",
+    "submissions/blind/blind_results.json": "c968b19d8eb48053f1d7395645892a485d495a5b7ad9a6ffdff8a4c653b2016f",
+    "submissions/blind/run_log.txt": "e822b1c33aa4fb801385b1979d115826f3272c954a42fe5a9787bd7b8fb8c289",
+    "submissions/blind/pipeline_commit.txt": "86a19db322e8677a248176f2f195d3c7dc29557ffb9c4ca172da34fafd84b169"
+  },
+  "finished_utc": "2026-10-29T04:08:08.881766+00:00",
+  "exit_code": 1,
+  "clean_worktree_after": true,
+  "historical_sha256_after": {
+    "results.json": "b2214ba1ac483895782a9816640cd7ee197048edf15c6cd492a5391c5fd9e8cb",
+    "blind_results.json": "c968b19d8eb48053f1d7395645892a485d495a5b7ad9a6ffdff8a4c653b2016f",
+    "submissions/blind/blind_results.json": "c968b19d8eb48053f1d7395645892a485d495a5b7ad9a6ffdff8a4c653b2016f",
+    "submissions/blind/run_log.txt": "e822b1c33aa4fb801385b1979d115826f3272c954a42fe5a9787bd7b8fb8c289",
+    "submissions/blind/pipeline_commit.txt": "86a19db322e8677a248176f2f195d3c7dc29557ffb9c4ca172da34fafd84b169"
+  },
+  "historical_records_unchanged": true
+}

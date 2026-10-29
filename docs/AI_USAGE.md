@@ -40,6 +40,17 @@ The user confirmed: **this is their first GitHub repository; they had not create
 
 Four older local Git commits are present in the supplied project archive and preserved in a bundle. A local Git object does not establish a pre-existing GitHub repository, who personally operated Git, or a student's contribution. Missing objects referenced by historical result hashes are therefore described as unavailable source-version evidence, not as a missing earlier GitHub repository. The original hashes are retained without replacement. See [history/README.md](../history/README.md).
 
-## Scope of this update
+## Scope of the 28 October documentation update
 
 This update writes AI-use records and clarifies provenance. It does not change raw data, numerical results, original submission ZIPs or original blind files. No six-stage numerical rerun or QMplus resubmission was performed. The formal report, signed contribution statement and self-assessment remain outside the user's requested repository update.
+
+
+## 29 October 2026 report drafting and authorised full reproduction
+
+The user separately requested an English report draft following the supplied Guidance, Times New Roman 12 pt and Vancouver references. AI assisted with structure, explanations, reference checking and figures; the draft discloses unsupported historical-version claims rather than inventing evidence. That report, contribution signatures and self-assessment have not been uploaded to this repository.
+
+The user then explicitly authorised a complete extra run, correction of failures and upload to GitHub. The initial current-code run at 73c4640 completed both datasets and matched the archived scientific values. AI identified that the draft's five panel groups were not yet called by the one-command runner and added that coverage at 05a4352. A fresh clone then stopped on a truncated L3_method.png. Validated atomic PNG output and two regression tests were added at 58eb990.
+
+A new GitHub clone at 58eb990 completed all six stages and the five report panel groups. Strict comparison passed for 344 numeric entries and all scientific labels/decisions; 12 tests passed. The only exempted result field is pipeline_commit, which must identify the new run's actual source. Original submission data, root results and blind three files are unchanged. Failure/success logs and source/output hashes are retained in [the reproduction evidence](../validation/reproduction_2026-10-29/README.md).
+
+Reviewer designated by the user remains **Jin Zhengyang**. These are tool-executed checks; this entry does not claim an additional human sign-off. See [the detailed record](ai_usage/REPRODUCTION_2026-10-29.md).

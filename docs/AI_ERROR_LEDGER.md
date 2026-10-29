@@ -24,3 +24,21 @@ E01、E02是两条真实复现的物理模型相关实现缺陷。它们不等�
 - 旧一键流程未完整接入带隙扫描图。共享绘图代码已接入扫描、实测轨迹连线和双通道顺序图；本次未重新执行全套绘图，不能声称这些图已由本次运行生成。
 - 用户本次L1包已有全部五张PNG，不能再称“四张图缺失”。缺少对应旧Git提交对象是另一项版本证据限制。
 - 用户新提供的盲测截图已补充提交状态和显示时间；如实记录平台显示的迟交1小时42分，不将其改写为按时提交。
+
+
+## E03: report panel groups were outside the one-command runner (29 October)
+
+- Detection: the initial complete six-stage replay passed, but the five composite figures in the English report draft still depended on a separate drafting script and earlier local tables.
+- Correction: commit 05a4352 adds g24lab/report_figures.py and calls it at the end of the all-dataset command. It reads the newly computed CSV/JSON and untouched inputs, with no private workspace path or archived numerical table.
+- Verification: the final clean-clone run generated all five PNG/SVG figure groups, validated their numerical sources, and matched the inspected draft panels. Figure 2 uses the newly computed global residual scan.
+- Classification: reproducibility coverage, not an additional physics-concept error.
+
+## E04: incomplete PNG in a fresh-clone replay (29 October)
+
+- Observed at commit 05a4352: regular L3_method.png was 196764 bytes and stopped before the third IDAT checksum. The pipeline correctly stopped with an integrity error. The retained file matches the prefix of the initial complete 392530-byte image.
+- Evidence: [failed stdout](../validation/reproduction_2026-10-29/failed_run_05a4352/full_replay_stdout.txt) and [failure metadata](../validation/reproduction_2026-10-29/failed_run_05a4352/failure.json).
+- Correction at 58eb990: render PNG bytes in memory; validate and decode them; write, flush and read back a temporary file; atomically replace the final path. The final PNG integrity gate remains active.
+- Verification: a large-image decode test passes; truncated bytes are rejected while a previous valid image remains intact. All 12 tests and the final fresh-clone six-stage command pass. Original inputs and scientific results are unchanged.
+- Limit: the incomplete file is observed; its underlying rendering/filesystem cause is not independently established. This is an output-integrity issue, not an additional physics error.
+
+The earlier note that full plotting had not been run describes the 28 October scope. It is superseded for the current code by [the successful 29 October reproduction](../validation/reproduction_2026-10-29/README.md). The missing September source object and the evidential limit on two independent physics-concept errors remain unchanged.

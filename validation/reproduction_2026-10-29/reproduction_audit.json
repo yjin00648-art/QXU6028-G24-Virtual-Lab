@@ -1,0 +1,159 @@
+{
+  "kind": "post-audit-reproduction-not-historical-blind-test",
+  "checked_utc": "2026-10-29T04:14:32.812763+00:00",
+  "command": "python reproduce.py --dataset all",
+  "archive_checks": {
+    "kind": "archive-consistency-check-without-numerical-rerun",
+    "group": "G24",
+    "datasets": {
+      "regular": {
+        "raw_manifest_files_verified": 9,
+        "EF_trajectory_length": 58,
+        "map_length": 100,
+        "recorded_pipeline_commit": "51814957ddcb8d34d4153c386cf2194f7be0b541"
+      },
+      "blind": {
+        "raw_manifest_files_verified": 9,
+        "EF_trajectory_length": 50,
+        "map_length": 100,
+        "recorded_pipeline_commit": "51814957ddcb8d34d4153c386cf2194f7be0b541"
+      }
+    },
+    "evidence_files_verified": 7,
+    "submitted_ZIPs_verified": 3,
+    "L1_submitted_PNGs": 5,
+    "regular_final_source": "L3/recorded/results.json (byte-identical)",
+    "blind_final_source": "G24_Blind_Submission.zip (byte-identical)",
+    "L1_and_L2_fields_match_submitted_checkpoints": true,
+    "historical_blind_files_match_all_three_recorded_directories": true,
+    "blind_submission_status": "Submitted for grading",
+    "blind_last_modified_as_displayed": "Thursday, 24 September 2026, 10:42 AM",
+    "blind_timing_as_displayed": "Assignment was submitted 1 hour 42 mins late",
+    "numerical_analysis_rerun": false,
+    "historical_commit_objects_verified": false,
+    "historical_hashes_preserved_without_replacement": true
+  },
+  "datasets": {
+    "regular": {
+      "all_scientific_fields_match": true,
+      "numeric_scalars_compared": 176,
+      "relative_tolerance": 1e-10,
+      "absolute_tolerance": 1e-12,
+      "excluded_field": "pipeline_commit (new run records its real source commit)",
+      "differences": [],
+      "source_commit": "58eb990c11c72b8a4e8584c8d9ea2def72337d54",
+      "environment": {
+        "python": "3.12.14",
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "matplotlib": "3.10.8"
+      },
+      "source_hashes_verified": true,
+      "output_hashes_verified": true,
+      "output_file_count": 38,
+      "validation": {
+        "schema_keys_match": true,
+        "required_values_filled_and_finite": true,
+        "EF_length": 58,
+        "map_length": 100,
+        "map_order": "row-major",
+        "map_zero_mean": true,
+        "map_matches_csv": true,
+        "PNG_count_verified": 12,
+        "bootstrap_replicates": 200,
+        "bootstrap_interval_verified": true
+      },
+      "L2_validation": {
+        "group": "G24",
+        "dataset_set": "regular",
+        "gap_mode": "refined",
+        "gap_domain_kT": [
+          0.5,
+          8.0
+        ],
+        "energy_grid_points": 4000,
+        "EF_grid_points": 400,
+        "trajectory_length": 58,
+        "cone_residual": 0.06414721773684373,
+        "best_hard_gap_residual": 0.010805887185505281,
+        "selected_residual": 0.010805887185505281,
+        "selected_gap_kT": 2.073,
+        "bootstrap_replicates": 200,
+        "bootstrap_seed": 20260923,
+        "bootstrap_gap_median_kT": 2.06,
+        "bootstrap_gap_p16_kT": 2.0,
+        "bootstrap_gap_p84_kT": 2.13,
+        "bootstrap_hard_gap_fraction": 1.0,
+        "gap_boundary_warning": false,
+        "all_outputs_finite": true
+      },
+      "historical_result_sha256": "b2214ba1ac483895782a9816640cd7ee197048edf15c6cd492a5391c5fd9e8cb",
+      "new_result_sha256": "19b4c992df5417bb52ae7ae2cdacbcee40c5e76598e2e2e5a2f2a90dda357329"
+    },
+    "blind": {
+      "all_scientific_fields_match": true,
+      "numeric_scalars_compared": 168,
+      "relative_tolerance": 1e-10,
+      "absolute_tolerance": 1e-12,
+      "excluded_field": "pipeline_commit (new run records its real source commit)",
+      "differences": [],
+      "source_commit": "58eb990c11c72b8a4e8584c8d9ea2def72337d54",
+      "environment": {
+        "python": "3.12.14",
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "matplotlib": "3.10.8"
+      },
+      "source_hashes_verified": true,
+      "output_hashes_verified": true,
+      "output_file_count": 39,
+      "validation": {
+        "schema_keys_match": true,
+        "required_values_filled_and_finite": true,
+        "EF_length": 50,
+        "map_length": 100,
+        "map_order": "row-major",
+        "map_zero_mean": true,
+        "map_matches_csv": true,
+        "PNG_count_verified": 12,
+        "bootstrap_replicates": 200,
+        "bootstrap_interval_verified": true
+      },
+      "L2_validation": {
+        "group": "G24",
+        "dataset_set": "blind",
+        "gap_mode": "refined",
+        "gap_domain_kT": [
+          0.5,
+          8.0
+        ],
+        "energy_grid_points": 4000,
+        "EF_grid_points": 400,
+        "trajectory_length": 50,
+        "cone_residual": 0.10326634811620902,
+        "best_hard_gap_residual": 0.013790143351586698,
+        "selected_residual": 0.013790143351586698,
+        "selected_gap_kT": 3.5306,
+        "bootstrap_replicates": 200,
+        "bootstrap_seed": 20260923,
+        "bootstrap_gap_median_kT": 3.52,
+        "bootstrap_gap_p16_kT": 3.43,
+        "bootstrap_gap_p84_kT": 3.6515999999999997,
+        "bootstrap_hard_gap_fraction": 1.0,
+        "gap_boundary_warning": false,
+        "all_outputs_finite": true
+      },
+      "historical_result_sha256": "c968b19d8eb48053f1d7395645892a485d495a5b7ad9a6ffdff8a4c653b2016f",
+      "new_result_sha256": "caa13346a71c266d7f6d179a1d6da8a021e7d60e49bed7f2231d7fdf82a294de"
+    }
+  },
+  "source_commit": "58eb990c11c72b8a4e8584c8d9ea2def72337d54",
+  "report_figure_groups": 5,
+  "report_figure_hashes_verified": true,
+  "historical_blind_records_sha256": {
+    "submissions/blind/blind_results.json": "c968b19d8eb48053f1d7395645892a485d495a5b7ad9a6ffdff8a4c653b2016f",
+    "submissions/blind/run_log.txt": "e822b1c33aa4fb801385b1979d115826f3272c954a42fe5a9787bd7b8fb8c289",
+    "submissions/blind/pipeline_commit.txt": "86a19db322e8677a248176f2f195d3c7dc29557ffb9c4ca172da34fafd84b169"
+  },
+  "status": "PASS"
+}

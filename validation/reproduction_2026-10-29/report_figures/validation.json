@@ -1,0 +1,40 @@
+{
+  "L1_operating_result_matches": true,
+  "C2_crossing_eV": 0.07276188988765439,
+  "C4_crossing_eV": 0.15734690713571076,
+  "L2_assigned_trajectory_matches": true,
+  "L2_selected_RMS": 0.010805887185505281,
+  "retained_EF_intervals_rows": 58,
+  "L3_retained_map_matches": true,
+  "L3_noise_quantile_matches": true,
+  "L3_PSF_matches": true,
+  "pipeline_commit": "58eb990c11c72b8a4e8584c8d9ea2def72337d54",
+  "purpose": "Recomputed figures for the English coursework report draft",
+  "figure_count": 5,
+  "figure_panels": {
+    "1": "L1 n_B, n_F and correction factor",
+    "2": "L2 joint fit, separate Hall/resistance overlays and residual search",
+    "3": "L2 ordered Fermi trajectory and paired-resampling bands",
+    "4": "Regular and blind maps on one percentage scale",
+    "5": "L3 eta sensitivity, two PSFs and 500 noise maxima"
+  },
+  "input_sha256": {
+    "regular/results.json": "19b4c992df5417bb52ae7ae2cdacbcee40c5e76598e2e2e5a2f2a90dda357329",
+    "blind/results.json": "caa13346a71c266d7f6d179a1d6da8a021e7d60e49bed7f2231d7fdf82a294de",
+    "regular/L2_calculations.csv": "33ac90e86abc961251674549457c77cc797ac6d375e13220f28f037bb59f4ea0",
+    "regular/L3_eta_sensitivity.csv": "f814edc649d45e5b82f13f2fd99b02a33db152d734d9a3f6e9a06f3bb7381df9",
+    "regular/L3_noise_maxima.csv": "b898880c07ef80c932a3f53d13d2e47f8422e0ce276614b02cdda2021b5f2e40"
+  },
+  "output_sha256": {
+    "figure1.png": "f6452c6504631ec1cdd2fb8c5718a96d25fd0d735912ec9d4106846f1b2f7b53",
+    "figure1.svg": "b2fae72bc495e6730427fd0184822c20631621171ed784752a7bba81d4f9b721",
+    "figure2.png": "7f9ca78bc50ead32e61bd21de27432d7dc910b04edb18f05348250a4bbee2bbb",
+    "figure2.svg": "c58baabee5d915e2147097fb06a0e6966f636d568f614f06e71be6a6d94d824d",
+    "figure3.png": "d7f4bb1bd06c77ac54fc99fbef7b14de323fbd74b12d046c2f5f237d7b1a5f56",
+    "figure3.svg": "dbdae30c9e28750f76d304632d5c67fd0fb23572f62bd0e6fffdbfffde1fe075",
+    "figure4.png": "c66a6a412c24a2d2875b753de5b6cc2061bf3cd2034d1cf4c3ba7504fc8a54ff",
+    "figure4.svg": "aa42a3239ae46b30ee86d698a7ed351ef0893255b3199f29530b3bd3ca29f69c",
+    "figure5.png": "5221e64f3ceefc4c2d11dfeeb9119af9f442dce85eaf241bb344a45dd65e4326",
+    "figure5.svg": "37e187202050a0c497e2d6076c6fc96a913e129cc606fc6cc33b2d1784fe9ca6"
+  }
+}

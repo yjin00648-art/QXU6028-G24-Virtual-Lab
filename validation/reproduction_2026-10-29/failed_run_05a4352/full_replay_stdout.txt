@@ -1,0 +1,84 @@
+G24 shared pipeline replay: regular
+UTC: 2026-10-29T04:07:41.372137+00:00
+Pipeline commit: 05a4352861bffb27fa2ce7d8bf40c37c25028bc0
+New replay, not the historical submission.
+Configuration: {"bootstrap_seed": 20260923, "gap_mode": "refined", "noise_seed": 20260924}
+
+
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m g24lab.l1 --data-dir /tmp/g24-inputs-dokhe06j --output-dir /workspace/scratch/0cf17bc21b10/verified-reproduction/generated/shared/regular --pipeline-commit 05a4352861bffb27fa2ce7d8bf40c37c25028bc0
+G24 L1 result
+Exact operating point: E_F = 0.1409005293 eV
+Band-edge carrier count: n_band = 1.819046e+12 cm^-2
+Fermi-referenced carrier count: n_F = 5.073654e+11 cm^-2
+Correction factor: C = n_band/n_F = 3.585278
+Band-edge mobility estimate: 5.781247e+03 cm^2 V^-1 s^-1
+Corrected mobility: 2.072738e+04 cm^2 V^-1 s^-1
+
+Interpretation: the band-edge method reports 3.585 times the Fermi-referenced carrier count, an overestimate of 258.5% relative to n_F. At fixed sheet resistivity, mobility is therefore underestimated by the same factor. Any carrier-count-normalised sensor sensitivity that scales as 1/n should be recalibrated upward by 3.585 times.
+
+C=2 crossing: 0.0727618899 eV
+C=4 crossing: 0.1573469071 eV
+Outputs: /workspace/scratch/0cf17bc21b10/verified-reproduction/generated/shared/regular
+
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m g24lab.l2 --data-dir /tmp/g24-inputs-dokhe06j --output-dir /workspace/scratch/0cf17bc21b10/verified-reproduction/generated/shared/regular --pipeline-commit 05a4352861bffb27fa2ce7d8bf40c37c25028bc0 --gap-mode refined --seed 20260923
+G24 regular: shared L2 pipeline (refined)
+Selected model: hard_gap
+Selected Eg/kBT: 2.0730
+Eg at 300 K: 0.05359119 eV
+Cone RMS: 0.0641472177
+Best hard-gap RMS: 0.0108058872
+Bootstrap median / p16 / p84 kBT: 2.060000 / 2.000000 / 2.130000
+Hard-gap selection fraction: 1.000
+Bootstrap replicates: 200; seed: 20260923
+Gap domain: 0.50--8.00 kBT for both datasets; no fitted-gap-specific windows.
+Refined mode scans the whole domain at 0.01 kBT, then 0.001 and 0.0001 locally.
+Course mode uses the published 0.25-kBT grid. Refined-mode permission is based on the user's earlier clarification, not an independently verified written course amendment.
+Hall signs, separate normalisation, joint nearest-EF assignment and the 15% selection rule are retained.
+This is a new replay, not a claim about the historic frozen blind-test pipeline.
+
+
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m g24lab.l3 --data-dir /tmp/g24-inputs-dokhe06j --output-dir /workspace/scratch/0cf17bc21b10/verified-reproduction/generated/shared/regular --pipeline-commit 05a4352861bffb27fa2ce7d8bf40c37c25028bc0 --base-results /workspace/scratch/0cf17bc21b10/verified-reproduction/generated/shared/regular/results.json --seed 20260924
+eta0: 0.001330992463
+max|m|: 0.04069367
+resolution: 1.444295 probe pitches
+delta95: 4.051695296e-06
+decision: clear fail
+checkpoint: /workspace/scratch/0cf17bc21b10/verified-reproduction/generated/shared/regular/G24_L3_Checkpoint.zip
+
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m g24lab.carrier_figures --data-dir /tmp/g24-inputs-dokhe06j --results /workspace/scratch/0cf17bc21b10/verified-reproduction/generated/shared/regular/results.json --output-dir /workspace/scratch/0cf17bc21b10/verified-reproduction/generated/shared/regular
+G24 supplementary carrier-transport figures
+Model: hard_gap, Eg/kBT = 2.073, T = 300.0 K
+L1 operating point marked at EF = 0.1409005293 eV
+
+The electron-like and hole-like populations use the course Fermi-window integrals with the G24 density-of-states scale. The Hall coefficient and sheet resistance follow RH=(p-n)/(p+n)^2 and Rs=1/(p+n), then each curve is normalised according to the L2 method. Measured repeat means are projected to their nearest points on the joint RH-Rs model curve.
+
+These four plots are supplementary. They do not replace the official L1 factor-sweep figure C(EF), which remains in the checkpoint.
+
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/PIL/PngImagePlugin.py", line 220, in crc
+    crc2 = i32(self.fp.read(4))
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/PIL/_binary.py", line 96, in i32be
+    return unpack_from(">I", c, o)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: unpack_from requires a buffer of at least 4 bytes for unpacking 4 bytes at offset 0 (actual buffer size is 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/scratch/0cf17bc21b10/verified-reproduction/reproduce.py", line 150, in <module>
+    main()
+  File "/workspace/scratch/0cf17bc21b10/verified-reproduction/reproduce.py", line 142, in main
+    replay(dataset, output, commit, config, args.data_dir.resolve() if args.data_dir else None)
+  File "/workspace/scratch/0cf17bc21b10/verified-reproduction/reproduce.py", line 99, in replay
+    checks = reporting.validate(results, inputs, out)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0cf17bc21b10/verified-reproduction/g24lab/reporting.py", line 59, in validate
+    image.verify()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/PIL/PngImagePlugin.py", line 860, in verify
+    self.png.verify()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/PIL/PngImagePlugin.py", line 250, in verify
+    self.crc(cid, ImageFile._safe_read(self.fp, length))
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/PIL/PngImagePlugin.py", line 226, in crc
+    raise SyntaxError(msg) from e
+SyntaxError: broken PNG file (incomplete checksum in b'IDAT')

@@ -3,6 +3,15 @@
 本仓库保存常规 L1/L2/L3、盲测 L1/L2/L3 的原始输入、分析代码、图表和结果，以及用户确认已上传 QMplus 的三个 ZIP。
 2026-10-28 的整理更新仅核对和上传已有结果。2026-10-29 用户另行授权完整复现；新运行与原始提交分别记录，不覆盖历史结果。
 
+## 2026-10-29 完整复现已通过
+
+从 GitHub 新克隆源版本 [58eb990](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/commit/58eb990c11c72b8a4e8584c8d9ea2def72337d54)，成功执行 `python reproduce.py --dataset all`。常规176项、盲测168项数值及所有科学标签/判定均与原归档一致；两套数据各完成200次L2重采样和500次L3噪声重建。另自动生成报告五组组合图，12项测试通过。
+
+记录见 [完整复现说明及日志](validation/reproduction_2026-10-29/README.md) 和 [机器核对报告](validation/reproduction_2026-10-29/reproduction_audit.json)。中途实际出现的L3 PNG截断失败及修复证据也保留在该目录。原始盲测三文件、提交包与根目录历史结果不变；新结果记录真实源提交号，位于核验目录的 `regular/results.json`、`blind/results.json`。
+
+这次运行验证当前代码的可复现性，不倒填九月份的冻结时间或未恢复的历史Git对象。
+
+
 ## 结果与实际提交文件
 
 | 路径 | 内容与来源 |
@@ -106,7 +115,7 @@ python -m unittest discover -s tests -v
 python -m tests.negative_controls
 ```
 
-此前已通过10项数值测试；反例结果保存在 `validation/negative_controls.json`，人工记录范围见 `docs/AI_USAGE.md` 和 `docs/AI_ERROR_LEDGER.md`。
+2026-10-29 在已提交源版本58eb990上通过12项测试（10项数值检查、2项PNG完整性回归）。此前的旧代码反例仍保存在 `validation/negative_controls.json`；本次失败/修复和成功运行分别记录在 `validation/reproduction_2026-10-29/`，使用范围见 `docs/AI_USAGE.md` 和 `docs/AI_ERROR_LEDGER.md`。
 
 ## AI 使用记录与检查人
 

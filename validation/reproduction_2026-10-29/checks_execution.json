@@ -1,0 +1,29 @@
+[
+  {
+    "check": "scientific_result_comparison",
+    "started_utc": "2026-10-29T04:14:32.703656+00:00",
+    "finished_utc": "2026-10-29T04:14:32.847456+00:00",
+    "exit_code": 0,
+    "command": [
+      "verify_reproduction.py",
+      "--output-root",
+      "generated/shared"
+    ],
+    "log": "scientific_result_comparison_stdout.txt"
+  },
+  {
+    "check": "regression_tests",
+    "started_utc": "2026-10-29T04:14:32.847488+00:00",
+    "finished_utc": "2026-10-29T04:14:36.242308+00:00",
+    "exit_code": 0,
+    "command": [
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "log": "regression_tests_stdout.txt"
+  }
+]

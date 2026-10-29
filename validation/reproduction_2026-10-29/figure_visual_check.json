@@ -1,0 +1,17 @@
+{
+  "five_report_figures_pixel_identical_to_visually_checked_prepublication_outputs": {
+    "figure1.png": true,
+    "figure2.png": true,
+    "figure3.png": true,
+    "figure4.png": true,
+    "figure5.png": true
+  },
+  "note": "Figure 2 was inspected after switching to the computed global scan; Figures 1,3,4,5 also match the inspected English draft figures.",
+  "SVG_XML_complete_and_valid": {
+    "figure1.svg": true,
+    "figure2.svg": true,
+    "figure3.svg": true,
+    "figure4.svg": true,
+    "figure5.svg": true
+  }
+}

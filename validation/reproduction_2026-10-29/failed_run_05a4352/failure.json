@@ -1,0 +1,14 @@
+{
+  "source_commit": "05a4352861bffb27fa2ce7d8bf40c37c25028bc0",
+  "exit_code": 1,
+  "file": "regular/L3_method.png",
+  "bytes": 196764,
+  "sha256": "703c3440c6aa61f9409fc837376eee1cf48d7b9b6ecc59227580983a71f97965",
+  "error": "SyntaxError: broken PNG file (incomplete checksum in b'IDAT')",
+  "observed_chunk": "Third IDAT chunk ends at byte 196768 including its CRC; file ended at byte 196764.",
+  "matches_prefix_of_initial_complete_392530_byte_PNG": true,
+  "fix_commit": "58eb990c11c72b8a4e8584c8d9ea2def72337d54",
+  "fix": "Render to memory, verify PNG, write/fsync/read back a temporary file, then atomically replace the target; retain final integrity checks.",
+  "root_cause_limit": "The observation establishes an incomplete file; it does not identify the underlying rendering/filesystem cause.",
+  "classification": "Output-integrity defect, not an additional physics-concept error."
+}

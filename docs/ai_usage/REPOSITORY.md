@@ -34,3 +34,12 @@ The published upload at e4367a773078b546be7341a7a0d21633efa1348a was checked by 
 The user confirmed this is their first GitHub repository, created on 28 October 2026. There is no claim of a prior GitHub remote repository. Four older local Git commits were carried inside supplied project material and are preserved in a bundle; local Git objects do not establish earlier GitHub use or personally performed student work. The unrecovered historical hashes remain disclosed source-version limitations, not a demand for an earlier GitHub repository that the user never created.
 
 Sources: [master log](../AI_USAGE.md), [provenance](../../PROVENANCE.json), [archive checks](../../validation/archive_verification.json), [legacy controls](../../validation/negative_controls.json), [history explanation](../../history/README.md) and [submitted-evidence index](../../evidence/INDEX.json).
+
+
+## Explicit scope change on 29 October 2026
+
+The user subsequently authorised a full additional run and repairs:
+
+> 我明白你的意思了，那请你在仓库中进行额外一次的运行操作吧，若是运行失败请你继续进行修改后上传到github仓库中
+
+This supersedes the earlier no-rerun preference for this operation. The original records remain unchanged. The final clean-clone source is 58eb990c11c72b8a4e8584c8d9ea2def72337d54. Both datasets, all report panel groups, strict scientific-result comparison and 12 regression tests passed. The failed intermediate PNG output and correction are retained rather than omitted. See [the full run record](../../validation/reproduction_2026-10-29/README.md) and [AI operation details](REPRODUCTION_2026-10-29.md).

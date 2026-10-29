@@ -1,0 +1,12 @@
+{
+  "schema_keys_match": true,
+  "required_values_filled_and_finite": true,
+  "EF_length": 58,
+  "map_length": 100,
+  "map_order": "row-major",
+  "map_zero_mean": true,
+  "map_matches_csv": true,
+  "PNG_count_verified": 12,
+  "bootstrap_replicates": 200,
+  "bootstrap_interval_verified": true
+}

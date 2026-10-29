@@ -1,0 +1,17 @@
+test_cone_can_be_selected (test_numerics.NumericalGates.test_cone_can_be_selected) ... ok
+test_course_grid (test_numerics.NumericalGates.test_course_grid) ... ok
+test_global_gap_not_dataset_specific (test_numerics.NumericalGates.test_global_gap_not_dataset_specific) ... ok
+test_input_manifests (test_numerics.NumericalGates.test_input_manifests) ... ok
+test_joint_nearest_ef (test_numerics.NumericalGates.test_joint_nearest_ef) ... ok
+test_l1_reference_ratios (test_numerics.NumericalGates.test_l1_reference_ratios) ... ok
+test_l3_original_dimensions_and_null_mode (test_numerics.NumericalGates.test_l3_original_dimensions_and_null_mode) ... ok
+test_selection_threshold_and_minimum_gap (test_numerics.NumericalGates.test_selection_threshold_and_minimum_gap) ... ok
+test_signed_separate_normalisation (test_numerics.NumericalGates.test_signed_separate_normalisation) ... ok
+test_zero_mean_projection_and_gradient (test_numerics.NumericalGates.test_zero_mean_projection_and_gradient) ... ok
+test_large_png_can_be_fully_decoded (test_plot_io.CompleteFigureOutput.test_large_png_can_be_fully_decoded) ... ok
+test_truncated_png_is_rejected_and_previous_file_survives (test_plot_io.CompleteFigureOutput.test_truncated_png_is_rejected_and_previous_file_survives) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 2.124s
+
+OK

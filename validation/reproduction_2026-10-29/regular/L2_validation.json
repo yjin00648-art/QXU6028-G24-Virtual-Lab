@@ -1,0 +1,24 @@
+{
+  "group": "G24",
+  "dataset_set": "regular",
+  "gap_mode": "refined",
+  "gap_domain_kT": [
+    0.5,
+    8.0
+  ],
+  "energy_grid_points": 4000,
+  "EF_grid_points": 400,
+  "trajectory_length": 58,
+  "cone_residual": 0.06414721773684373,
+  "best_hard_gap_residual": 0.010805887185505281,
+  "selected_residual": 0.010805887185505281,
+  "selected_gap_kT": 2.073,
+  "bootstrap_replicates": 200,
+  "bootstrap_seed": 20260923,
+  "bootstrap_gap_median_kT": 2.06,
+  "bootstrap_gap_p16_kT": 2.0,
+  "bootstrap_gap_p84_kT": 2.13,
+  "bootstrap_hard_gap_fraction": 1.0,
+  "gap_boundary_warning": false,
+  "all_outputs_finite": true
+}
