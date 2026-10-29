@@ -1,0 +1,15 @@
+{
+  "recorded_on": "2026-10-29",
+  "reported_by": "Jin Zhengyang",
+  "evidence_category": "retrospective user statement",
+  "verbatim_user_statement": "那时间就是十一点十五分，这是我完成全部L1,2,3代码以及运行图片的时间，在十一点十五分到十二点十分是我进行盲测的时间",
+  "regular_L1_L2_L3_code_and_run_figures_completed_at_as_reported": "11:15",
+  "blind_work_start_as_reported": "11:15",
+  "blind_work_end_as_reported": "12:10",
+  "duration_minutes_if_same_day_and_clock": 55,
+  "event_date_as_explicitly_reported": null,
+  "timezone_as_explicitly_reported": null,
+  "interpretation": "User-supplied code/figure readiness time and blind-work interval. The statement does not independently identify a code snapshot, verify a historical Git object, or establish that the algorithm remained unchanged.",
+  "relationship_to_QMplus_receipt": "Separate source from evidence/blind_receipt.json. The screenshot shows 24 September 2026, 10:42 AM without a timezone. Do not infer chronological agreement or contradiction until the reported event date and timezones are known.",
+  "historical_results_and_hashes_modified": false
+}

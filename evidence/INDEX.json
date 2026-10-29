@@ -72,5 +72,15 @@
     "screenshot_path": "evidence/submission_screenshots/blind_submission_status.png",
     "meaning": "Records the platform display; no inference about marking penalties or any approved extension."
   },
-  "scope": "No full numerical rerun. Preserve the three user-confirmed QMplus ZIPs byte-for-byte. Final report, contribution statement and self-assessment are outside this requested repository update."
+  "scope": "No full numerical rerun. Preserve the three user-confirmed QMplus ZIPs byte-for-byte. Final report, contribution statement and self-assessment are outside this requested repository update.",
+  "supplementary_user_statements": [
+    {
+      "recorded_on": "2026-10-29",
+      "reported_by": "Jin Zhengyang",
+      "repository_path": "evidence/user_reported_timeline.json",
+      "bytes": 1172,
+      "sha256": "60b579a9ba13dcb8a7833efa207a0c85eeb796cace5754a4d61c49a2dce67c24",
+      "classification": "retrospective user statement; not a platform timestamp or verified historical commit"
+    }
+  ]
 }

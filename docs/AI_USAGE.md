@@ -2,6 +2,8 @@
 
 Record completed: **28 October 2026**. **Checked by: Jin Zhengyang.**
 
+Timeline addendum, **29 October 2026**: Jin Zhengyang reported completion of all regular L1/L2/L3 code and run figures at 11:15, followed by blind work from 11:15 to 12:10. The event date and timezone were not explicitly supplied. The original statement is preserved in [user_reported_timeline.json](../evidence/user_reported_timeline.json) and discussed in the [blind record](ai_usage/BLIND.md). It is recorded as a user account, separately from the platform receipt and historical source-version verification.
+
 Tool: ChatGPT Work / OpenAI Codex, as identified in the existing L1/L2 records and current work session. An exact historical model version was not recorded and is not inferred.
 
 The user supplied the reviewer name and requested completion of the remaining log fields. Reviewer attribution is recorded on the completion date; it does not assign an invented review date or claim that every automated check was personally executed by the reviewer during the original lab.

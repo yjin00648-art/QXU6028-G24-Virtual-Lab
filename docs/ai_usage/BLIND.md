@@ -28,6 +28,14 @@ The archived regular and blind refined L2 scripts use different fixed search win
 
 ## Timing and source-version evidence
 
+### User-reported operating timeline, added 29 October 2026
+
+Jin Zhengyang stated that all regular L1/L2/L3 code and run figures were complete at **11:15**, and that blind work took place from **11:15 to 12:10**. This is 55 minutes if the same day and clock apply. The statement is retained verbatim in [user_reported_timeline.json](../../evidence/user_reported_timeline.json).
+
+The user did not explicitly specify an event date or timezone in this statement. Those fields remain unfilled rather than inferred. The stated code-readiness time is a user-provided account; it does not independently verify the code snapshot, the historical Git object, or whether the algorithm remained unchanged during the blind interval. It is not directly compared with the platform clock below.
+
+### Preserved platform receipt and recorded hash
+
 The user-supplied QMplus screenshot shows Attempt 1, Submitted for grading, Not graded, and last modified 24 September 2026 at 10:42 AM. It shows a 9:00 AM due time and states submission was 1 hour 42 minutes late. The timezone is not displayed; no penalty or extension decision is inferred.
 
 The recorded pipeline hash is 51814957ddcb8d34d4153c386cf2194f7be0b541. Its underlying Git object has not been recovered from the supplied materials. The timing screenshot and preserved hash text do not independently establish that source object or prove compliance with the original frozen-code condition. The user has confirmed this October repository is their first GitHub repository.
