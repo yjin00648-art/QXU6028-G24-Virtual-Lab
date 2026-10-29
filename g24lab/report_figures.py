@@ -13,6 +13,7 @@ import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from .plot_io import save_png
 from matplotlib.colors import TwoSlopeNorm
 from PIL import Image
 from . import l1,l2,l3
@@ -61,7 +62,7 @@ def generate(output_root: Path):
     axs[1].annotate('Operating point',xy=(op,regular['L1']['correction_factor']),xytext=(0.017,5.6),fontsize=10.5,arrowprops={'arrowstyle':'-','color':orange})
     axs[1].set(xlabel=r'$E_F$ (eV)',ylabel=r'$C=n_B/n_F$',title='(b) Counting correction',ylim=(0.7,6.7))
     for ax in axs:ax.axvline(op,color=orange,ls='--',lw=1);ax.grid(alpha=.2)
-    fig.savefig(FIG/'figure1.png',dpi=320);fig.savefig(FIG/'figure1.svg');plt.close(fig)
+    save_png(fig,FIG/'figure1.png',dpi=320);fig.savefig(FIG/'figure1.svg');plt.close(fig)
 
     data=pd.read_csv(REPO/'L2/data/L2_data.csv')
     means=l2.core.prepare_means(data)
@@ -99,14 +100,14 @@ def generate(output_root: Path):
     ax.set(xlabel=r'Gap $E_g/k_BT$',ylabel='Joint RMS residual',title='(d) Gap residual evidence')
     ax.legend(frameon=False,fontsize=9)
     for ax in axs.flat:ax.grid(alpha=.18)
-    fig.savefig(FIG/'figure2.png',dpi=320);fig.savefig(FIG/'figure2.svg');plt.close(fig)
+    save_png(fig,FIG/'figure2.png',dpi=320);fig.savefig(FIG/'figure2.svg');plt.close(fig)
     fig,ax=plt.subplots(figsize=(6.45,3.15),layout='constrained')
     ax.fill_between(indices,trajectory.EF_bootstrap_p16_eV,trajectory.EF_bootstrap_p84_eV,color='#9cc7df',alpha=.6,label='16th–84th percentile')
     ax.plot(indices,assigned,'o-',ms=3,color=blue,label='Central assignment')
     ax.axhline(0,color='0.3',lw=.7)
     ax.set(xlabel='Measurement index',ylabel=r'Assigned $E_F$ (eV)')
     ax.legend(frameon=False,fontsize=10.5,loc='upper left');ax.grid(alpha=.18)
-    fig.savefig(FIG/'figure3.png',dpi=320);fig.savefig(FIG/'figure3.svg');plt.close(fig)
+    save_png(fig,FIG/'figure3.png',dpi=320);fig.savefig(FIG/'figure3.svg');plt.close(fig)
 
     fig,axs=plt.subplots(1,2,figsize=(6.45,3.3),layout='constrained')
     norm=TwoSlopeNorm(vmin=-4.5,vcenter=0,vmax=4.5)
@@ -121,7 +122,7 @@ def generate(output_root: Path):
         ax.set(xlabel='x (probe pitches)',ylabel='y (probe pitches)',title=title,xticks=[-2.7,0,2.7],yticks=[-2.7,0,2.7])
     bar=fig.colorbar(image,ax=list(axs),fraction=.038,pad=.025)
     bar.set_label('Relative deviation (%)',fontsize=11)
-    fig.savefig(FIG/'figure4.png',dpi=320);fig.savefig(FIG/'figure4.svg');plt.close(fig)
+    save_png(fig,FIG/'figure4.png',dpi=320);fig.savefig(FIG/'figure4.svg');plt.close(fig)
 
     A=np.load(REPO/'L3/data/L3_A.npy')
     L=l3.gradient_matrix(10);P=l3.zero_mean_projector(100)
@@ -151,7 +152,7 @@ def generate(output_root: Path):
     ax.axvline(regular['L3']['detection_limit_fraction']*1e6,color=orange,ls='--',label=r'$\delta_{95}$')
     ax.set(xlabel=r'Noise maximum ($10^{-6}$)',ylabel='Count',title='(d) 500 noise-only maps')
     ax.legend(frameon=False);ax.grid(axis='y',alpha=.18)
-    fig.savefig(FIG/'figure5.png',dpi=320);fig.savefig(FIG/'figure5.svg');plt.close(fig)
+    save_png(fig,FIG/'figure5.png',dpi=320);fig.savefig(FIG/'figure5.svg');plt.close(fig)
     
 
     for number in range(1,6):

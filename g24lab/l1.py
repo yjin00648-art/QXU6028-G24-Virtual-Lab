@@ -17,6 +17,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from .plot_io import save_png
 import numpy as np
 import pandas as pd
 
@@ -294,7 +295,7 @@ def main() -> None:
     ax.legend(frameon=False, loc="upper left")
     ax.set_xlim(float(data["EF_eV"].min()) - 0.008, float(data["EF_eV"].max()) + 0.008)
     ax.set_ylim(0.8, max(6.8, float(correction_sweep.max()) + 0.35))
-    fig.savefig(args.output_dir / "L1_factor_sweep.png", dpi=240)
+    save_png(fig, args.output_dir / "L1_factor_sweep.png", dpi=240)
     plt.close(fig)
 
     readme = (

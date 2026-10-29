@@ -17,6 +17,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from .plot_io import save_png
 import numpy as np
 import pandas as pd
 
@@ -106,7 +107,7 @@ def save_population_figure(
     ax.set_ylabel(f"{symbol} (cm$^{{-2}}$)")
     ax.ticklabel_format(axis="y", style="sci", scilimits=(0, 0))
     style_axis(ax, EF_op_eV)
-    fig.savefig(path, dpi=240)
+    save_png(fig, path, dpi=240)
     plt.close(fig)
 
 
@@ -141,7 +142,7 @@ def save_transport_figure(
     ax.set_title(title)
     ax.set_ylabel(ylabel)
     style_axis(ax, EF_op_eV)
-    fig.savefig(path, dpi=240)
+    save_png(fig, path, dpi=240)
     plt.close(fig)
 
 

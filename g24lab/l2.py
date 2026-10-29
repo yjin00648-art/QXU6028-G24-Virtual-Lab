@@ -15,6 +15,7 @@ import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from .plot_io import save_png
 from . import l2_core as core
 
 GAP_MIN = 0.50
@@ -132,7 +133,7 @@ def save_fit(xy, indices, fit, path, label):
     ax.set(xlabel=r"Normalised Hall coefficient, $\widetilde{R}_H$", ylabel=r"Normalised sheet resistance, $\widetilde{R}_s$", title=f"G24 {label}: joint Hall/sheet-resistance fit")
     ax.grid(alpha=0.2)
     ax.legend(loc="lower center", fontsize=8)
-    fig.savefig(path, dpi=210)
+    save_png(fig, path, dpi=210)
     plt.close(fig)
 
 
@@ -150,7 +151,7 @@ def save_sweep(scan, fit, path, label):
         ax.grid(alpha=0.2)
         ax.legend(fontsize=8)
     fig.suptitle(f"G24 {label}: gap-residual scan")
-    fig.savefig(path, dpi=200)
+    save_png(fig, path, dpi=200)
     plt.close(fig)
 
 
@@ -164,7 +165,7 @@ def save_mio(xy, indices, fit, path, label):
     ax.set(xlabel="Measurement index order (MIO)", ylabel="Independently normalised response", title=f"G24 {label}: Hall and sheet resistance by measurement index")
     ax.grid(alpha=0.2)
     ax.legend(fontsize=8, ncol=2)
-    fig.savefig(path, dpi=200)
+    save_png(fig, path, dpi=200)
     plt.close(fig)
 
 

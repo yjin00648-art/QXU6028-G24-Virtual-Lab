@@ -18,6 +18,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from .plot_io import save_png
 import numpy as np
 import pandas as pd
 
@@ -209,7 +210,7 @@ def save_map_figure(
         "G24 L3 zero-mean conductivity map\n"
         f"eta={eta:.6g}; max|m|={vmax:.5f}; delta95={delta95:.2e}; {decision.upper()}"
     )
-    fig.savefig(path, dpi=260)
+    save_png(fig, path, dpi=260)
     plt.close(fig)
 
 
@@ -293,7 +294,7 @@ def save_method_figure(
     ax.legend(frameon=False)
 
     fig.suptitle("G24 L3 inversion, resolution and detection-limit diagnostics", fontsize=16, fontweight="semibold")
-    fig.savefig(path, dpi=240)
+    save_png(fig, path, dpi=240)
     plt.close(fig)
 
 

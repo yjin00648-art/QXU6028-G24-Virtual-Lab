@@ -24,6 +24,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from .plot_io import save_png
 import numpy as np
 import pandas as pd
 
@@ -311,7 +312,7 @@ def save_raw_repeat_figure(
     for ax in axes:
         ax.grid(alpha=0.22)
     fig.tight_layout()
-    fig.savefig(path, dpi=220)
+    save_png(fig, path, dpi=220)
     plt.close(fig)
 
 
@@ -375,7 +376,7 @@ def save_model_figure(
     ax.grid(alpha=0.22)
     ax.legend(frameon=False, loc="lower center")
     fig.tight_layout()
-    fig.savefig(path, dpi=220)
+    save_png(fig, path, dpi=220)
     plt.close(fig)
 
 
@@ -411,7 +412,7 @@ def save_trajectory_figure(
     ax.grid(alpha=0.22)
     ax.legend(frameon=False)
     fig.tight_layout()
-    fig.savefig(path, dpi=220)
+    save_png(fig, path, dpi=220)
     plt.close(fig)
 
 
