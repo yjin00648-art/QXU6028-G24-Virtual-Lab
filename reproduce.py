@@ -140,6 +140,10 @@ def main():
     commit = pipeline_commit()
     for dataset in (("regular", "blind") if args.dataset == "all" else (args.dataset,)):
         replay(dataset, output, commit, config, args.data_dir.resolve() if args.data_dir else None)
+    if args.dataset == "all":
+        with (output / "report_figures_run_log.txt").open("w", encoding="utf-8") as log:
+            run_step([sys.executable, "-m", "g24lab.report_figures", "--output-root", str(output)], log)
+        print(f"Completed five report figure groups: {output / 'report_figures'}", flush=True)
 
 
 if __name__ == "__main__":

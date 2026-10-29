@@ -1,7 +1,7 @@
 # QXU6028 G24 — Virtual Lab
 
 本仓库保存常规 L1/L2/L3、盲测 L1/L2/L3 的原始输入、分析代码、图表和结果，以及用户确认已上传 QMplus 的三个 ZIP。
-2026-10-28 本次更新仅整理、核对和上传已有结果，没有重新运行六项数值计算。
+2026-10-28 的整理更新仅核对和上传已有结果。2026-10-29 用户另行授权完整复现；新运行与原始提交分别记录，不覆盖历史结果。
 
 ## 结果与实际提交文件
 
@@ -81,7 +81,17 @@ python reproduce.py --dataset all
 
 也可选择 `--dataset regular` 或 `--dataset blind`，或通过 `--data-dir` 指向一套完整 G24 输入。新输出写入 `generated/shared/regular/` 和 `generated/shared/blind/`，不会覆盖提交包、根结果或历史 `recorded/`。重复运行用新的 `--output-dir`。
 
-代码与配置须先提交，运行时自动记录实际 HEAD。当前实现会生成新的日志、图表和结果；本次没有执行这项完整运行，不能把归档结果描述为本次新版管线生成。
+完整 `--dataset all` 还自动调用 `g24lab/report_figures.py`，在 `generated/shared/report_figures/` 生成英文初稿使用的五组组合图，分别保存 PNG 和 SVG：L1 两种计数及 C；L2 联合拟合、分通道叠图和残差；有重采样区间的 EF 轨迹；常规/盲测地图；L3 正则化、PSF 和噪声验证。组合图使用这次新算出的 CSV/JSON，不读取旧的 `recorded/` 表或其他工作目录。
+
+完整运行后核对所有科学结果字段、源代码/输出哈希及五组图：
+
+```bash
+python verify_reproduction.py --output-root generated/shared
+```
+
+核查报告写入 `generated/shared/reproduction_audit.json`。`pipeline_commit` 是唯一允许与原始结果不同的字段，因为新运行必须记录这次真实使用的代码版本；其余数值、标签和轨迹均比较，数值容差为相对 `1e-10`、绝对 `1e-12`。
+
+代码与配置须先提交，运行时自动记录实际 HEAD。当前实现会生成新的日志、图表和结果；归档结果仍保留当时哈希，新运行不能冒充历史盲测。
 
 `pipeline_config.json` 记录模式和种子。默认 refined 模式在完整 0.50–8.00 kBT 区间搜索后自动细化，不按常规/盲测设置不同固定窗口；bootstrap 使用该全域库。书面课程的 0.25 kBT 网格可用：
 
