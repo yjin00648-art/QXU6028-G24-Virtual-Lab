@@ -58,6 +58,9 @@ def verify(root=ROOT):
     root = Path(root).resolve()
     record = {"kind": "archive-consistency-check-without-numerical-rerun", "group": "G24"}
     counts = {}
+    regular_archive = root / "L3/recorded/results.json"
+    archived_regular = json.loads(regular_archive.read_text(encoding="utf-8"))
+    final = json.loads((root / "results.json").read_text(encoding="utf-8"))
     for dataset, prefix in (("regular", ""), ("blind", "blind_")):
         paths = {p.name: p for stage in ("L1", "L2", "L3") for p in (root / f"{prefix}{stage}" / "data").iterdir() if p.is_file()}
         manifest = json.loads(paths["manifest.json"].read_text(encoding="utf-8"))
@@ -68,14 +71,16 @@ def verify(root=ROOT):
             require(p.stat().st_size == item["bytes"] and digest(p) == item["sha256"], "Raw input differs: " + p.name)
         with paths["L2_data.csv"].open(newline="", encoding="utf-8-sig") as stream:
             count = len({row["measurement_index"] for row in csv.DictReader(stream)})
-        result = json.loads((root / ("blind_results.json" if dataset == "blind" else "results.json")).read_text(encoding="utf-8"))
+        result = (
+            json.loads((root / "blind_results.json").read_text(encoding="utf-8"))
+            if dataset == "blind" else archived_regular
+        )
         template = json.loads(paths["blind_results.json" if dataset == "blind" else "results_template.json"].read_text(encoding="utf-8"))
         check_results(result, template, dataset, count)
+        if dataset == "regular":
+            check_results(final, template, dataset, count)
         counts[dataset] = {"raw_manifest_files_verified": len(manifest["files"]), "EF_trajectory_length": count, "map_length": 100, "recorded_pipeline_commit": result["pipeline_commit"]}
     record["datasets"] = counts
-    regular_bytes = (root / "results.json").read_bytes()
-    require(regular_bytes == (root / "L3/recorded/results.json").read_bytes(), "Regular final result differs from its recorded source")
-    final = json.loads(regular_bytes)
     evidence = json.loads((root / "evidence/INDEX.json").read_text(encoding="utf-8"))
     for item in evidence["items"]:
         file = root / item["repository_path"]
@@ -85,9 +90,9 @@ def verify(root=ROOT):
         with zipfile.ZipFile(archives / name) as archive:
             require(archive.testzip() is None, "ZIP integrity failed: " + name)
             stage_result = json.loads(archive.read(prefix + "results.json"))
-            require(stage_result["L1"] == final["L1"], "Submitted L1 differs from final result")
+            require(stage_result["L1"] == archived_regular["L1"], "Submitted L1 differs from the regular archive")
             if stage == "L2":
-                require(stage_result["L2"] == final["L2"], "Submitted L2 differs from final result")
+                require(stage_result["L2"] == archived_regular["L2"], "Submitted L2 differs from the regular archive")
             for member in archive.infolist():
                 if member.is_dir():
                     continue
@@ -108,8 +113,9 @@ def verify(root=ROOT):
     receipt = json.loads((root / "evidence/blind_receipt.json").read_text(encoding="utf-8"))
     require(receipt == evidence["blind_receipt"], "Receipt metadata differs")
     record.update({"evidence_files_verified": len(evidence["items"]), "submitted_ZIPs_verified": 3, "L1_submitted_PNGs": 5,
-        "regular_final_source": "L3/recorded/results.json (byte-identical)", "blind_final_source": "G24_Blind_Submission.zip (byte-identical)",
-        "L1_and_L2_fields_match_submitted_checkpoints": True, "historical_blind_files_match_all_three_recorded_directories": True,
+        "regular_archive_source": str(regular_archive.relative_to(root)), "blind_final_source": "G24_Blind_Submission.zip (byte-identical)",
+        "regular_final_pipeline_commit": final["pipeline_commit"],
+        "regular_archive_L1_and_L2_match_submitted_checkpoints": True, "historical_blind_files_match_all_three_recorded_directories": True,
         "blind_submission_status": receipt["submission_status"], "blind_last_modified_as_displayed": receipt["last_modified_as_displayed"],
         "blind_timing_as_displayed": receipt["time_remaining_as_displayed"], "numerical_analysis_rerun": False,
         "historical_commit_objects_verified": False, "historical_hashes_preserved_without_replacement": True})

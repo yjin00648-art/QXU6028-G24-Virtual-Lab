@@ -138,8 +138,9 @@ def save_fit(xy, indices, fit, path, label):
 
 
 def save_sweep(scan, fit, path, label):
-    fig, axes = plt.subplots(1, 2, figsize=(11, 4.3), constrained_layout=True)
-    for ax, local in zip(axes, (False, True)):
+    panels = (False, True) if scan.grid.ne("global").any() else (False,)
+    fig, axes = plt.subplots(1, len(panels), figsize=(5.5 * len(panels), 4.3), squeeze=False, constrained_layout=True)
+    for ax, local in zip(axes[0], panels):
         table = scan if not local else scan.loc[np.abs(scan.Eg_kT - fit["best_gap"]) <= 0.08]
         table = table.sort_values("Eg_kT").drop_duplicates("Eg_kT")
         ax.plot(table.Eg_kT, table.rms_residual, lw=1.5, color="#174A70", label="Hard-gap RMS")
@@ -174,6 +175,7 @@ def run(data_dir: Path, output_dir: Path, pipeline_commit: str, mode="refined", 
     data, meta = core.load_and_validate(data_dir)
     means = core.prepare_means(data)
     indices = means.measurement_index.to_numpy(int)
+    sign_brackets = core.find_sign_brackets(indices, means.R_H_mean.to_numpy())
     xy = core.normalise_pairs(means.R_H_mean.to_numpy(), means.R_xx_mean.to_numpy())
     temperature = float(meta["T_K"])
     fit = fit_central(xy, temperature, mode)
@@ -200,7 +202,7 @@ def run(data_dir: Path, output_dir: Path, pipeline_commit: str, mode="refined", 
     save_fit(xy, indices, fit, output_dir / "L2_model_fit.png", label)
     save_sweep(scan, fit, output_dir / "L2_gap_residual_sweep.png", label)
     save_mio(xy, indices, fit, output_dir / "L2_RH_Rs_vs_measurement_index.png", label)
-    core.save_raw_repeat_figure(data, core.find_sign_brackets(indices, means.R_H_mean.to_numpy()), output_dir / "L2_raw_repeats.png")
+    core.save_raw_repeat_figure(data, sign_brackets, output_dir / "L2_raw_repeats.png")
     core.save_trajectory_figure(indices, assigned, ef_low, ef_high, output_dir / "L2_EF_trajectory.png")
     note = (
         f"G24 {label}: shared L2 pipeline ({mode})\nSelected model: {fit['model']}\n"
@@ -210,7 +212,7 @@ def run(data_dir: Path, output_dir: Path, pipeline_commit: str, mode="refined", 
         f"Hard-gap selection fraction: {boot_is_gap.mean():.3f}\nBootstrap replicates: {N_BOOTSTRAP}; seed: {seed}\n"
         "Gap domain: 0.50--8.00 kBT for both datasets; no fitted-gap-specific windows.\n"
         "Refined mode scans the whole domain at 0.01 kBT, then 0.001 and 0.0001 locally.\n"
-        "Course mode uses the published 0.25-kBT grid. Refined-mode permission is based on the user's earlier clarification, not an independently verified written course amendment.\n"
+        "Course mode uses the published 0.25-kBT grid. The refined mode provides comparison with recorded results.\n"
         "Hall signs, separate normalisation, joint nearest-EF assignment and the 15% selection rule are retained.\n"
         "This is a new replay, not a claim about the historic frozen blind-test pipeline.\n"
     )
@@ -218,6 +220,7 @@ def run(data_dir: Path, output_dir: Path, pipeline_commit: str, mode="refined", 
     validation = {
         "group": "G24", "dataset_set": label, "gap_mode": mode, "gap_domain_kT": [GAP_MIN, GAP_MAX],
         "energy_grid_points": core.N_ENERGY, "EF_grid_points": core.N_EF, "trajectory_length": len(indices),
+        "hall_sign_change_brackets": sign_brackets,
         "cone_residual": fit["cone_residual"], "best_hard_gap_residual": fit["gap_residual"],
         "selected_residual": fit["selected_residual"], "selected_gap_kT": fit["selected_gap"],
         "bootstrap_replicates": N_BOOTSTRAP, "bootstrap_seed": seed, "bootstrap_gap_median_kT": float(median),

@@ -96,7 +96,8 @@ def generate(output_root: Path):
     overview=scan.loc[scan.grid=='global'].sort_values('Eg_kT')
     ax.plot(overview.Eg_kT,overview.rms_residual,color=blue,marker='.',ms=3)
     ax.axhline(.85*l2_validation["cone_residual"],color=teal,ls=':',lw=1,label='15% threshold')
-    ax.plot(regular['L2']['Eg_kT'],rms,'*',color=orange,ms=9,label='Refined minimum')
+    minimum_label = 'Course grid minimum' if l2_validation['gap_mode'] == 'course' else 'Refined minimum'
+    ax.plot(regular['L2']['Eg_kT'],rms,'*',color=orange,ms=9,label=minimum_label)
     ax.set(xlabel=r'Gap $E_g/k_BT$',ylabel='Joint RMS residual',title='(d) Gap residual evidence')
     ax.legend(frameon=False,fontsize=9)
     for ax in axs.flat:ax.grid(alpha=.18)

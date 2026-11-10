@@ -27,6 +27,17 @@ def synthetic_pairs(gap):
     return pd.DataFrame(rows, columns=["measurement_index", "repeat", "R_H_raw", "R_xx_raw"])
 
 
+def weak_gap_evidence_pairs():
+    """Synthetic pairs that reach the legacy model-selection guard."""
+    data = synthetic_pairs(2.073)
+    columns = ["R_H_raw", "R_xx_raw"]
+    pairs = data.loc[data.repeat.eq(1), columns].to_numpy()
+    noise = np.random.default_rng(16).normal(0.0, 0.12, pairs.shape)
+    pairs = np.clip(pairs + noise, [-1.0, 0.002], [1.0, 1.0])
+    data[columns] = np.repeat(pairs, 3, axis=0)
+    return data
+
+
 def legacy_failure(data, meta):
     path = ROOT / "L2" / "code" / "analysis_L2_optimized.py"
     sys.path.insert(0, str(path.parent))
@@ -49,21 +60,35 @@ def legacy_failure(data, meta):
 def run_controls():
     blind = pd.read_csv(ROOT / "blind_L2" / "data" / "L2_data.csv")
     blind_meta = json.loads((ROOT / "blind_L2" / "data" / "L2_meta.json").read_text())
-    cone = synthetic_pairs(0.0)
+    synthetic_meta = {"group": "G24", "T_K": 300.0, "dataset_set": "synthetic_control"}
+    boundary = "Preliminary gap optimum lies on the search boundary."
+    threshold = "The refined hard-gap model did not pass the 15% rule."
     entries = []
-    for name, data, meta, expected in (
-        ("E01_fixed_gap_window_on_actual_blind_data", blind, blind_meta, "hard_gap"),
-        ("E02_missing_cone_fallback_on_synthetic_cone", cone, {"group": "G24", "T_K": 300.0, "dataset_set": "synthetic_control"}, "cone"),
+    for name, data, meta, data_kind, expected, legacy_message in (
+        ("E01_fixed_gap_window_on_actual_blind_data", blind, blind_meta, "provided blind data", "hard_gap", boundary),
+        ("E02_exact_cone_sanity_check", synthetic_pairs(0.0), synthetic_meta, "synthetic noise-free cone", "cone", boundary),
+        ("E02_weak_gap_evidence_reaches_selection_guard", weak_gap_evidence_pairs(), synthetic_meta,
+         "synthetic noisy paired response (seed 16, standard deviation 0.12 before clipping)", "cone", threshold),
     ):
         failure = legacy_failure(data, meta)
         means = l2.core.prepare_means(data)
         xy = l2.core.normalise_pairs(means.R_H_mean.to_numpy(), means.R_xx_mean.to_numpy())
         fixed = l2.fit_central(xy, float(meta["T_K"]))
-        assert not failure["completed"], f"Legacy failure was not reproduced: {name}"
+        assert failure["message"] == legacy_message, f"Unexpected legacy outcome for {name}: {failure}"
         assert fixed["model"] == expected
         if expected == "cone":
-            assert fixed["selected_gap"] == 0 and fixed["selected_residual"] < 1e-12
-        entries.append({"id": name, "discovered_on": "2026-10-28", "data_kind": "provided blind data" if expected == "hard_gap" else "explicitly synthetic noise-free cone validation control", "legacy": failure, "repaired_model": fixed["model"], "repaired_gap_kT": fixed["selected_gap"], "repaired_RMS": fixed["selected_residual"], "passed": True})
+            assert fixed["selected_gap"] == 0
+            if legacy_message == boundary:
+                assert fixed["selected_residual"] < 1e-12
+            else:
+                assert 1.9 < fixed["best_gap"] < 2.2
+                assert fixed["gap_residual"] >= 0.85 * fixed["cone_residual"]
+        entries.append({
+            "id": name, "data_kind": data_kind, "legacy": failure,
+            "repaired_model": fixed["model"], "repaired_gap_kT": fixed["selected_gap"],
+            "repaired_RMS": fixed["selected_residual"], "best_hard_gap_kT": fixed["best_gap"],
+            "best_hard_gap_RMS": fixed["gap_residual"], "cone_RMS": fixed["cone_residual"], "passed": True,
+        })
     source = ROOT / "L2" / "code" / "analysis_L2_optimized.py"
     return {"run_utc": datetime.now(timezone.utc).isoformat(), "kind": "post-audit regression evidence, not a historical September error ledger", "legacy_source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(), "entries": entries}
 

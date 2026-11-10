@@ -52,15 +52,17 @@ def compare_results(old, new):
             "differences": differences}
 
 
-def verify(output_root):
+def verify(output_root, archived=False):
     output_root = Path(output_root).resolve()
     archive_checks = verify_archives(ROOT)
+    command = "python reproduce.py --dataset all"
+    regular_reference = "L3/recorded/results.json" if archived else "results.json"
     record = {"kind": "post-audit-reproduction-not-historical-blind-test",
               "checked_utc": datetime.now(timezone.utc).isoformat(),
-              "command": "python reproduce.py --dataset all",
+              "command": command + " --gap-mode refined" if archived else command,
               "archive_checks": archive_checks, "datasets": {}}
     commits = set()
-    for dataset, name in (("regular", "results.json"), ("blind", "blind_results.json")):
+    for dataset, name in (("regular", regular_reference), ("blind", "blind_results.json")):
         folder = output_root / dataset
         old = json.loads((ROOT / name).read_text())
         new = json.loads((folder / "results.json").read_text())
@@ -84,7 +86,8 @@ def verify(output_root):
             "output_file_count": len(manifest["output_sha256"]),
             "validation": json.loads((folder / "validation.json").read_text()),
             "L2_validation": json.loads((folder / "L2_validation.json").read_text()),
-            "historical_result_sha256": digest(ROOT / name),
+            "reference_result_path": name,
+            "reference_result_sha256": digest(ROOT / name),
             "new_result_sha256": digest(folder / "results.json"),
         }
     assert len(commits) == 1
@@ -110,7 +113,8 @@ def verify(output_root):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-root", type=Path, default=ROOT / "generated/shared")
+    parser.add_argument("--archived", action="store_true", help="Check a refined replay against the two September results.")
     args = parser.parse_args()
-    result = verify(args.output_root)
+    result = verify(args.output_root, archived=args.archived)
     (args.output_root / "reproduction_audit.json").write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")
     print(json.dumps(result, indent=2, ensure_ascii=False))

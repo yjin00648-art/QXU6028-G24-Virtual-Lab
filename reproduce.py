@@ -14,6 +14,7 @@ import tempfile
 from g24lab import reporting
 
 ROOT = Path(__file__).resolve().parent
+GAP_MODES = ("course", "refined")
 
 
 def pipeline_commit():
@@ -117,17 +118,22 @@ def main():
     parser.add_argument("--data-dir", type=Path, help="Optional untouched complete G24 directory; select one dataset.")
     parser.add_argument("--output-dir", type=Path, default=ROOT / "generated" / "shared")
     parser.add_argument("--config", type=Path, default=ROOT / "pipeline_config.json")
-    parser.add_argument("--gap-mode", choices=("refined", "course"), help="Override the config's gap grid, using the same rule for any dataset.")
+    parser.add_argument("--gap-mode", choices=GAP_MODES, help="Use this gap grid for every selected dataset.")
     args = parser.parse_args()
     if args.verify_only:
         from verify_submission import verify
         print(json.dumps(verify(ROOT), indent=2, ensure_ascii=False))
         return
     config = json.loads(args.config.read_text(encoding="utf-8"))
-    if set(config) != {"gap_mode", "bootstrap_seed", "noise_seed"} or config["gap_mode"] not in {"course", "refined"}:
+    if set(config) != {"gap_mode", "bootstrap_seed", "noise_seed"}:
         parser.error("Configuration must contain gap_mode, bootstrap_seed and noise_seed.")
-    if args.gap_mode:
-        config["gap_mode"] = args.gap_mode
+    gap_modes = config["gap_mode"]
+    if isinstance(gap_modes, str):
+        gap_modes = dict.fromkeys(("regular", "blind"), gap_modes)
+    if not isinstance(gap_modes, dict) or set(gap_modes) != {"regular", "blind"} or any(
+        mode not in GAP_MODES for mode in gap_modes.values()
+    ):
+        parser.error("gap_mode must be course or refined, or specify a mode for both regular and blind.")
     for key in ("bootstrap_seed", "noise_seed"):
         if type(config[key]) is not int or config[key] < 0:
             parser.error("Seeds must be nonnegative integers.")
@@ -139,7 +145,8 @@ def main():
         parser.error("Use --dataset regular or blind with --data-dir.")
     commit = pipeline_commit()
     for dataset in (("regular", "blind") if args.dataset == "all" else (args.dataset,)):
-        replay(dataset, output, commit, config, args.data_dir.resolve() if args.data_dir else None)
+        dataset_config = {**config, "gap_mode": args.gap_mode or gap_modes[dataset]}
+        replay(dataset, output, commit, dataset_config, args.data_dir.resolve() if args.data_dir else None)
     if args.dataset == "all":
         with (output / "report_figures_run_log.txt").open("w", encoding="utf-8") as log:
             run_step([sys.executable, "-m", "g24lab.report_figures", "--output-root", str(output)], log)
