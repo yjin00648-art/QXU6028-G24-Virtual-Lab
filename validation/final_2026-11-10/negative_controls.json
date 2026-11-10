@@ -1,0 +1,55 @@
+{
+  "run_utc": "2026-11-10T11:23:30.065811+00:00",
+  "kind": "post-audit regression evidence, not a historical September error ledger",
+  "legacy_source_sha256": "8a48577e22e94f26db6da31bb8e9193866dfa03120599374c9de7fcd3377c52d",
+  "entries": [
+    {
+      "id": "E01_fixed_gap_window_on_actual_blind_data",
+      "data_kind": "provided blind data",
+      "legacy": {
+        "exception": "AssertionError",
+        "message": "Preliminary gap optimum lies on the search boundary.",
+        "completed": false
+      },
+      "repaired_model": "hard_gap",
+      "repaired_gap_kT": 3.5306,
+      "repaired_RMS": 0.013790143351586698,
+      "best_hard_gap_kT": 3.5306,
+      "best_hard_gap_RMS": 0.013790143351586698,
+      "cone_RMS": 0.10326634811620902,
+      "passed": true
+    },
+    {
+      "id": "E02_exact_cone_sanity_check",
+      "data_kind": "synthetic noise-free cone",
+      "legacy": {
+        "exception": "AssertionError",
+        "message": "Preliminary gap optimum lies on the search boundary.",
+        "completed": false
+      },
+      "repaired_model": "cone",
+      "repaired_gap_kT": 0.0,
+      "repaired_RMS": 5.445005652175319e-16,
+      "best_hard_gap_kT": 0.5,
+      "best_hard_gap_RMS": 0.01037635272724048,
+      "cone_RMS": 5.445005652175319e-16,
+      "passed": true
+    },
+    {
+      "id": "E02_weak_gap_evidence_reaches_selection_guard",
+      "data_kind": "synthetic noisy paired response (seed 16, standard deviation 0.12 before clipping)",
+      "legacy": {
+        "exception": "AssertionError",
+        "message": "The refined hard-gap model did not pass the 15% rule.",
+        "completed": false
+      },
+      "repaired_model": "cone",
+      "repaired_gap_kT": 0.0,
+      "repaired_RMS": 0.11615495853977811,
+      "best_hard_gap_kT": 1.9901,
+      "best_hard_gap_RMS": 0.10414220187093516,
+      "cone_RMS": 0.11615495853977811,
+      "passed": true
+    }
+  ]
+}

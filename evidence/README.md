@@ -8,7 +8,9 @@
 | `G24_L2_Checkpoint.zip` | 含阶段结果、模型图、EF轨迹图、带隙残差扫描和说明；所有文件与 L2/recorded 一致 |
 | `G24_Blind_Submission.zip` | 含正式盲测三文件及一个 L3 工作包；三文件与现有三个 blind/recorded 目录一致 |
 
-L3 工作包中的 `preview_outputs/` 是预览，未用来覆盖正式完整结果。
+2026-11-10，Jin Zhengyang 确认常规 L3 与盲测在 QMplus 同包提交。归档 ZIP 内的 `G24_L3_Working_Pack.zip` 包含常规数据、代码及预览结果和图表。预览检查点记录的是占位符 `PENDING_LOCAL_L3_COMMIT`。提交范围和期末结果的核验见 [期末证据记录](../validation/final_2026-11-10/README.md)。
+
+同日收到的 L2 检查点 ZIP 与本目录归档逐字节一致，且其 `commit_hash.txt` 对应 `history/original_L1_L2.bundle` 内可恢复的 `3afb63d` 提交。
 
 `INDEX.json` 保存上述 ZIP 和四张截图的 SHA-256、字节数与来源。截图为原文件副本。
 

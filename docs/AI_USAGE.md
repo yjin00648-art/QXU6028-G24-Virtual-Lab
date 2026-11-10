@@ -54,3 +54,13 @@ The user then explicitly authorised a complete extra run, correction of failures
 A new GitHub clone at 58eb990 completed all six stages and the five report panel groups. Strict comparison passed for 344 numeric entries and all scientific labels/decisions; 12 tests passed. The only exempted result field is pipeline_commit, which must identify the new run's actual source. Original submission data, root results and blind three files are unchanged. Failure/success logs and source/output hashes are retained in [the reproduction evidence](../validation/reproduction_2026-10-29/README.md).
 
 Reviewer designated by the user remains **Jin Zhengyang**. These are tool-executed checks; this entry does not claim an additional human sign-off. See [the detailed record](ai_usage/REPRODUCTION_2026-10-29.md).
+
+## 10 November 2026 report editing and final checks
+
+| Tool or method | Instruction and contribution | Verification and attribution |
+| --- | --- | --- |
+| ChatGPT with Humanizer for report prose | Adapt the English to the supplied writing sample, use moderate sentence lengths, and retain values, units, technical terms, figure numbers, citations and uncertainty. AI assisted with drafting, language revision and consistency checks. | Compared technical claims, quantities and citations with the draft and records. Earlier reference checks are documented in the 29 October entry. |
+| ChatGPT for the final L2 comparison | Read the supplied L2 checkpoint, use the handbook gap grid for the final regular result, and explain the application implication and the limit of the resampling interval. AI edited the runner configuration, compared the outputs, wrote the report updates and selected the final JSON from the actual run. | The supplied ZIP matched the archived copy. The clean-checkout run generated the two datasets and five figure groups, and 12 tests passed. The figures, table and regular JSON were checked against the run. |
+| ChatGPT for error checks and document preparation | Exercise the missing cone decision independently, record the combined L3 and blind delivery, insert the supplied signatures, and clean the submission copy. | The old script reached the 15% guard on a synthetic control. The repaired script returned cone. Jin Zhengyang supplied the ZIP, signature and date, confirmed the combined submission and described the contribution roles. The signed statement records those roles. |
+
+Jin Zhengyang is the named reviewer. The numerical tests and file comparisons in this entry were performed as part of the AI-assisted workflow. [Final verification](../validation/final_2026-11-10/README.md)

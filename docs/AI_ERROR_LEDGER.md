@@ -13,9 +13,10 @@
 ## E02：细化程序没有合法cone返回路径
 
 - 原实现：同一旧程序主要输出hard_gap，不满足条件时抛出异常，没有正常的cone输出分支。
-- 发现依据：课程cone正向模型生成的无噪声模拟对照触发旧程序异常，未返回已知cone真值。该数据明确标为synthetic，仅用于验证。
+- 初次发现：无噪声 cone 对照触发了与 E01 相同的边界断言。该结果只说明该输入在旧流程提前停止。
 - 修正：严格执行 r_gap < 0.85*r_cone 且 Eg/kBT≥1，否则返回cone、Eg=0；bootstrap同样执行选模规则。
-- 验证：修复后该对照返回cone、Eg/kBT=0、RMS约5.45e-16；0.85边界和最小带隙门槛测试通过。
+- 独立验证（2026-11-10）：构造带已知扰动的模拟成对响应，让旧程序通过两个搜索边界检查并到达 15% 决策。旧程序在这里抛出 `The refined hard-gap model did not pass the 15% rule.`。共享程序求得最优候选约 1.9901 kBT，硬带隙与 cone 的 RMS 分别为 0.1041422 和 0.1161550。改善约 10.34%，因此按规则返回 cone、Eg/kBT = 0。
+- 无噪声 cone 对照仍返回 cone、Eg/kBT = 0、RMS 约 5.45×10⁻¹⁶。两个模拟对照仅用于验证，输入构造和原程序的异常可由 `python -m tests.negative_controls` 重现。 [期末反例结果](../validation/final_2026-11-10/negative_controls.json)
 
 E01、E02是两条真实复现的物理模型相关实现缺陷。它们不等同于凭空补写的历史单位或符号概念错误；模拟对照不充当本组实验数据。
 
@@ -41,4 +42,4 @@ E01、E02是两条真实复现的物理模型相关实现缺陷。它们不等�
 - Verification: a large-image decode test passes; truncated bytes are rejected while a previous valid image remains intact. All 12 tests and the final fresh-clone six-stage command pass. Original inputs and scientific results are unchanged.
 - Limit: the incomplete file is observed; its underlying rendering/filesystem cause is not independently established. This is an output-integrity issue, not an additional physics error.
 
-The earlier note that full plotting had not been run describes the 28 October scope. It is superseded for the current code by [the successful 29 October reproduction](../validation/reproduction_2026-10-29/README.md). The missing September source object and the evidential limit on two independent physics-concept errors remain unchanged.
+The 29 October replay checked all five figure groups. The 10 November controls exercise the fixed search-window failure and the missing cone decision separately. They document model-selection implementation errors. The exact September blind source association remains unverified because the recorded Git object is unavailable. [Final checks](../validation/final_2026-11-10/README.md)

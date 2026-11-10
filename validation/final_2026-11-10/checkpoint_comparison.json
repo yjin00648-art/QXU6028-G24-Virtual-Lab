@@ -1,0 +1,45 @@
+{
+  "kind": "final-submission-evidence-check",
+  "group": "G24",
+  "final_source_commit": "d53604c798420cd6f82ff5376989e3006d339980",
+  "L2_checkpoint": {
+    "submitted_ZIP_sha256": "1ad58259f02d71a9488e5f2d24faf59f0e388f68606ebb4bc57898e39b1f71e6",
+    "user_supplied_ZIP_matches": true,
+    "archived_commit": "3afb63d39d2dd5ee359141756d59bd0daa100684",
+    "commit_recovered_from_bundle": true,
+    "archived_L2_script_bytes_match": true,
+    "course_scan_31_residuals_match_checkpoint_overview": true,
+    "archived_gap_kT": 2.073,
+    "archived_p16_p84_kT": [
+      2.0,
+      2.13
+    ],
+    "final_gap_kT": 2.0,
+    "final_p16_p84_kT": [
+      2.0,
+      2.0
+    ],
+    "final_course_bootstrap_counts": {
+      "2.0": 169,
+      "2.25": 31
+    },
+    "final_RMS_improvement_percent": 82.14923835378552,
+    "EF_assignments_changed": 11,
+    "independent_course_pilot_commit": "2d49736f7662c763541772183c1e4355e0aac512",
+    "final_fields_match_course_pilot": true
+  },
+  "regular_L1_and_L3_scientific_fields_match_archive": true,
+  "combined_regular_L3_and_blind_delivery": {
+    "user_confirmed_on": "2026-11-10",
+    "outer_archive": "evidence/submitted_archives/G24_Blind_Submission.zip",
+    "regular_L3_working_pack_sha256": "0b3ae95b39e71729ddeb712db62b89b7deaadf1416f3a87d0fc547e7b4f4d455",
+    "preview_members": [
+      "G24_L3_Working_Pack/preview_outputs/results.json",
+      "G24_L3_Working_Pack/preview_outputs/L3_map.png",
+      "G24_L3_Working_Pack/preview_outputs/L3_method.png",
+      "G24_L3_Working_Pack/preview_outputs/L3_brief_note.txt",
+      "G24_L3_Working_Pack/preview_outputs/commit_hash.txt"
+    ],
+    "preview_commit_field": "PENDING_LOCAL_L3_COMMIT"
+  }
+}
