@@ -1,0 +1,22 @@
+# G24 blind test submission files
+
+The Practical Methods Guide lists three files for individual upload. The three files here can be downloaded individually under those names. Each matches the corresponding file inside the original QMplus ZIP byte for byte.
+
+| File | Contents | SHA-256 |
+| --- | --- | --- |
+| [blind_results.json](blind_results.json) | Original G24 blind L1–L3 results | `c968b19d8eb48053f1d7395645892a485d495a5b7ad9a6ffdff8a4c653b2016f` |
+| [run_log.txt](run_log.txt) | Original run log supplied for the blind test | `e822b1c33aa4fb801385b1979d115826f3272c954a42fe5a9787bd7b8fb8c289` |
+| [pipeline_commit.txt](pipeline_commit.txt) | Commit identifier recorded in the blind submission | `86a19db322e8677a248176f2f195d3c7dc29557ffb9c4ca172da34fafd84b169` |
+
+## QMplus receipt for 24 September 2026
+
+Attempt 1 shows `G24_Blind_Submission.zip` with the status “Submitted for grading”. The ZIP contains the three blind files and the regular `G24_L3_Working_Pack.zip`.
+
+| Receipt field | UK time (BST) | Singapore time (UTC+8) |
+| --- | --- | --- |
+| Deadline | 09:00 | 16:00 |
+| Last modified | 10:42 | 17:42 |
+
+QMplus displayed “Assignment was submitted 1 hour 42 mins late”. The time zones follow Jin Zhengyang’s clarification about the platform display and the local working times.
+
+[Original QMplus ZIP](../../evidence/submitted_archives/G24_Blind_Submission.zip) · [Receipt screenshot](../../evidence/submission_screenshots/blind_submission_status.png) · [Receipt transcription](../../evidence/blind_receipt.json) · [Student timeline and timezone clarification](../../evidence/user_reported_timeline.json)
