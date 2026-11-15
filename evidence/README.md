@@ -1,5 +1,7 @@
 # QMplus 提交材料与时间证据
 
+[盲测提交文件](../submissions/blind/README.md) 提供手册所列的三个独立文件及其 SHA-256 值，可直接与原始 ZIP 和回执核对。
+
 `submitted_archives/` 中三份 ZIP 是用户本次明确确认已上传 QMplus 的文件，按原字节归档：
 
 | 文件 | 核对结果 |
