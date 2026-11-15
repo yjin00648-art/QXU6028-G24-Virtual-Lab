@@ -25,7 +25,7 @@
 | `results.json` | 期末常规 L1–L3 结果，L2 使用手册网格，`pipeline_commit` 记录实际源提交 |
 | `L3/recorded/results.json` | 完整常规历史结果，L1、L2 字段分别与当时的检查点一致 |
 | `blind_results.json` | 本次 `G24_Blind_Submission.zip` 内的原始盲测结果，字节不变 |
-| `submissions/blind/` | 从上述实际盲测 ZIP 原样提取的 `blind_results.json`、`run_log.txt`、`pipeline_commit.txt` |
+| [盲测提交文件](submissions/blind/README.md) | 分别下载 `blind_results.json`、`run_log.txt`、`pipeline_commit.txt`，并核对原始 ZIP 与 QMplus 回执 |
 | `evidence/submitted_archives/` | `G24_L1_4figures.zip`、`G24_L2_Checkpoint.zip`、`G24_Blind_Submission.zip`，均为用户确认的 QMplus 提交包 |
 | `evidence/submission_screenshots/` | L1、L2 和本次补充的盲测提交状态截图 |
 | `evidence/INDEX.json` | 原始 ZIP、截图的字节数与 SHA-256；盲测提交时间的原样转录 |
