@@ -43,3 +43,10 @@ E01、E02是两条真实复现的物理模型相关实现缺陷。它们不等�
 - Limit: the incomplete file is observed; its underlying rendering/filesystem cause is not independently established. This is an output-integrity issue, not an additional physics error.
 
 The 29 October replay checked all five figure groups. The 10 November controls exercise the fixed search-window failure and the missing cone decision separately. They document model-selection implementation errors. The exact September blind source association remains unverified because the recorded Git object is unavailable. [Final checks](../validation/final_2026-11-10/README.md)
+
+## 15 November 2026 evidence check
+
+The final report describes E01 and E02 as defects found by later tests of the L2 implementation.
+The [separate decision control](../validation/final_2026-11-10/negative_controls.json)
+records the old failure at the 15% decision and the corrected cone result. The 10 November clean run
+and the original blind submission are independently identified by their recorded commits.
