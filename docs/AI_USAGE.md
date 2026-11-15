@@ -64,3 +64,29 @@ Reviewer designated by the user remains **Jin Zhengyang**. These are tool-execut
 | ChatGPT for error checks and document preparation | Exercise the missing cone decision independently, record the combined L3 and blind delivery, insert the supplied signatures, and clean the submission copy. | The old script reached the 15% guard on a synthetic control. The repaired script returned cone. Jin Zhengyang supplied the ZIP, signature and date, confirmed the combined submission and described the contribution roles. The signed statement records those roles. |
 
 Jin Zhengyang is the named reviewer. The numerical tests and file comparisons in this entry were performed as part of the AI-assisted workflow. [Final verification](../validation/final_2026-11-10/README.md)
+
+## 15 November 2026 submission review
+
+**Tool and scope.** ChatGPT Work / OpenAI Codex assisted with the bracketed Vancouver citations,
+reference verification, wording corrections, result and evidence checks, and assembly of the
+submission package. Jin Zhengyang is the designated reviewer.
+
+**Instruction.** The user supplied the sixth Word version and asked for improved in-text citations,
+bracketed Vancouver reference numbering, a review of remaining issues and an updated submission ZIP.
+
+**Checks.** The report's five embedded analysis figures were matched byte for byte to the 10 November
+clean-checkout replay. Table 1 was checked against the final regular and originally submitted blind
+JSON files. The regular L2 fit used the prescribed 0.25 kBT grid and gave 2.00 kBT. The finer L2
+checkpoint gave 2.0730 kBT. For the blind records, the run log, commit identifier and result were
+matched to the archived upload. The report's revised timestamp wording follows the QMplus receipt.
+The submission retains the four signed contributions dated 10 November 2026.
+
+**Extent of contribution.** AI edited the wording of the supplied report, standardised symbols,
+checked numeric traceability and prepared the final files. The clean-checkout replay evidence is dated
+10 November. The 15 November checks audited those recorded outputs and the retained raw-data and
+archive manifests. The original records and signed declarations provide the historical attribution.
+See the [clean-checkout evidence](../validation/final_2026-11-10).
+
+**Repository follow-up.** ChatGPT Work / OpenAI Codex synced the 15 November report and ledger entries
+from the final submission package. It prepared the individual download links, verified the three files
+against the original ZIP and checked the receipt transcription. [Blind submission files](../submissions/blind/README.md)
