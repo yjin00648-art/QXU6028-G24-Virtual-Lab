@@ -3,11 +3,18 @@
 本仓库保存常规 L1/L2/L3、盲测 L1/L2/L3 的原始输入、分析代码、图表和结果，以及用户确认已上传 QMplus 的三个 ZIP。
 2026-10-28 的整理更新仅核对和上传已有结果。2026-10-29 用户另行授权完整复现；新运行与原始提交分别记录，不覆盖历史结果。
 
-## 2026-11-10 期末结果
+## 期末提交结果
 
-根目录 [results.json](results.json) 是本组期末常规结果，由干净检出的 [d53604c](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/commit/d53604c798420cd6f82ff5376989e3006d339980) 生成。常规 L2 采用手册规定的 0.50–8.00 kBT、0.25 kBT 步长，得到 hard_gap、Eg/kBT = 2.00。重采样的 p16 和 p84 落在同一网格点。原检查点的细化结果 2.0730 kBT 和区间 [2.00, 2.13] kBT 可用于比较网格分辨率的影响。
+根目录 [results.json](results.json) 是本组期末常规结果，于 2026-11-10 由干净检出的 [d53604c](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/commit/d53604c798420cd6f82ff5376989e3006d339980) 生成。常规 L2 采用手册规定的 0.50–8.00 kBT、0.25 kBT 步长，得到 hard_gap、Eg/kBT = 2.00。重采样的 p16 和 p84 落在同一网格点。原检查点的细化结果 2.0730 kBT 和区间 [2.00, 2.13] kBT 可用于比较网格分辨率的影响。
 
 [期末复现记录](validation/final_2026-11-10/README.md) 包含报告图、验证报告和 L2 检查点比较。常规 L2 有 58 个轨迹点，盲测有 50 个。两个 L3 地图各有 100 个按行排列的有限数值。
+
+2026-11-20，以下两份结果与最新版期末提交包逐字节一致。`python reproduce.py --verify-only` 核查通过。
+
+| 最终提交结果 | SHA-256 |
+| --- | --- |
+| [常规 L1–L3](results.json) | `e394626171b3385d5b0a4b5e8993e2666f1bdab2480cca7b4742b43fee3d8b26` |
+| [原始盲测 L1–L3](submissions/blind/blind_results.json) | `c968b19d8eb48053f1d7395645892a485d495a5b7ad9a6ffdff8a4c653b2016f` |
 
 ## 2026-10-29 完整复现已通过
 

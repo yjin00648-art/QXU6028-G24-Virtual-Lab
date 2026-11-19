@@ -20,3 +20,7 @@ Attempt 1 shows `G24_Blind_Submission.zip` with the status “Submitted for grad
 QMplus displayed “Assignment was submitted 1 hour 42 mins late”. The time zones follow Jin Zhengyang’s clarification about the platform display and the local working times.
 
 [Original QMplus ZIP](../../evidence/submitted_archives/G24_Blind_Submission.zip) · [Receipt screenshot](../../evidence/submission_screenshots/blind_submission_status.png) · [Receipt transcription](../../evidence/blind_receipt.json) · [Student timeline and timezone clarification](../../evidence/user_reported_timeline.json)
+
+## Recorded analysis version
+
+The original `pipeline_commit.txt` records `51814957ddcb8d34d4153c386cf2194f7be0b541`. The Git object for this commit is unavailable in the retained history. The 10 November 2026 clean-checkout replay verified the blind scientific results and records its generating commit in the audit. [Retained Git history](../../history/README.md) · [Replay audit](../../validation/final_2026-11-10/reproduction_audit.json)
