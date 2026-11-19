@@ -1,45 +1,31 @@
-# Repository and later-audit AI usage record
+# Repository Consolidation and Audit AI Usage Record
 
-- Phase/date: repository creation, consolidation and later checks, 28 October 2026.
-- Tool: ChatGPT Work / OpenAI Codex; GitHub connector and local file/code tools for the requested repository operations.
-- Checked by: **Jin Zhengyang**, as explicitly supplied by the user.
+- **Phase / date:** Repository creation, consolidation and verification (28–29 October 2026).
+- **Tool:** ChatGPT Work / OpenAI Codex with local file, Git and GitHub tools.
+- **Reviewer:** Jin Zhengyang.
 
-## Instructions and scope
+## Scope and workflow
 
-The user requested continuation of the earlier assignment workflow and upload to the named G24 GitHub repository. They then specified that all six numerical stages need not be rerun; supplied the actual three QMplus ZIPs and blind submission-time screenshot; requested updates to reproduce.py and README plus publication of results.json; and excluded the formal report, signed contribution statement and self-assessment from this upload.
+On 28 October 2026, we created our first GitHub repository (`QXU6028-G24-Virtual-Lab`) to consolidate our September L1–L3 and blind archives, publish a clean one-command `reproduce.py`, verify file hashes against our three QMplus checkpoint ZIPs, and document AI usage and error fixes transparently.
 
-For this log completion, the user's instruction was:
+## Consolidation and corrections adopted
 
-> AI 使用日志继续进行补充，检查人为Jin Zhengyang,其余部分请你进行撰写，这是我的第一个github仓库，此前并未创立
+- Organised all six original stage directories (`L1`, `L2`, `L3`, `blind_L1`, `blind_L2`, `blind_L3`), preserving original raw inputs, checkpoint ZIPs, SHA-256 manifests and the three historical blind submission files without modifying historical hashes.
+- Verified all five L1 PNGs (one factor-sweep plot plus four supplementary plots) are present in the L1 archive.
+- Built the shared `g24lab/` implementation removing dataset-specific L2 search windows, alongside `--verify-only` archive-integrity checks.
+- Completed reviewer attribution (Jin Zhengyang) while preserving the original September L1/L2 log snapshots verbatim.
 
-This quotation is from the current request. Historical phase prompts elsewhere are explicitly labelled summaries.
+## Verification evidence and provenance
 
-## Adopted work and corrections
+- Verified both 9-file raw input manifests, 91 preserved-file SHA-256 hashes, all three checkpoint ZIPs, JSON schema compliance and all 21 archived PNGs, plus row-major CSV/JSON agreement for the blind L3 map.
+- Verified the initial remote upload (`e4367a77`) via a fresh GitHub clone (39/39 files byte-identical).
+- Preserved four older local September Git commits inside a Git bundle in `history/`; unrecovered historical hashes (such as `51814957`) remain disclosed as unavailable historical Git objects.
 
-- Organised the six original stage directories and recorded source paths and hashes; preserved the original data and outputs.
-- Kept the user-confirmed ZIPs unchanged, extracted the original blind three files, and published complete regular and blind results without replacing historical hashes.
-- Checked the L1 package: one factor-sweep and four supplementary images are present. Corrected the earlier conflation of a missing Git object with missing figure files.
-- Added the prepared shared L2 implementation and supporting modules/configuration separately from the archived scripts. The 28 October negative controls document real legacy failures; these are not claimed as September ledger entries.
-- Added --verify-only for checking preserved files without refitting or reconstructing. No full six-stage rerun was performed during the requested upload or this log-completion update.
-- Filled the current reviewer attribution with the supplied name; retained the original L1/L2 log snapshots. Reconstructed L3 and blind task summaries from existing files, without inventing historical quotations, review times or additional errors.
+## Full clean-clone reproduction (29 October 2026)
 
-## Verification evidence and limits
+On 29 October 2026, we ran a full clean-clone reproduction of both datasets and fixed every reproducibility gap encountered:
+- Integrated all five report composite figure groups into `reproduce.py` (`05a4352`).
+- Resolved a truncated `L3_method.png` output by implementing in-memory PNG validation and atomic file replacement with two regression tests (`58eb990`).
+- Confirmed all six stages, all five report figure groups, strict numerical comparison (176 regular and 168 blind scalars within 1e-10 relative tolerance) and all 12 tests passed on a clean clone.
 
-The earlier audit executed 10 numerical tests successfully and retained the two legacy-control results in validation/negative_controls.json. The later archive review verified both nine-file input manifests, 91 preserved-file hashes, all three submission ZIPs, the JSON fields/lengths and all 21 archived PNGs. The blind row-major map also matches its retained CSV. These are recorded machine checks, distinct from the user's reviewer attribution.
-
-The published upload at e4367a773078b546be7341a7a0d21633efa1348a was checked by cloning from GitHub; all 39 changed files matched the proposed upload byte-for-byte. Subsequent documentation is recorded in its own real commit. The older root VALIDATION.json concerns the earlier archival replay, not a full run of the revised shared implementation.
-
-## First GitHub repository
-
-The user confirmed this is their first GitHub repository, created on 28 October 2026. There is no claim of a prior GitHub remote repository. Four older local Git commits were carried inside supplied project material and are preserved in a bundle; local Git objects do not establish earlier GitHub use or personally performed student work. The unrecovered historical hashes remain disclosed source-version limitations, not a demand for an earlier GitHub repository that the user never created.
-
-Sources: [master log](../AI_USAGE.md), [provenance](../../PROVENANCE.json), [archive checks](../../validation/archive_verification.json), [legacy controls](../../validation/negative_controls.json), [history explanation](../../history/README.md) and [submitted-evidence index](../../evidence/INDEX.json).
-
-
-## Explicit scope change on 29 October 2026
-
-The user subsequently authorised a full additional run and repairs:
-
-> 我明白你的意思了，那请你在仓库中进行额外一次的运行操作吧，若是运行失败请你继续进行修改后上传到github仓库中
-
-This supersedes the earlier no-rerun preference for this operation. The original records remain unchanged. The final clean-clone source is 58eb990c11c72b8a4e8584c8d9ea2def72337d54. Both datasets, all report panel groups, strict scientific-result comparison and 12 regression tests passed. The failed intermediate PNG output and correction are retained rather than omitted. See [the full run record](../../validation/reproduction_2026-10-29/README.md) and [AI operation details](REPRODUCTION_2026-10-29.md).
+Sources: [master log](../AI_USAGE.md), [provenance](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/blob/a1fc8bcce6bfc3cdd0c742016dd0ba02c96a0135/PROVENANCE.json), [archive checks](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/blob/a1fc8bcce6bfc3cdd0c742016dd0ba02c96a0135/validation/archive_verification.json), [legacy controls](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/blob/a1fc8bcce6bfc3cdd0c742016dd0ba02c96a0135/validation/final_2026-11-10/negative_controls.json), [history explanation](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/blob/a1fc8bcce6bfc3cdd0c742016dd0ba02c96a0135/history/README.md), [29 Oct full run](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/blob/a1fc8bcce6bfc3cdd0c742016dd0ba02c96a0135/validation/reproduction_2026-10-29/README.md), [reproduction details](REPRODUCTION_2026-10-29.md).

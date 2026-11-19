@@ -127,6 +127,8 @@ python -m tests.negative_controls
 
 ## AI 使用记录与检查人
 
+The English AI records reflect the revised submission package dated 19 November 2026 and its GitHub verification. [AI usage log](docs/AI_USAGE.md) · [AI error and correction ledger](docs/AI_ERROR_LEDGER.md)
+
 **Checked by: Jin Zhengyang.** 检查人姓名由用户于2026-10-28明确提供；不据此倒填原始检查时间。
 
 当前完整日志见 [docs/AI_USAGE.md](docs/AI_USAGE.md)，分别覆盖 [L1](docs/ai_usage/L1.md)、[L2](docs/ai_usage/L2.md)、[L3](docs/ai_usage/L3.md)、[盲测](docs/ai_usage/BLIND.md) 和 [仓库整理](docs/ai_usage/REPOSITORY.md) 的工具、用途、指令摘要、采用/修改内容及检查证据。
