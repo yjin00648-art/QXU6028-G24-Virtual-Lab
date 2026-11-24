@@ -66,3 +66,9 @@ against the original ZIP and checked the receipt transcription. [Blind submissio
 ChatGPT Work / OpenAI Codex compared the revised submission archive with the repository and prepared the English AI records for publication. The final regular results, the three original blind files and the archived reproduction audit matched byte for byte. The five report figure groups matched the 10 November replay. The trajectory check also identified a small local decrease in the otherwise upward L2 trend. [Final reproduction](../validation/final_2026-11-10/README.md) · [Regular L2 trajectory](../validation/final_2026-11-10/L2_calculations.csv)
 
 For the final publication, Codex compared the two results files, the original blind files and the reproduction audit with the final submission package. `python reproduce.py --verify-only` passed. [Result checksums](../README.md) · [Blind version record](../submissions/blind/README.md)
+
+### Final report and submission package check on 24 November 2026
+
+- **Tool.** ChatGPT Work / OpenAI Codex.
+- **Contribution.** Reviewed the selected final report against the coursework brief and report guidance, checked the word count and numerical consistency, and suggested contribution wording based on the roles supplied by the student. Rebuilt the submission archive and extracted the self-assessment and signed contribution statement from the supplied Word report.
+- **Verification.** Checked Table 1 against the final regular and archived blind JSON files and matched the five embedded figures to the recorded replay. The three original blind files were checked against the preserved QMplus archive. See the [reproduction audit](../validation/final_2026-11-10/reproduction_audit.json) and [blind archive record](../submissions/blind/README.md).
