@@ -15,6 +15,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from .plot_io import save_png
 from matplotlib.colors import TwoSlopeNorm
+from matplotlib.ticker import FormatStrFormatter
 from PIL import Image
 from . import l1,l2,l3
 
@@ -31,6 +32,7 @@ def generate(output_root: Path):
     if regular["pipeline_commit"]!=blind["pipeline_commit"]:
         raise ValueError("Report figure inputs must share one source commit.")
     params=json.loads((REPO/"L1/data/L1_params.json").read_text())
+    carrier_sweep = pd.read_csv(REPLAY / "L1_calculations.csv")
     trajectory=pd.read_csv(REPLAY/"L2_calculations.csv")
     sensitivity=pd.read_csv(REPLAY/"L3_eta_sensitivity.csv")
     noise=pd.read_csv(REPLAY/"L3_noise_maxima.csv").iloc[:,0].to_numpy()
@@ -40,29 +42,82 @@ def generate(output_root: Path):
                          'legend.fontsize':10.5,'mathtext.fontset':'stix','axes.spines.top':False,'axes.spines.right':False})
     blue, orange, teal = '#1f4e79', '#b45f2a', '#237d73'
     checks = {}
-    # L1: direct evaluation of retained equations only, with no fitting.
-    ef = np.linspace(0,0.26,161)
-    nb = np.array([l1.n_band(x,params['T'],params['c']) for x in ef])
-    nf = np.array([l1.n_fermi(x,params['T'],params['c']) for x in ef])
-    op = params['EF_op_eV']
-    c2,c4 = (l1.solve_crossing(v,params['T'],params['c']) for v in (2,4))
-    assert np.isclose(l1.n_fermi(op,params['T'],params['c']),regular['L1']['n_fermi_op_cm2'],rtol=1e-10)
-    checks['L1_operating_result_matches'] = True
-    checks['C2_crossing_eV'],checks['C4_crossing_eV'] = c2,c4
-    fig,axs=plt.subplots(1,2,figsize=(6.45,3.15),layout='constrained')
-    axs[0].plot(ef,nb/1e12,color=blue,label=r'$n_B$')
-    axs[0].plot(ef,nf/1e12,color=teal,label=r'$n_F$')
-    axs[0].set(xlabel=r'$E_F$ (eV)',ylabel=r'Population ($10^{12}$ cm$^{-2}$)',title='(a) Carrier populations')
-    axs[0].legend(frameon=False)
-    axs[1].plot(ef,nb/nf,color=blue)
-    for val,where in [(2,c2),(4,c4)]:
-        axs[1].axhline(val,color='0.5',ls=':',lw=1)
-        axs[1].plot(where,val,'o',color=orange,ms=4)
-    axs[1].plot(op,regular['L1']['correction_factor'],'o',color=orange,ms=5)
-    axs[1].annotate('Operating point',xy=(op,regular['L1']['correction_factor']),xytext=(0.017,5.6),fontsize=10.5,arrowprops={'arrowstyle':'-','color':orange})
-    axs[1].set(xlabel=r'$E_F$ (eV)',ylabel=r'$C=n_B/n_F$',title='(b) Counting correction',ylim=(0.7,6.7))
-    for ax in axs:ax.axvline(op,color=orange,ls='--',lw=1);ax.grid(alpha=.2)
-    save_png(fig,FIG/'figure1.png',dpi=320);fig.savefig(FIG/'figure1.svg');plt.close(fig)
+    # L1: evaluate the continuous model and mark the ratios at the supplied CSV energies.
+    temperature, dos = params["T"], params["c"]
+    ef = np.linspace(0, 0.26, 161)
+    nb = np.array([l1.n_band(e, temperature, dos) for e in ef])
+    nf = np.array([l1.n_fermi(e, temperature, dos) for e in ef])
+    op = params["EF_op_eV"]
+    op_ratio = l1.correction_factor(op, temperature, dos)
+    crossings = {target: l1.solve_crossing(target, temperature, dos) for target in (2, 4)}
+    np.testing.assert_allclose(
+        [l1.n_fermi(op, temperature, dos), op_ratio],
+        [regular["L1"]["n_fermi_op_cm2"], regular["L1"]["correction_factor"]],
+        rtol=1e-10, atol=0,
+    )
+    np.testing.assert_allclose(nb[0] / nf[0], 1.0, rtol=0, atol=1e-12)
+    checks.update(
+        L1_operating_result_matches=True,
+        L1_csv_ratio_count=len(carrier_sweep),
+        C2_crossing_eV=crossings[2],
+        C4_crossing_eV=crossings[4],
+    )
+
+    red = "#ab273e"
+    with plt.rc_context({"font.serif": ["Nimbus Roman", "DejaVu Serif"]}):
+        fig, (left, right) = plt.subplots(1, 2, figsize=(6.45, 3.15))
+        # Retain the panel positions of the submitted Figure 1.
+        fig.subplots_adjust(
+            left=0.0716198105081826, right=0.9935395348837209,
+            bottom=0.15622350088183423, top=0.9233465360449736,
+            wspace=0.17031274155048715,
+        )
+        left.plot(ef, nb / 1e12, color=blue, label=r"$n_B$")
+        left.plot(ef, nf / 1e12, color=teal, label=r"$n_F$")
+        left.set(
+            xlabel=r"$E_F$ (eV)", ylabel=r"Population ($10^{12}$ cm$^{-2}$)",
+            title="(a) Carrier populations",
+        )
+        left.legend(frameon=False)
+        left.axvline(op, color=orange, ls="--", lw=1)
+        left.grid(alpha=0.2)
+
+        right.plot(ef, nb / nf, color=blue, lw=1.7, label="Integrated model")
+        right.scatter(
+            carrier_sweep["EF_eV"], carrier_sweep["correction_factor"],
+            s=13, facecolors="white", edgecolors=blue, linewidths=0.9,
+            label="G24 CSV-derived ratios", zorder=3,
+        )
+        right.scatter(
+            [op], [op_ratio], s=33, color=red, edgecolors="white",
+            linewidths=0.7, zorder=5, label="Operating point",
+        )
+        right.annotate(
+            rf"$E_F={op:.4f}$ eV" + "\n" + rf"$C={op_ratio:.3f}$",
+            xy=(op, op_ratio), xytext=(0.025, 4.62), color=red, fontsize=9.5, va="center",
+            arrowprops={"arrowstyle": "->", "color": red, "lw": 0.8, "shrinkB": 5},
+        )
+        for target, text_position in ((2, (0.098, 1.31)), (4, (0.166, 3.16))):
+            crossing = crossings[target]
+            right.hlines(target, 0, crossing, color=teal, ls=":", lw=0.9, zorder=2)
+            right.vlines(crossing, 0.7, target, color=teal, ls=":", lw=0.9, zorder=2)
+            right.annotate(
+                rf"$C={target}$ at {crossing:.4f} eV", xy=(crossing, target),
+                xytext=text_position, color=teal, fontsize=9.2,
+                arrowprops={"arrowstyle": "-", "color": teal, "lw": 0.75, "shrinkB": 1},
+                bbox={"boxstyle": "square,pad=0.07", "facecolor": "white", "edgecolor": "none"},
+            )
+
+        right.set(
+            xlabel=r"$E_F$ (eV)", ylabel=r"$C=n_B/n_F$", title="(b) Counting correction",
+            xlim=(-0.006, 0.266), ylim=(0.7, 6.9), xticks=[0, .05, .10, .15, .20, .25],
+        )
+        right.xaxis.set_major_formatter(FormatStrFormatter("%.2f"))
+        right.legend(loc="upper left", frameon=False, fontsize=9.2, borderaxespad=0.3, labelspacing=0.3)
+        right.grid(alpha=0.2)
+        save_png(fig, FIG / "figure1.png", dpi=320)
+        fig.savefig(FIG / "figure1.svg")
+        plt.close(fig)
 
     data=pd.read_csv(REPO/'L2/data/L2_data.csv')
     means=l2.core.prepare_means(data)
@@ -160,10 +215,10 @@ def generate(output_root: Path):
         with Image.open(FIG/f"figure{number}.png") as im:im.verify()
     checks.update(
         pipeline_commit=regular["pipeline_commit"],
-        purpose="Recomputed figures for the English coursework report draft",
+        purpose="Recomputed figures for the final coursework report",
         figure_count=5,
         figure_panels={"1":"L1 n_B, n_F and correction factor", "2":"L2 joint fit, separate Hall/resistance overlays and residual search", "3":"L2 ordered Fermi trajectory and paired-resampling bands", "4":"Regular and blind maps on one percentage scale", "5":"L3 eta sensitivity, two PSFs and 500 noise maxima"},
-        input_sha256={str(p.relative_to(output_root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [REPLAY/"results.json",output_root/"blind/results.json",REPLAY/"L2_calculations.csv",REPLAY/"L3_eta_sensitivity.csv",REPLAY/"L3_noise_maxima.csv"]},
+        input_sha256={str(p.relative_to(output_root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [REPLAY/"results.json",output_root/"blind/results.json",REPLAY/"L1_calculations.csv",REPLAY/"L2_calculations.csv",REPLAY/"L3_eta_sensitivity.csv",REPLAY/"L3_noise_maxima.csv"]},
         output_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(FIG.iterdir()) if p.suffix in {".png",".svg"}},
     )
     (FIG/"validation.json").write_text(json.dumps(checks,indent=2)+"\n")

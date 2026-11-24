@@ -1,0 +1,10 @@
+Date / phase: 21 September 2026 / L1
+Tool/model: ChatGPT Work / Codex
+Purpose: Check the G24 data pack and implement the L1 forward carrier-count calculation.
+Instruction summary: Use the published integration limits, constants, units and gate values; calculate the exact operating point rather than the nearest CSV row; generate results.json and the correction-factor figure.
+Output used / changed / rejected: AI generated the initial analysis.py, results.json, validation record, calculation table, figure and brief interpretation. The L1 verification and version records are listed in docs/ai_usage/L1.md.
+Checked by: Jin Zhengyang
+
+AI error ledger note: The L1 record lists no AI error. The submission error ledger is in docs/AI_ERROR_LEDGER.md.
+
+Original September snapshot: https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/blob/44144c7f6164270c0923fe70d1693fc913cd3dae/AI_usage_log_L1_original.txt

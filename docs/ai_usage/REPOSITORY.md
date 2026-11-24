@@ -2,20 +2,18 @@
 
 - **Phase / date:** Repository creation, consolidation and verification (28–29 October 2026).
 - **Tool:** ChatGPT Work / OpenAI Codex with local file, Git and GitHub tools.
-- **Review and coordination.** I’m Jin Zhengyang, and I coordinated the repository work for G24.
+- **Reviewer:** Jin Zhengyang.
 
 ## Scope and workflow
 
-On 28 October 2026, I created my first GitHub repository (`QXU6028-G24-Virtual-Lab`) to consolidate our September L1–L3 and blind archives. I used Codex to prepare the one-command `reproduce.py`, verify file hashes against our three QMplus ZIPs and document AI use and error corrections.
+On 28 October 2026, we created our first GitHub repository (`QXU6028-G24-Virtual-Lab`) to consolidate our September L1–L3 and blind archives, publish a clean one-command `reproduce.py`, verify file hashes against our three QMplus checkpoint ZIPs, and document AI usage and error fixes transparently.
 
 ## Consolidation and corrections adopted
-
-I used Codex to organise and verify our repository materials.
 
 - Organised all six original stage directories (`L1`, `L2`, `L3`, `blind_L1`, `blind_L2`, `blind_L3`), preserving original raw inputs, checkpoint ZIPs, SHA-256 manifests and the three historical blind submission files without modifying historical hashes.
 - Verified all five L1 PNGs (one factor-sweep plot plus four supplementary plots) are present in the L1 archive.
 - Built the shared `g24lab/` implementation removing dataset-specific L2 search windows, alongside `--verify-only` archive-integrity checks.
-- Recorded my name in the consolidated log and kept the original September L1/L2 log snapshots verbatim.
+- Completed reviewer attribution (Jin Zhengyang) while preserving the original September L1/L2 log snapshots verbatim.
 
 ## Verification evidence and provenance
 

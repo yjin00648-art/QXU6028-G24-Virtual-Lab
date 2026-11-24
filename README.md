@@ -7,9 +7,13 @@
 
 根目录 [results.json](results.json) 是本组期末常规结果，于 2026-11-10 由干净检出的 [d53604c](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/commit/d53604c798420cd6f82ff5376989e3006d339980) 生成。常规 L2 采用手册规定的 0.50–8.00 kBT、0.25 kBT 步长，得到 hard_gap、Eg/kBT = 2.00。重采样的 p16 和 p84 落在同一网格点。原检查点的细化结果 2.0730 kBT 和区间 [2.00, 2.13] kBT 可用于比较网格分辨率的影响。
 
-[期末复现记录](validation/final_2026-11-10/README.md) 包含报告图、验证报告和 L2 检查点比较。常规 L2 有 58 个轨迹点，盲测有 50 个。两个 L3 地图各有 100 个按行排列的有限数值。
+[11 月 10 日复现记录](validation/final_2026-11-10/README.md) 保存了当时的报告图、验证报告和 L2 检查点比较。常规 L2 有 58 个轨迹点，盲测有 50 个。两个 L3 地图各有 100 个按行排列的有限数值。
 
-2026-11-20，以下两份结果与最新版期末提交包逐字节一致。`python reproduce.py --verify-only` 核查通过。
+定稿的 Figure 1(b) 由当前一键流程生成。图中保留从电中性点开始的模型曲线，叠加基于 G24 原始 CSV 计算的比值，并标注工作点和两个阈值。[绘图代码](g24lab/report_figures.py)
+
+采用 Python 3.12.14、本仓库锁定的依赖和 Nimbus Roman 字体验证后，一键生成的五张 PNG 与期末报告内嵌的五张图逐字节一致。每次运行的图像哈希记录在输出目录的 `report_figures/validation.json`。
+
+2026-11-24 复核，以下两份结果与期末提交包逐字节一致。`python reproduce.py --verify-only` 核查通过。
 
 | 最终提交结果 | SHA-256 |
 | --- | --- |
