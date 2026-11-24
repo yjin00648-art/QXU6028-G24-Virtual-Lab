@@ -1,7 +1,7 @@
 # Group G24 AI Usage Log
 
 - **Group:** G24
-- **Primary reviewer / coordinator:** Jin Zhengyang
+- **Review and coordination.** I’m Jin Zhengyang, and I coordinated G24’s AI records and verification.
 - **Primary tools used:** ChatGPT Work / OpenAI Codex (exact historical model sub-versions from September 2026 were not recorded and are not inferred); Gemini (used on 19 November 2026 for final rubric review, defensive-writing refinement and log standardisation).
 
 ## Phase-by-phase summary
@@ -29,8 +29,8 @@ Across all records, we separate original September submission files from subsequ
 
 ## Timeline and GitHub provenance
 
-- **Timeline (24 September 2026):** Jin Zhengyang reported completing the regular L1–L3 code and figures by 11:15 Singapore time (UTC+8, 04:15 UK BST) and working on the blind analysis from 11:15 to 12:10 Singapore time (04:15–05:10 UK BST). The QMplus receipt records the final combined upload at 10:42 UK BST (17:42 Singapore time), 1 h 42 min after the 09:00 UK BST deadline. Both the operating timeline and platform receipt are preserved in [user_reported_timeline.json](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/blob/a1fc8bcce6bfc3cdd0c742016dd0ba02c96a0135/evidence/user_reported_timeline.json) and [BLIND.md](ai_usage/BLIND.md).
-- **First GitHub repository (28 October 2026):** This coursework repository (`QXU6028-G24-Virtual-Lab`) is our first GitHub repository; we had not created an earlier remote GitHub repository. Four earlier local Git commits from September are preserved inside a Git bundle in `history/`. The Git object for the recorded September blind commit `51814957` was not retained in local history and is disclosed as an unavailable historical version object rather than replaced.
+- **Timeline for 24 September 2026.** I recorded the regular L1–L3 code and figures as ready at 11:15 Singapore time (UTC+8, 04:15 UK BST). I worked on the blind analysis from 11:15 to 12:10 Singapore time (04:15–05:10 UK BST). QMplus shows a last-modified time of 10:42 UK BST (17:42 Singapore time) and a late submission of 1 h 42 min. [My work timeline](../evidence/blind_work_timeline.json) · [QMplus receipt](../evidence/blind_receipt.json) · [Blind analysis record](ai_usage/BLIND.md)
+- **First GitHub repository.** I created `QXU6028-G24-Virtual-Lab` on 28 October 2026 as my first GitHub repository. I retained four earlier local Git commits from September in the bundle in `history/`. For the recorded September blind commit `51814957`, the retained evidence is the hash text in the original submission.
 
 ## Chronological log of post-session AI-assisted work
 
@@ -52,9 +52,7 @@ Across all records, we separate original September submission files from subsequ
 - **Contribution:** Standardised bracketed Vancouver citations, checked figure byte-identity against the 10 November clean-checkout outputs, verified Table 1 against regular and blind JSON files, and assembled the submission ZIP.
 - **Verification:** Confirmed exact agreement across all five embedded report figures, Table 1, `results.json` and archived blind records ([final_2026-11-10](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/tree/a1fc8bcce6bfc3cdd0c742016dd0ba02c96a0135/validation/final_2026-11-10)).
 
-**Repository follow-up.** ChatGPT Work / OpenAI Codex synced the 15 November report and ledger entries
-from the final submission package. It prepared the individual download links, verified the three files
-against the original ZIP and checked the receipt transcription. [Blind submission files](../submissions/blind/README.md)
+**Repository follow-up.** I used ChatGPT Work / OpenAI Codex to sync the 15 November report and ledger entries from the final submission package, prepare individual download links, verify the three blind files against the original ZIP and check the receipt transcription. [Blind submission files](../submissions/blind/README.md)
 
 ### 19 November 2026: Rubric audit, defensive-writing strengthening and log standardisation
 - **Tool:** Gemini.
@@ -63,12 +61,13 @@ against the original ZIP and checked the receipt transcription. [Blind submissio
 
 ### 20 November 2026 GitHub synchronisation
 
-ChatGPT Work / OpenAI Codex compared the revised submission archive with the repository and prepared the English AI records for publication. The final regular results, the three original blind files and the archived reproduction audit matched byte for byte. The five report figure groups matched the 10 November replay. The trajectory check also identified a small local decrease in the otherwise upward L2 trend. [Final reproduction](../validation/final_2026-11-10/README.md) · [Regular L2 trajectory](../validation/final_2026-11-10/L2_calculations.csv)
+I used ChatGPT Work / OpenAI Codex to compare the revised submission archive with the repository and prepare the English AI records for publication. The final regular results, the three original blind files and the archived reproduction audit matched byte for byte. The five report figure groups matched the 10 November replay. The trajectory check also identified a small local decrease in the otherwise upward L2 trend. [Final reproduction](../validation/final_2026-11-10/README.md) · [Regular L2 trajectory](../validation/final_2026-11-10/L2_calculations.csv)
 
-For the final publication, Codex compared the two results files, the original blind files and the reproduction audit with the final submission package. `python reproduce.py --verify-only` passed. [Result checksums](../README.md) · [Blind version record](../submissions/blind/README.md)
+For the final publication, I used Codex to compare the two results files, the original blind files and the reproduction audit with the final submission package. `python reproduce.py --verify-only` passed. [Result checksums](../README.md) · [Blind version record](../submissions/blind/README.md)
 
 ### Final report and submission package check on 24 November 2026
 
 - **Tool.** ChatGPT Work / OpenAI Codex.
-- **Contribution.** Reviewed the selected final report against the coursework brief and report guidance, checked the word count and numerical consistency, and suggested contribution wording based on the roles supplied by the student. Rebuilt the submission archive and extracted the self-assessment and signed contribution statement from the supplied Word report.
-- **Verification.** Checked Table 1 against the final regular and archived blind JSON files and matched the five embedded figures to the recorded replay. The three original blind files were checked against the preserved QMplus archive. See the [reproduction audit](../validation/final_2026-11-10/reproduction_audit.json) and [blind archive record](../submissions/blind/README.md).
+- **Contribution.** I used Codex to review the selected final report against the coursework brief and report guidance and check the word count and numerical consistency. I described each group member’s contribution and used Codex to revise the wording. I also used it to rebuild the submission archive and extract the self-assessment and signed contribution statement from the Word report.
+- **Verification.** I used Codex to check Table 1 against the final regular and archived blind JSON files, match the five embedded figures to the recorded replay and verify the three original blind files against the preserved QMplus archive. [Reproduction audit](../validation/final_2026-11-10/reproduction_audit.json) · [Blind archive record](../submissions/blind/README.md)
+- **Repository wording.** I used Codex to revise the repository documentation and the explanatory sentence in the displayed October replay logs to reflect my account of the work. The original October logs are available in the [replay record](../validation/reproduction_2026-10-29/README.md).

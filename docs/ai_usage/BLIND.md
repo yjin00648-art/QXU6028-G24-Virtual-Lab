@@ -1,7 +1,7 @@
 # Blind-Test AI Usage Record
 
 - **Phase:** G24 blind analysis (preserved run log dated 24 September 2026).
-- **Record consolidated retrospectively:** 28 October 2026 (reviewed by Jin Zhengyang).
+- **Record review.** I reviewed this retrospective summary, compiled on 28 October 2026.
 - **Tool:** ChatGPT Work / OpenAI Codex (exact historical model sub-version not recorded).
 
 ## Purpose and instruction summary
@@ -28,19 +28,19 @@ We transparently disclose that the archived September regular and blind L2 scrip
 
 ### Session timeline (24 September 2026)
 
-Jin Zhengyang reported completing the regular L1–L3 code and figures by **11:15 Singapore time (UTC+8)** and working on the blind analysis from **11:15 to 12:10 Singapore time** (55 minutes). On 24 September 2026, UK local time was BST (UTC+1, seven hours behind Singapore, verified against [GOV.UK](https://www.gov.uk/when-do-the-clocks-change) using Python `zoneinfo`).
+I recorded the regular L1–L3 code and figures as ready at **11:15 Singapore time (UTC+8)** and worked on the blind analysis from **11:15 to 12:10 Singapore time** (55 minutes). UK local time on 24 September 2026 was BST (UTC+1), seven hours behind Singapore. I used Python `zoneinfo` and the UK clock-change dates to check the conversion. [My work timeline](../../evidence/blind_work_timeline.json) · [GOV.UK](https://www.gov.uk/when-do-the-clocks-change)
 
 | Event | Singapore (UTC+8) | UK (BST, UTC+1) |
 | --- | --- | --- |
 | Regular code and figures ready (reported) | 11:15 | 04:15 |
 | Blind analysis work (reported) | 11:15–12:10 | 04:15–05:10 |
 | QMplus due time | 16:00 | 09:00 |
-| QMplus last modified / submission time | 17:42 | 10:42 |
+| QMplus last-modified time | 17:42 | 10:42 |
 
 ### Preserved platform receipt and recorded commit hash
 
 Our retained QMplus screenshot shows Attempt 1, `Submitted for grading`, last modified 24 September 2026 at 10:42 AM UK BST (1 h 42 min after the 9:00 AM due time). The original display and normalised timestamps are recorded in `blind_receipt.json` without assuming any extension or penalty adjustment.
 
-The recorded blind commit hash is `51814957ddcb8d34d4153c386cf2194f7be0b541`. Because this GitHub repository was our first remote repository (created on 28 October 2026), the earlier local Git object for `51814957` was not retained in project history. The clean-checkout run at `d53604c` verifies reproducibility of the blind scientific fields. [Individual blind files and receipt](../../submissions/blind/README.md)
+The recorded blind commit hash is `51814957ddcb8d34d4153c386cf2194f7be0b541`. I created my first GitHub repository on 28 October 2026. The materials I recovered for the September blind run include the hash text, and the Git object for that hash is unavailable. The clean-checkout run at `d53604c` verifies reproducibility of the blind scientific fields. [Individual blind files and receipt](../../submissions/blind/README.md)
 
 Sources: [submitted ZIP](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/blob/a1fc8bcce6bfc3cdd0c742016dd0ba02c96a0135/evidence/submitted_archives/G24_Blind_Submission.zip), [original result](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/blob/a1fc8bcce6bfc3cdd0c742016dd0ba02c96a0135/submissions/blind/blind_results.json), [original log](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/blob/a1fc8bcce6bfc3cdd0c742016dd0ba02c96a0135/submissions/blind/run_log.txt), [original hash](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/blob/a1fc8bcce6bfc3cdd0c742016dd0ba02c96a0135/submissions/blind/pipeline_commit.txt), [L2 validation](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/blob/a1fc8bcce6bfc3cdd0c742016dd0ba02c96a0135/blind_L2/recorded/validation/L2_validation.json), [L3 note](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/blob/a1fc8bcce6bfc3cdd0c742016dd0ba02c96a0135/blind_L3/recorded/notes/L3_brief_note.txt), [receipt](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/blob/a1fc8bcce6bfc3cdd0c742016dd0ba02c96a0135/evidence/blind_receipt.json), [archive checks](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/blob/a1fc8bcce6bfc3cdd0c742016dd0ba02c96a0135/validation/archive_verification.json).

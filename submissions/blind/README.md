@@ -1,6 +1,6 @@
 # G24 blind test submission files
 
-The Practical Methods Guide lists three files for individual upload. The three files here can be downloaded individually under those names. Each matches the corresponding file inside the original QMplus ZIP byte for byte.
+I checked the three files listed in the Practical Methods Guide against our original QMplus ZIP. Each file below uses its submitted name and matches its corresponding ZIP member byte for byte.
 
 | File | Contents | SHA-256 |
 | --- | --- | --- |
@@ -17,9 +17,9 @@ Attempt 1 shows `G24_Blind_Submission.zip` with the status “Submitted for grad
 | Deadline | 09:00 | 16:00 |
 | Last modified | 10:42 | 17:42 |
 
-QMplus displayed “Assignment was submitted 1 hour 42 mins late”. The time zones follow Jin Zhengyang’s clarification about the platform display and the local working times.
+QMplus displayed “Assignment was submitted 1 hour 42 mins late”. In my timeline I use UK local time for the QMplus display and Singapore time for my work on the blind analysis.
 
-[Original QMplus ZIP](../../evidence/submitted_archives/G24_Blind_Submission.zip) · [Receipt screenshot](../../evidence/submission_screenshots/blind_submission_status.png) · [Receipt transcription](../../evidence/blind_receipt.json) · [Student timeline and timezone clarification](../../evidence/user_reported_timeline.json)
+[Original QMplus ZIP](../../evidence/submitted_archives/G24_Blind_Submission.zip) · [Receipt screenshot](../../evidence/submission_screenshots/blind_submission_status.png) · [Receipt transcription](../../evidence/blind_receipt.json) · [My work timeline and time zones](../../evidence/blind_work_timeline.json)
 
 ## Recorded analysis version
 

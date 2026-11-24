@@ -4,7 +4,7 @@
   "final_source_commit": "d53604c798420cd6f82ff5376989e3006d339980",
   "L2_checkpoint": {
     "submitted_ZIP_sha256": "1ad58259f02d71a9488e5f2d24faf59f0e388f68606ebb4bc57898e39b1f71e6",
-    "user_supplied_ZIP_matches": true,
+    "received_ZIP_matches_archive": true,
     "archived_commit": "3afb63d39d2dd5ee359141756d59bd0daa100684",
     "commit_recovered_from_bundle": true,
     "archived_L2_script_bytes_match": true,
@@ -30,7 +30,7 @@
   },
   "regular_L1_and_L3_scientific_fields_match_archive": true,
   "combined_regular_L3_and_blind_delivery": {
-    "user_confirmed_on": "2026-11-10",
+    "confirmation_date": "2026-11-10",
     "outer_archive": "evidence/submitted_archives/G24_Blind_Submission.zip",
     "regular_L3_working_pack_sha256": "0b3ae95b39e71729ddeb712db62b89b7deaadf1416f3a87d0fc547e7b4f4d455",
     "preview_members": [

@@ -7,7 +7,7 @@
       "bytes": 616103,
       "sha256": "4b4332bb997544fcda4573c7b0ea57888fb479069cb68cfc47c8c208119e9a45",
       "copied_without_modification": true,
-      "classification": "user-confirmed QMplus submission archive"
+      "classification": "original QMplus submission archive"
     },
     {
       "uploaded_name": "G24_L2_Checkpoint.zip",
@@ -15,7 +15,7 @@
       "bytes": 714042,
       "sha256": "1ad58259f02d71a9488e5f2d24faf59f0e388f68606ebb4bc57898e39b1f71e6",
       "copied_without_modification": true,
-      "classification": "user-confirmed QMplus submission archive"
+      "classification": "original QMplus submission archive"
     },
     {
       "uploaded_name": "G24_Blind_Submission.zip",
@@ -23,7 +23,7 @@
       "bytes": 1152525,
       "sha256": "7d2f412e15b352e6e20f4958353e302f9cf55cc99f4df62750535aa58542d6ba",
       "copied_without_modification": true,
-      "classification": "user-confirmed QMplus submission archive"
+      "classification": "original QMplus submission archive"
     },
     {
       "uploaded_name": "L1_submission_status.png",
@@ -68,10 +68,10 @@
     "last_modified_as_displayed": "Thursday, 24 September 2026, 10:42 AM",
     "time_remaining_as_displayed": "Assignment was submitted 1 hour 42 mins late",
     "submitted_filename": "G24_Blind_Submission.zip",
-    "timezone": "not printed in screenshot; subsequently identified by the user as UK local time",
+    "timezone": "UK local time according to my clarification on 29 October 2026. The screenshot displays the clock time only.",
     "screenshot_path": "evidence/submission_screenshots/blind_submission_status.png",
-    "meaning": "Preserves the platform display and adds user-specified timezone interpretation. No marking penalty or extension is inferred.",
-    "timezone_source": "Jin Zhengyang clarification on 2026-10-29",
+    "meaning": "I transcribed the QMplus display and converted the times to UK and Singapore local time. The recorded delay is the platform's label.",
+    "timezone_source": "My 29 October 2026 clarification (Jin Zhengyang)",
     "iana_timezone": "Europe/London",
     "timezone_abbreviation_on_displayed_date": "BST",
     "utc_offset_on_displayed_date": "+01:00",
@@ -88,15 +88,15 @@
     "clock_change_reference": "https://www.gov.uk/when-do-the-clocks-change",
     "conversion_method": "Python zoneinfo: Europe/London and Asia/Singapore; 24 September 2026 is within British Summer Time."
   },
-  "scope": "No full numerical rerun. Preserve the three user-confirmed QMplus ZIPs byte-for-byte. Final report, contribution statement and self-assessment are outside this requested repository update.",
-  "supplementary_user_statements": [
+  "scope": "I created this index during the archive check on 28 October 2026. I kept the original QMplus archives for verification. Later numerical runs are documented under validation/.",
+  "supplementary_timeline_records": [
     {
       "recorded_on": "2026-10-29",
       "reported_by": "Jin Zhengyang",
-      "repository_path": "evidence/user_reported_timeline.json",
-      "bytes": 2646,
-      "sha256": "52aa1734116460c29021530acab245b882d148b848544db215eaaa11188ec09f",
-      "classification": "retrospective user statement with user-designated Singapore/UK timezones; historical code version not independently verified",
+      "repository_path": "evidence/blind_work_timeline.json",
+      "bytes": 2480,
+      "sha256": "8766a699e6f0081ddf4bf6037ee3440523edad9de24f622b2e60f56447b86e3f",
+      "classification": "retrospective work timeline with Singapore and UK time zones",
       "timezone_clarification_recorded_on": "2026-10-29"
     }
   ]

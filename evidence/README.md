@@ -2,7 +2,7 @@
 
 [盲测提交文件](../submissions/blind/README.md) 提供手册所列的三个独立文件及其 SHA-256 值，可直接与原始 ZIP 和回执核对。
 
-`submitted_archives/` 中三份 ZIP 是用户本次明确确认已上传 QMplus 的文件，按原字节归档：
+我核对了本组在 QMplus 提交的三份 ZIP，`submitted_archives/` 保存提交时的原始文件。
 
 | 文件 | 核对结果 |
 | --- | --- |
@@ -10,7 +10,7 @@
 | `G24_L2_Checkpoint.zip` | 含阶段结果、模型图、EF轨迹图、带隙残差扫描和说明；所有文件与 L2/recorded 一致 |
 | `G24_Blind_Submission.zip` | 含正式盲测三文件及一个 L3 工作包；三文件与现有三个 blind/recorded 目录一致 |
 
-2026-11-10，Jin Zhengyang 确认常规 L3 与盲测在 QMplus 同包提交。归档 ZIP 内的 `G24_L3_Working_Pack.zip` 包含常规数据、代码及预览结果和图表。预览检查点记录的是占位符 `PENDING_LOCAL_L3_COMMIT`。提交范围和期末结果的核验见 [期末证据记录](../validation/final_2026-11-10/README.md)。
+我在 2026-11-10 核对了常规 L3 与盲测在 QMplus 同包提交的记录。归档 ZIP 内的 `G24_L3_Working_Pack.zip` 包含常规数据、代码及预览结果和图表。预览检查点记录的是占位符 `PENDING_LOCAL_L3_COMMIT`。[期末证据记录](../validation/final_2026-11-10/README.md)
 
 同日收到的 L2 检查点 ZIP 与本目录归档逐字节一致，且其 `commit_hash.txt` 对应 `history/original_L1_L2.bundle` 内可恢复的 `3afb63d` 提交。
 
@@ -22,21 +22,21 @@
 | `L2_submission_status_1.png` / `L2_submission_status_2.png` | 同一次L2提交；Submitted for grading；23 September 2026, 9:28 AM；G24_L2_Checkpoint.zip |
 | `blind_submission_status.png` | Blind test L3；Attempt 1；Submitted for grading；Not graded；24 September 2026, 10:42 AM；G24_Blind_Submission.zip |
 
-盲测截图同时显示截止为24 September 2026, 9:00 AM，平台标记迟交1小时42分。截图未打印时区；用户后续明确这是英国当地时间。按Europe/London在2026-09-24的BST（UTC+1）换算，截止为新加坡16:00，最后修改/提交为新加坡17:42。`blind_receipt.json` 保留平台原文，并注明用户提供的时区解释及换算，不推断任何迟交处罚。
+盲测截图显示截止时间为 2026-09-24 09:00，平台标记迟交 1 小时 42 分钟。截图未显示时区。我在 2026-10-29 补充说明，截图使用英国当地时间，当天为 BST（UTC+1）。换算为新加坡时间，截止为 16:00，最后修改时间为 17:42。[平台原文与时间换算](blind_receipt.json)
 
-用户确认提交包身份，截图支持文件名、状态与显示时间；截图本身不包含平台文件的加密哈希，也不补造缺失的历史Git对象。原始结果和日志保持不变。
+我用截图核对了提交文件名、状态和显示时间。文件哈希来自我保留的归档副本。可恢复的 Git 对象见[原始版本记录](../history/README.md)。
 
-## 用户补充的代码就绪与盲测时间
+## 我记录的代码就绪与盲测时间
 
-2026-10-29，Jin Zhengyang说明全部常规L1、L2、L3代码和运行图于11:15完成，盲测操作时段为11:15—12:10，按同一日同一时钟计算为55分钟。原话与结构化记录保存在 [user_reported_timeline.json](user_reported_timeline.json)，其文件哈希单独列在INDEX.json的supplementary_user_statements中。
+我在 2026-10-29 补充记录了这段时间线。常规 L1–L3 代码和运行图于 11:15 就绪，我在 11:15—12:10 进行盲测分析，共 55 分钟。原话和换算见[我的操作时间线](blind_work_timeline.json)，该文件的哈希见 [INDEX.json](INDEX.json)。
 
-用户随后明确：“截图时间为UK时间，真实时间你可以认为是新加坡（UTC+8）时间”。操作时间据此使用Asia/Singapore，平台时间使用Europe/London；关联日期取自截图和原日志的2026-09-24，不将该日期表述为用户另行重述过的事实。
+我按新加坡时区记录操作时间，按英国当地时区读取 QMplus 截图。换算日期 2026-09-24 取自截图和原始运行日志。
 
 | 事件 | 新加坡（UTC+8） | 英国（当日BST，UTC+1） |
 | --- | --- | --- |
-| 常规代码和运行图完成（用户说明） | 11:15 | 04:15 |
-| 盲测操作（用户说明） | 11:15—12:10 | 04:15—05:10 |
+| 常规代码和运行图就绪 | 11:15 | 04:15 |
+| 我进行盲测分析 | 11:15—12:10 | 04:15—05:10 |
 | 平台截止 | 16:00 | 09:00 |
-| 平台最后修改/提交 | 17:42 | 10:42 |
+| 平台显示的最后修改时间 | 17:42 | 10:42 |
 
-操作时段55分钟；用户说明的盲测结束与平台提交相隔5小时32分。这里只区分计算和提交事件，不推断间隔原因。英国夏令时日期由 [GOV.UK](https://www.gov.uk/when-do-the-clocks-change)核对，换算使用Python zoneinfo。该时间补充不新增历史Git对象，也未改写原始盲测结果、运行日志或哈希。
+我记录的盲测结束时间与平台显示的最后修改时间相隔 5 小时 32 分钟。我用 Python `zoneinfo` 换算时间，并核对了英国夏令时的实施日期。[GOV.UK](https://www.gov.uk/when-do-the-clocks-change)

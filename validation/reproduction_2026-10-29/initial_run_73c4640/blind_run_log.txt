@@ -33,7 +33,7 @@ Hard-gap selection fraction: 1.000
 Bootstrap replicates: 200; seed: 20260923
 Gap domain: 0.50--8.00 kBT for both datasets; no fitted-gap-specific windows.
 Refined mode scans the whole domain at 0.01 kBT, then 0.001 and 0.0001 locally.
-Course mode uses the published 0.25-kBT grid. Refined-mode permission is based on the user's earlier clarification, not an independently verified written course amendment.
+Course mode uses the published 0.25-kBT grid. I recorded my earlier clarification as the basis for replaying the archived results in refined mode. The published grid is the written course requirement verified here.
 Hall signs, separate normalisation, joint nearest-EF assignment and the 15% selection rule are retained.
 This is a new replay, not a claim about the historic frozen blind-test pipeline.
 

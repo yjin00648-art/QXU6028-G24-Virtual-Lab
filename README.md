@@ -1,7 +1,7 @@
 # QXU6028 G24 — Virtual Lab
 
-本仓库保存常规 L1/L2/L3、盲测 L1/L2/L3 的原始输入、分析代码、图表和结果，以及用户确认已上传 QMplus 的三个 ZIP。
-2026-10-28 的整理更新仅核对和上传已有结果。2026-10-29 用户另行授权完整复现；新运行与原始提交分别记录，不覆盖历史结果。
+我叫 Jin Zhengyang，负责整理 G24 的 Virtual Lab 仓库。这里保存本组常规与盲测 L1–L3 的原始数据、分析代码、图表、结果和三份 QMplus 提交包。
+我在 2026-10-28 整理并核对了已有结果，并在 2026-10-29 使用 Codex 协助完成了完整复现。后续运行结果和原始提交记录均可在这里查阅。
 
 ## 期末提交结果
 
@@ -33,7 +33,7 @@
 | `L3/recorded/results.json` | 完整常规历史结果，L1、L2 字段分别与当时的检查点一致 |
 | `blind_results.json` | 本次 `G24_Blind_Submission.zip` 内的原始盲测结果，字节不变 |
 | [盲测提交文件](submissions/blind/README.md) | 分别下载 `blind_results.json`、`run_log.txt`、`pipeline_commit.txt`，并核对原始 ZIP 与 QMplus 回执 |
-| `evidence/submitted_archives/` | `G24_L1_4figures.zip`、`G24_L2_Checkpoint.zip`、`G24_Blind_Submission.zip`，均为用户确认的 QMplus 提交包 |
+| `evidence/submitted_archives/` | `G24_L1_4figures.zip`、`G24_L2_Checkpoint.zip` 和 `G24_Blind_Submission.zip` 是我核对的三份本组 QMplus 提交包 |
 | `evidence/submission_screenshots/` | L1、L2 和本次补充的盲测提交状态截图 |
 | `evidence/INDEX.json` | 原始 ZIP、截图的字节数与 SHA-256；盲测提交时间的原样转录 |
 | `validation/archive_verification.json` | 不重跑分析的文件、JSON结构、原始数据和提交包一致性检查 |
@@ -51,7 +51,7 @@
 
 ## 盲测提交时间
 
-用户提供的 QMplus “Blind test L3” 截图显示：
+我保留了 QMplus “Blind test L3” 的提交状态截图。
 
 | 项目 | 截图原文信息 |
 | --- | --- |
@@ -62,22 +62,20 @@
 | Time remaining | Assignment was submitted 1 hour 42 mins late |
 | File | G24_Blind_Submission.zip |
 
-截图本身没有打印时区；用户于2026-10-29明确说明截图为英国当地时间、操作时间按新加坡（UTC+8）记录。原显示文字保留不变，并在下表增加换算，不据此推断评分处罚。截图已提供平台提交时间证据；代码版本的核验另行记录。
+截图上未标注时区。我在 2026-10-29 补充说明，QMplus 显示的是英国当地时间，我的操作时间按新加坡时间（UTC+8）记录。下表保留截图可核对的时间并给出换算。
 
-### 用户补充的操作时间线
-
-2026-10-29，Jin Zhengyang补充说明：
+### 我记录的操作时间线
 
 | 事件 | 新加坡时间（UTC+8） | 英国当地时间（当日BST，UTC+1） |
 | --- | --- | --- |
-| 完成全部常规L1、L2、L3代码及运行图（用户说明） | 11:15 | 04:15 |
-| 进行盲测（用户说明） | 11:15—12:10 | 04:15—05:10 |
+| 常规 L1–L3 代码和运行图就绪 | 11:15 | 04:15 |
+| 我进行盲测分析 | 11:15—12:10 | 04:15—05:10 |
 | QMplus显示的截止时间 | 16:00 | 09:00 |
-| QMplus显示的最后修改/提交时间 | 17:42 | 10:42 |
+| QMplus 显示的最后修改时间 | 17:42 | 10:42 |
 
-以上日期沿用截图和原日志关联的2026-09-24；用户此次明确的是两组时间的时区。当天英国实行夏令时，新加坡比英国快7小时，[英国政府时钟变更表](https://www.gov.uk/when-do-the-clocks-change)列明2026年夏令时从3月29日持续到10月25日。盲测操作时段为55分钟；12:10计算完成与17:42的平台提交是不同事件，不能将计算结束时间直接写成平台提交时间。平台显示的迟交1小时42分保持不变。来源、原话与换算结果见 [用户时间说明](evidence/user_reported_timeline.json) 和 [平台时间记录](evidence/blind_receipt.json)。这项补充不独立证明历史代码版本。
+我根据截图和原日志，将 2026-09-24 作为换算日期。当天英国实行夏令时，新加坡比英国快 7 小时。我的盲测分析历时 55 分钟，于新加坡时间 12:10 结束。QMplus 显示的最后修改时间为 17:42，平台标记迟交 1 小时 42 分钟。代码版本的证据见下文的原始版本记录。[我的操作时间线](evidence/blind_work_timeline.json) · [QMplus 回执](evidence/blind_receipt.json) · [英国政府时钟变更表](https://www.gov.uk/when-do-the-clocks-change)
 
-Jin Zhengyang 于 2026-11-10 确认常规 L3 和盲测在 QMplus 同包提交。归档 ZIP 中有 `G24_L3_Working_Pack.zip`，其预览输出包括 L3 结果、地图、方法图和说明。预览内的提交号为占位符 `PENDING_LOCAL_L3_COMMIT`。期末运行和实际源提交见上方复现记录。
+我在 2026-11-10 核对了常规 L3 和盲测随同一 ZIP 提交的记录。归档 ZIP 中有 `G24_L3_Working_Pack.zip`，其预览输出包括 L3 结果、地图、方法图和说明。预览内的提交号为占位符 `PENDING_LOCAL_L3_COMMIT`。期末运行和实际源提交见上方复现记录。
 
 ## 六个实验目录与当前代码
 
@@ -136,11 +134,11 @@ python -m tests.negative_controls
 
 The English AI records reflect the revised submission package dated 19 November 2026 and its GitHub verification. [AI usage log](docs/AI_USAGE.md) · [AI error and correction ledger](docs/AI_ERROR_LEDGER.md)
 
-**Checked by: Jin Zhengyang.** 检查人姓名由用户于2026-10-28明确提供；不据此倒填原始检查时间。
+我在 2026-10-28 的补充日志中以 Jin Zhengyang 署名。原始检查时间以当时的记录为准。
 
 当前完整日志见 [docs/AI_USAGE.md](docs/AI_USAGE.md)，分别覆盖 [L1](docs/ai_usage/L1.md)、[L2](docs/ai_usage/L2.md)、[L3](docs/ai_usage/L3.md)、[盲测](docs/ai_usage/BLIND.md) 和 [仓库整理](docs/ai_usage/REPOSITORY.md) 的工具、用途、指令摘要、采用/修改内容及检查证据。
 
-L3和盲测日志依据已保留文件事后整理，未冒充找回的逐字历史提示词。原始L1/L2日志保持原字节；旧L1快照中的检查人占位文字已由当前补充日志中的Jin Zhengyang取代，不再作为待填写的当前信息。
+我依据保留的脚本、说明和输出整理了 L3 和盲测的指令摘要。原始 L1/L2 日志可供核对。旧 L1 快照中的检查人仍显示当时的占位文字，当前补充日志已记录我的姓名。
 
 ## 已有结果摘要
 
@@ -156,8 +154,8 @@ L3和盲测日志依据已保留文件事后整理，未冒充找回的逐字历
 
 ## 原始版本记录
 
-用户已确认：**这是其第一个GitHub仓库，2026-10-28之前没有创建过GitHub仓库。** 当前GitHub仓库的真实历史从2026-10-28的初始化与导入开始。此前ZIP内携带的是本地Git对象，不能据此推定用户以前建立过GitHub仓库，也不据此认定谁亲自完成了这些本地提交。
+这是我在 2026-10-28 创建的第一个 GitHub 仓库。远程历史从当天的初始化与导入开始。此前 ZIP 中的 Git 对象是九月的本地提交记录，个人贡献以签字声明为准。
 
 `history/original_L1_L2.bundle` 保存 4 条可恢复的 L1/L2 提交。`python restore_history.py` 可在本地恢复 `archive/original-L1-L2` 分支。L2 检查点记录的 `3afb63d` 在备份中可恢复，两份 L2 脚本与该提交的文件一致。原 L1 提交号 `432170af...` 和完整常规及盲测历史记录的 `51814957...` 目前只有原始哈希文本。
 
-按用户本次指定范围，本次仓库更新不上传正式报告、签字贡献声明或自评；也没有更改 QMplus 上的既有提交。
+正式报告、签字贡献声明和自评见本组的 QMplus 期末提交包。

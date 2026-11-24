@@ -3,6 +3,8 @@
 The final fresh-clone run passed. Its code is [58eb990](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/commit/58eb990c11c72b8a4e8584c8d9ea2def72337d54).
 Original regular/blind results, raw inputs, submitted ZIPs and historical blind files were preserved.
 
+On 24 November 2026 I rephrased the L2 grid note in the October replay logs displayed here. The [original logs and checksum index](https://github.com/yjin00648-art/QXU6028-G24-Virtual-Lab/tree/33e5ea296dae473e69a5682be0d88727a9e2e7a4/validation/reproduction_2026-10-29) are available at their archived revision.
+
 | Check | Evidence |
 | --- | --- |
 | Full command | `python reproduce.py --dataset all` |
@@ -19,7 +21,7 @@ Original regular/blind results, raw inputs, submitted ZIPs and historical blind 
 | Comparison tolerance | Relative 1e-10, absolute 1e-12 |
 
 Only `pipeline_commit` is excluded from old/new result comparison: each new output records the actual code commit.
-No scientific field is exempted. See [machine audit](reproduction_audit.json), [execution record](execution_record.json), [full stdout](full_replay_stdout.txt) and [tests](regression_tests_stdout.txt).
+No scientific field is exempted. See [machine audit](reproduction_audit.json), [execution record](execution_record.json), [full stdout (display copy)](full_replay_stdout.txt) and [tests](regression_tests_stdout.txt).
 The [regular](regular/results.json) and [blind](blind/results.json) JSON files are new replays with a recoverable source commit; the root results and original blind three files remain historical records.
 
 ## Reproduction and figure coverage
@@ -45,7 +47,7 @@ The current automatic report figures reproduce the initial draft panels. Figure 
 
 ## Observed failure and correction
 
-The initial six-stage run at 73c4640 passed. Adding the five report panel groups exposed a later output-integrity failure in a fresh clone at 05a4352: `L3_method.png` ended without a complete IDAT checksum. The failed [log](failed_run_05a4352/full_replay_stdout.txt) and [diagnostic record](failed_run_05a4352/failure.json) are retained.
+The initial six-stage run at 73c4640 passed. Adding the five report panel groups exposed a later output-integrity failure in a fresh clone at 05a4352: `L3_method.png` ended without a complete IDAT checksum. See the [failed run log (display copy)](failed_run_05a4352/full_replay_stdout.txt) and the [diagnostic record](failed_run_05a4352/failure.json).
 Commit 58eb990 introduces validated atomic PNG writes and two regression checks. The final fresh-clone command above then completed successfully. The underlying rendering/filesystem cause of the earlier truncation is not independently established.
 
 This later successful reproduction verifies the current code. It does not reconstruct the missing September Git object or retroactively establish an unchanged frozen blind-test version. The original blind hashes and submission-time evidence are unchanged.
